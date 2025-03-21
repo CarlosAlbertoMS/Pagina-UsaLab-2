@@ -45,7 +45,7 @@
 .logousalab {
     width: 136px;
     height: 128px;
-    object-fit: cover;
+    object-fit: contain;
     flex-shrink: 0;
     margin-right: -112px;
     margin-top: 16px;
@@ -515,7 +515,7 @@ footer {
 .utmfooter {
     width: 147px;
     height: 147px;
-    object-fit: cover;
+    object-fit: contain;
     flex-shrink: 0;
     object-position: 50% 68%;
 }
@@ -524,7 +524,7 @@ footer {
     width: 156px;
     height: 149px;
     flex-shrink: 0;
-    object-fit: cover;
+    object-fit: contain;
     transform: scale(1.4);
     filter: brightness(0) invert(1);
 }
