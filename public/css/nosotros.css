@@ -1,3 +1,9 @@
+.container1 {
+    border: solid peru 10px;
+    box-sizing: border-box;
+}
+
+
 /*Separadores de la pagina*/
 .separador2 {
     height: 160px;
@@ -7,52 +13,57 @@
 /*Contenedor mision vision*/
 .misionContent {
     width: 100%;
-    height: 1143px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    padding: 40px 20px;
 }
 
 /*Fondo del contenedor azul*/
 .fondoazul {
-    width: 1368px;
-    height: 1143px;
-    flex-shrink: 0;
+    width: 90%; /* Adjust width as needed */
+    /* Remove fixed height */
     position: absolute;
     background: #06052D;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-left: 360px;
     z-index: 1;
+    top: 50%; /* Vertically center the background */
+    transform: translateY(-50%); /* Adjust for the top: 50% */
+    /* You might need to adjust these values based on your exact layout */
+    height: auto; /* Let the height be determined by content */
 }
 
 /*Contenedor de los elementos*/
 .misionvc {
-    width: 1472px;
-    height: 956px;
+    max-width: 1472px;
+    width: 95%;
+    height: auto;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 96px;
-    margin-left: 96px;
+    gap: 40px;
     z-index: 2;
+    margin-left: 0;
+    padding: 40px 0; /* Add some vertical padding to .misionvc */
 }
 
 /*Imagen Mario*/
 .img13 {
-    width: 576px;
-    height: 910px;
-    margin-top: -13px;
-    flex-shrink: 0;
+    max-width: 50%;
+    height: auto;
+    margin-top: 0;
+    flex-shrink: 1;
     object-fit: cover;
 }
 
 /*Contenedor del texto*/
 .misionvision {
-    width: 808px;
-    height: 956px;
+    max-width: 808px;
+    width: 95%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +74,7 @@
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
-    font-size: 55px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -74,23 +85,58 @@
     color: #FAF2F2;
     text-align: justify;
     font-family: Montserrat;
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px;
-
+    line-height: 30px;
 }
 
 /*Separadores de la pagina*/
 .separador3 {
     width: 100%;
-    height: 42px;
+    height: 20px;
 }
 
 .linea1 {
-    width: 712px;
-    height: 3px;
+    width: 80%;
+    height: 2px;
     background: #FFF;
+}
+
+/* Media Query for larger screens (min-width: 768px) */
+@media (min-width: 768px) {
+    .misionvc {
+        flex-wrap: nowrap;
+        gap: 96px;
+        align-items: center; /* Make sure items are centered vertically */
+    }
+
+    .img13 {
+        max-width: 576px;
+        height: 720px;
+        margin-top: -13px;
+        flex-shrink: 0;
+    }
+
+    .titlemision {
+        font-size: 55px;
+    }
+
+    .misionp {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .linea1 {
+        width: 712px;
+        height: 3px;
+    }
+
+    .fondoazul {
+        height: 100%; /* Make it the height of the parent */
+        top: 0; /* Reset top */
+        transform: translateY(0); /* Reset transform */
+    }
 }
 
 /*Separadores de la pagina*/
