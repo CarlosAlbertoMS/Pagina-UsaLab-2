@@ -1,42 +1,72 @@
 /* Estilo para el contenido de la card */
 .informationCardContainer {
-    width: 1424px;
-    height: 688px;
+    width: 100%; /*1424*/
+    /*height: 50%;/*688*/
     display: flex;
-    position: relative;
+    /*position: relative;*/
+    flex-direction: row;
+    align-items: stretch;
+    margin: 0 auto;
+    overflow: hidden;
 }
+
+@media (max-width: 1400px) {
+    .informationCardContainer {
+    
+        width: 70%; 
+      
+    }
+}
+
 
 /* Estilo para la imagen de la card */
 .imagenInformationCard {
-    position: absolute; 
+    /*position: absolute; */
     left: 0;
     z-index: 1; /* Asegura que la imagen esté sobre el div de texto */
-    width: 552px;
+    width: 50%;/*552*/
     height: 697px;
     flex-shrink: 0;
     border-radius: var(--Corner-Large, 16px);
     object-fit: cover;
 }
 
+
 /* Estilo para el contenedor del texto de la card */
-.textoInformationCardContainer {
-    position: absolute;
+.textoInformationCardContainer { 
+    /*position: absolute;*/
     right: 0;
     z-index: 0; /* Asegura que el div de texto esté debajo de la imagen */
-    width: 907px;
+    width: 50%;
     height: 688px;
     flex-shrink: 0;
     border-radius: 0px 16px 16px 0px;
     background: #F9F9F9;
     display: flex;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
+
+    
 }
 
+@media (max-width: 1400px) {
+    .imagenInformationCard
+    .textoInformationCardContainer {
+        width: 45%;  /* Se reduce el ancho */
+        min-height: 300px;
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        /*border-radius: 0px 8px 8px 0px; /* Ajusta el borde para mantener el diseño */
+    }
+}
+
+.imagenInformationCard {
+    aspect-ratio: 16 / 9; /* Mantiene proporción ancho/alto */
+    max-height: 90vh; /* No ocupa más del 90% de la pantalla */
+}
 /* Estilo para el texto de la card */
 .textoInformationCard {
-    margin-left: 114px;
-    width: 713px;
+    margin-left: 5%;
+    width: 100%;
     flex-shrink: 0;
     color: #000;
     text-align: justify;
@@ -46,4 +76,14 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.32px;
+    overflow: hidden;
+}
+@media (max-width: 1400px) {
+    .textoInformationCard {
+        width: 90%;  /* Se reduce el ancho */
+        min-height: 500px;
+        font-size: 28px;
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        /*border-radius: 0px 8px 8px 0px; /* Ajusta el borde para mantener el diseño */
+    }
 }

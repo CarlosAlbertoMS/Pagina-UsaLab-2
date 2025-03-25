@@ -1,12 +1,20 @@
 /* Estilo de la Card de objetivos */
 .objetivosDeLaIncorporacionDeHciCard {
-    width: 1728px;
+    width: 1728px;/*1728*/
     height: 418px;
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
 }
-
+@media (max-width: 1400px) {
+    .objetivosDeLaIncorporacionDeHciCard {
+        width: 90%; /* Ajusta el ancho a un 85% para reducir el espacio a la derecha */        
+        margin-left: 5%; /* Añade un margen izquierdo para mantener el espacio */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 /* Estilo del titulo de la card */
 .objetivosDeLaIncorporacionDeHciCardTitle {
     margin-top: 40px;
@@ -20,6 +28,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+@media (max-width: 1400px) {
+    .objetivosDeLaIncorporacionDeHciCardTitle {
+        margin-left: 0%;/* Ajusta el margen para pantallas más pequeñas */
+    }
 }
 
 /* Estilo del texto de la card */
@@ -37,4 +51,10 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.32px;
+}
+
+@media (max-width: 1400px) {
+    .objetivosDeLaIncorporacionDeHciCardText {
+        margin-left: 0%;/* Ajusta el margen para pantallas más pequeñas */
+    }
 }

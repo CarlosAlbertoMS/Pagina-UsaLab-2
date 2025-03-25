@@ -1,6 +1,6 @@
 /******************************header*******************************/
 .container1 {
-    width: 1728px;
+    width: 100%;/*1728*/
     height: auto;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -9,7 +9,14 @@
     overflow: hidden;
     animation: aparecer 1s forwards;
 }
-
+@media (max-width: 1400px) {
+    .container1{
+        width: 100%;
+        
+        
+       /* text-align: left;/* Ajusta el margen para pantallas más pequeñas */
+    }
+}
 @keyframes aparecer {
     to {
         opacity: 1.5;
@@ -25,7 +32,12 @@
     flex-direction: row;
     justify-content: space-between;
 }
-
+@media (max-width: 1300px) {
+    .header{
+        width: 80%;
+        /*text-align: left;/* Ajusta el margen para pantallas más pequeñas */
+    }
+}
 .logoutm {
     width: 128px;
     height: 128px;
@@ -69,7 +81,12 @@
     display: flex;
     justify-content: space-between;
 }
-
+@media (max-width: 1400px) {
+    .navbar1{
+        width: 10%;
+        /*text-align: left;/* Ajusta el margen para pantallas más pequeñas */
+    }
+}
 /*Seccion de inicio*/
 .inicio {
     display: flex;
@@ -429,7 +446,11 @@
     margin-bottom: -384px;
     animation: titulousalab 1.5s forwards;
 }
-
+@media (max-width:1400px){
+    .titulousalab{
+        width: 100%;
+    }
+}
 @keyframes titulousalab {
     to {
         margin-bottom: 104px;
@@ -439,6 +460,12 @@
 .img1{
     background: rgba(0, 0, 0, 0.30);
     filter: brightness(50%);
+}
+@media (max-width:1400px){
+    .img1{
+        width: 100%;
+        height: 50%;
+    }
 }
 
 .titulousalabtxt {
@@ -452,18 +479,32 @@
     line-height: 40px;
     letter-spacing: 0.8px;
 }
+@media (max-width:1400px){
+    .titulousalabtxt{
+        
+        font-size: 70px;
+    }
+}
 
 .contenidousalab {
-    width: 1728px;
-    height: 248px;
+    width: 100%;/*1728*/
+    height: 50%;/*248*/
     display: flex;
     margin-bottom: -288px;
-    margin-left: -260px;
+    margin-left: 0px;
     flex-shrink: 0;
     background: rgba(192, 192, 192, 0.30);
     justify-content: center;
     align-items: center;
     animation: contenidousalab 1.5s forwards;
+}
+
+@media (max-width:1400px){
+    .contenidousalab{
+        width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+        height: 50%;
+        justify-content: center; /* Mantiene el contenido centrado */
+    }
 }
 
 @keyframes contenidousalab {
@@ -474,8 +515,8 @@
 }
 
 .contenidousalabtxt {
-    width: 1392px;
-    height: 152px;
+    width: 100%;/*1392*/
+    height: 50%; /*152*/
     flex-shrink: 0;
     color: #FFFCFC;
     text-align: justify;
@@ -486,7 +527,14 @@
     line-height: 40px;
     letter-spacing: 0.32px;
 }
-
+@media (max-width:1400px){
+    .contenidousalabtxt{
+        width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+        height: 50%;
+        justify-content: center; /* Mantiene el contenido centrado */
+        font-size: 25px;
+    }
+}
 /********************************************************footer**************************************************************/
 footer {
     width: 1728px;

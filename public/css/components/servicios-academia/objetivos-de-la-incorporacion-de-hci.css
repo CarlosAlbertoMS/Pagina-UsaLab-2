@@ -18,7 +18,12 @@
     line-height: normal;
     letter-spacing: 0.55px;
 }
-
+@media (max-width: 1300px) {
+    .objetivosDeLaIncorporacionDeHciTitle{
+        width: 80%;
+        text-align: left;/* Ajusta el margen para pantallas más pequeñas */
+    }
+}
 /* Estilo del conteedor de las cards de objetivos */
 .cardsObjetivosContainer {
     margin-top: 80px;

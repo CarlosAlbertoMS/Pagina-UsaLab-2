@@ -34,13 +34,20 @@
 }
 
 .pasosParaReservacionCardsContainer {
-    width: 1568px;
+    width: 100%;
     height: 629px;
     display: flex;
     overflow-x: hidden;
     gap: 40px;
     box-sizing: border-box;
-    margin-left: 160px;
+    margin-left: 5%;
+}
+
+@media (max-width: 1400px){
+    .pasosParaReservacionCardsContainer{
+        width: 80%;
+    }
+
 }
 
 /* Mostrar la barra de desplazamiento al hacer hover */
@@ -50,7 +57,7 @@
 
 /* Estilo de las cards de la subsección "Pasos para reservación" */
 .pasoParaReservacionCard {
-    width: 645px;
+    width: 38%;
     height: 599px;
     flex-shrink: 0;
     border-radius: 16px;
@@ -60,6 +67,7 @@
     align-items: center;
     gap: 28px;
 }
+
 
 /* Estilo de número de paso */
 .pasoDeReservacion {
@@ -94,4 +102,12 @@
     font-weight: 400;
     line-height: normal;
     width: 568px;
+}
+
+@media (max-width: 1400px){
+    .pasoParaReservacionCardText{
+        font-size: 28px;
+        width: 90%;
+    }
+
 }

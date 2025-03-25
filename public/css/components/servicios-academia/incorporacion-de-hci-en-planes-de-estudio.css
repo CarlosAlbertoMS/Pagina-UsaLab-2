@@ -6,6 +6,13 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+@media (max-width: 1300px) {
+    .incorporacionDeHciEnPlanesDeEstudioContainer {
+        width: 1000px; /* Se ajusta al ancho de la pantalla */
+        height: 982px; /* Altura automática */
+        flex-wrap: wrap; /* Permitir que los elementos se acomoden en varias líneas */
+    }
+}
 
 /* Estilo del titulo de la sección */
 .incorporacionDeHciEnPlanesDeEstudioTitle {
