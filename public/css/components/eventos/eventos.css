@@ -3,11 +3,11 @@ body {
 }
 
 .carousel {
-    border: solid yellow 5px;
+    border: solid darkcyan 5px;
 }
 
 .carousel-inner {
-    border: solid orange 5px;
+    border: solid darkgreen 5px;
     margin: auto;
 }
 
