@@ -13,11 +13,18 @@
 @media (max-width: 1400px) {
     .informationCardContainer {
     
-        width: 70%; 
+        width: 90%; 
       
     }
 }
 
+@media (min-width: 1400px) {
+    .informationCardContainer {
+    
+        width: 90%; 
+      
+    }
+}
 
 /* Estilo para la imagen de la card */
 .imagenInformationCard {
@@ -83,6 +90,16 @@
         width: 90%;  /* Se reduce el ancho */
         min-height: 500px;
         font-size: 28px;
+        height: auto; /* Permite que la altura se ajuste automáticamente */
+        /*border-radius: 0px 8px 8px 0px; /* Ajusta el borde para mantener el diseño */
+    }
+}
+
+@media (min-width: 1400px) {
+    .textoInformationCard {
+        width: 90%;  /* Se reduce el ancho */
+        
+        
         height: auto; /* Permite que la altura se ajuste automáticamente */
         /*border-radius: 0px 8px 8px 0px; /* Ajusta el borde para mantener el diseño */
     }

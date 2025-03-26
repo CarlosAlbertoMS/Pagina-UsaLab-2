@@ -1,6 +1,6 @@
 /* Estilos para el contenedor de la sección */
 .accesoALaboratorioContainer {
-    width: 1728px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -45,7 +45,7 @@
 
 @media (max-width: 1400px){
     .pasosParaReservacionCardsContainer{
-        width: 80%;
+        width: 90%;
     }
 
 }
@@ -104,7 +104,7 @@
     width: 568px;
 }
 
-@media (max-width: 1400px){
+@media (max-width: 1500px){
     .pasoParaReservacionCardText{
         font-size: 28px;
         width: 90%;

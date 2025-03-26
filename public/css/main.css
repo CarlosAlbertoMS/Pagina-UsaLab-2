@@ -1,22 +1,21 @@
-/******************************header*******************************/
+
+
 .container1 {
     width: 100%;/*1728*/
+    max-width: 1728px; 
     height: auto;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: auto;
+    margin: 0 auto;
     opacity: 0;
     overflow: hidden;
     animation: aparecer 1s forwards;
+    box-sizing: border-box;
 }
-@media (max-width: 1400px) {
-    .container1{
-        width: 100%;
-        
-        
-       /* text-align: left;/* Ajusta el margen para pantallas más pequeñas */
-    }
-}
+
+
+
+
 @keyframes aparecer {
     to {
         opacity: 1.5;
@@ -24,7 +23,7 @@
 }
 
 .header {
-    width: 1728px;
+    width: 100%;
     height: 152px;
     flex-shrink: 0;
     display: flex;
@@ -32,12 +31,7 @@
     flex-direction: row;
     justify-content: space-between;
 }
-@media (max-width: 1300px) {
-    .header{
-        width: 80%;
-        /*text-align: left;/* Ajusta el margen para pantallas más pequeñas */
-    }
-}
+
 .logoutm {
     width: 128px;
     height: 128px;
@@ -74,19 +68,14 @@
 /**********************Barra de novegacion****************************/
 
 .navbar1 {
-    width: 1728px;
+    width: 100%;
     height: 56px;
     flex-shrink: 0;
     background: #06052D;
     display: flex;
     justify-content: space-between;
 }
-@media (max-width: 1400px) {
-    .navbar1{
-        width: 10%;
-        /*text-align: left;/* Ajusta el margen para pantallas más pequeñas */
-    }
-}
+
 /*Seccion de inicio*/
 .inicio {
     display: flex;
@@ -500,6 +489,13 @@
 }
 
 @media (max-width:1400px){
+    .contenidousalab{
+        width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+        height: 50%;
+        justify-content: center; /* Mantiene el contenido centrado */
+    }
+}
+@media (min-width:1400px){
     .contenidousalab{
         width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
         height: 50%;

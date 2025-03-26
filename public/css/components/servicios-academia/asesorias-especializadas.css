@@ -9,12 +9,7 @@
     justify-content: center;
     align-content: flex-start;
 }
-@media (max-width: 1400px){
-    .asesoriasEspecializadasContainer{
-        margin-left: 5%;
-        width: 100%;
-    }
-}
+
 /* Estilo del titulo de la sección */
 .asesoriasEspecializadasTitle {
     width: 100%;
@@ -48,16 +43,10 @@
     width: 100%;
     height: 697px;
     display: flex;
-    gap: 18px;
+    gap: 50px;
     box-sizing: border-box;
 }
-@media (max-width: 1400px) {
-    .comoSolicitarAsesoriasCardsContainer {
-        width: 100%;
-        gap: 28px;
-       
-    }
-}
+
 /* Estilo de las cards de la subsección "¿Qué ofrecemos?" */
 .comoSolicitarAsesoriasCard {
     width: 30%;
@@ -70,6 +59,7 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;
+    margin: 0 auto;
 }
 
 /* Estilos de la figura de la card */
@@ -78,15 +68,11 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     position: absolute;
     bottom: -9px;   /* El SVG está mal hecho */
-    width: 100%;
+    width: 10%;
+    margin-left: 0 ;
+    left: 0;
 }
-@media (max-width: 1400px) {    
-    .comoSolicitarAsesoriasCardFigure  {
-        width: 10%;   
-        left: 0;    
-       
-    }
-}
+
 /* Estilo para el titulo de la card */
 .comoSolicitarAsesoriasCardTitle {
     width: 380px;
@@ -103,7 +89,7 @@
 
 /* Estilo para el contenido de la card */
 .comoSolicitarAsesoriasCardContent {
-    width: 100%;
+    width: 80%;
     color: #FFF;
     font-family: Montserrat;
     font-size: 32px;
@@ -114,11 +100,4 @@
     position: absolute;
     bottom: 48px;
     left: 107px;
-}
-@media (max-width: 1400px) {
-    .comoSolicitarAsesoriasCardContent  {
-        width: 90%;      
-        font-size: 28px; 
-       
-    }
 }
