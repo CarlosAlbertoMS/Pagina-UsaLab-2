@@ -2,8 +2,8 @@
 
 /* Contenedor para la sección "Investigaciones más destacadas" */
 .investigaciones-mas-destacadas-container {
-    width: 1728px;
-    height: 1483px;
+    width: 100%;
+    height: 100%;
     display: grid;
     gap: 80px;
 }
