@@ -16,7 +16,7 @@
 
 /*Fondo del contenedor azul*/
 .fondoazul {
-    width: 1368px;
+    width: auto; /*modificado*/
     height: 1143px;
     flex-shrink: 0;
     position: absolute;
