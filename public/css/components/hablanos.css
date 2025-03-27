@@ -1,79 +1,109 @@
 /**************** SECCIÓN: HÁBLANOS DE TU PROYECTO ****************/
 
-/* Contenedor de la sección "Háblanos de tu proyecto" */
+/* Contenedor de la sección */
 .hablanosContainer {
-    width: 1728px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 156px;
+    margin-bottom: 10vh;
+    padding: 0 5%;
 }
 
-/* Subcontenedor de la sección "Hablanos de tu proyecto" */
+/* Subcontenedor */
 .hablanos {
     display: flex;
-    width: 1185px;
-    height: 360px;
+    max-width: 90%;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 80px;
-    flex-shrink: 0;
+    gap: 5vh;
 }
 
-/* Titulo "Háblanos de tu proyecto" */
+/* Título */
 .hablanos-title {
-    width: 707px;
-    height: 56px;
-    flex-shrink: 0;
+    max-width: 80%;
     color: #06052D;
     text-align: center;
     font-family: Montserrat;
-    font-size: 55px;
-    font-style: normal;
+    font-size: 3vw;
     font-weight: 600;
-    line-height: normal;
 }
 
 /* Texto de la sección */
 .hablanos-text {
-    width: 1185px;
-    height: 80px;
-    flex-shrink: 0;
+    max-width: 90%;
     color: #000;
     text-align: center;
     font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-size: 2vw;
 }
 
-/* Botón "Hablemos" */
+/* Botón */
 .hablanos-button {
-    width: 272px;
-    height: 64px;
-    flex-shrink: 0;
-    border-radius: var(--Corner-Full, 1000px);
+    width: 15vw;
+    height: 8vh;
+    border-radius: 50px;
     background: #06052D;
     display: flex;
-    /* width: 176px;
-    height: 32px; */
-    flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
+    align-items: center;
     color: #FFF;
-    text-align: center;
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    transition: width 1.0s ease, height 1.0s ease, font-size 1.0s ease;
+    font-size: 2vw;
+    transition: all 0.3s ease;
 }
 
-.hablanos:hover .hablanos-button {
-    width: 308.7px;
-    height: 66px;
-    font-size: 36px;
+.hablanos-button:hover {
+    width: 16vw;
+    height: 9vh;
+    font-size: 2.2vw;
+}
+
+/* 🔹 MEDIA QUERIES */
+
+/* 📱 Móviles */
+@media (max-width: 768px) {
+    .hablanos-title {
+        font-size: 6vw;
+    }
+
+    .hablanos-text {
+        font-size: 4vw;
+    }
+
+    .hablanos-button {
+        width: 40vw;
+        height: 10vh;
+        font-size: 4vw;
+    }
+
+    .hablanos-button:hover {
+        width: 45vw;
+        height: 11vh;
+        font-size: 4.2vw;
+    }
+}
+
+/* 🖥 Pantallas grandes */
+@media (min-width: 1200px) {
+    .hablanos-title {
+        font-size: 55px;
+    }
+
+    .hablanos-text {
+        font-size: 32px;
+    }
+
+    .hablanos-button {
+        width: 272px;
+        height: 64px;
+        font-size: 32px;
+    }
+
+    .hablanos-button:hover {
+        width: 308.7px;
+        height: 66px;
+        font-size: 36px;
+    }
 }
