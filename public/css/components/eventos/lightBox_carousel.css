@@ -7,7 +7,6 @@
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    border: solid lightblue 5px;
 }
 
 .tipografiaImageText {
@@ -19,7 +18,6 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    border: solid lightpink 5px;
 }
 
 /* --------- Animaciones del carousel --------- */
@@ -46,7 +44,7 @@
     height: 147px;
     transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
     position: absolute;
     right: 5%; /* Ajustar según diseño */
@@ -54,9 +52,9 @@
     transform: translateY(-50%) translateX(20%); /* Desplazamiento inicial */
     text-align: center;
     font-family: Montserrat;
-    font-size: 24px;
+    /* font-size: 24px; */
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: normal;
 }
 
@@ -97,16 +95,16 @@
 }
 
 .carousel-fade .carousel-item {
-    transition: opacity .3s ease-in-out; /* Reduced from default .6s */
+    transition: opacity .4s ease-in-out; /* Reduced from default .6s */
 }
 
-.carousel-fade .carousel-item.active.item {
-    transition: opacity .3s ease-in-out; /* Reduced from default .6s */
+.carousel-fade .carousel-item .active.item {
+    transition: opacity .6s ease-in-out; /* Reduced from default .6s */
 }
 
-.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .-next.carousel-item-start,
 .carousel-fade .carousel-item-prev.carousel-item-end {
-    transition: opacity .3s ease-in-out; /* Reduced from default .6s */
+    transition: opacity .6s ease-in-out; /* Reduced from default .6s */
 }
 
 .carousel-indicators {

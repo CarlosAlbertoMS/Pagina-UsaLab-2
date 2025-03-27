@@ -37,12 +37,18 @@
 }
 
 /************************Estilo para el contenedor de toda la subseccion profesores titulo y cards *********************/
-.contenedorProfesores {
+/* .contenedorProfesores {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 0px;
+} */
+.contenedorProfesores {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    width: 95%;
 }
 
 /************************Estilo para el contenedor de toda la subseccion profesores cards *********************/

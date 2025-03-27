@@ -32,7 +32,7 @@
 
 .event-card {
     position: relative;
-    width: 45%; 
+    width: 40%; 
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -42,6 +42,7 @@
     border-radius: var(--Corner-Medium, 12px);
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 0 1.5rem 2rem 1.5rem;
 }
 
 .event-card::before {
@@ -51,7 +52,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(128, 135, 150, 0.4);
+    background: rgba(120, 135, 150, 0.25);
     z-index: 0;
     border-radius: 8px;
 }
@@ -79,7 +80,6 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.55px;
-    padding: 0 0 2rem 2rem
 }
 
 .title-event-card, .text-event-card{
@@ -96,5 +96,9 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.32px;
-    padding: 0 2rem 2rem 2rem
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    background-color: rgba(255, 255, 255, 0.5);
 }

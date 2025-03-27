@@ -27,21 +27,21 @@
                                         lugar="Second slide"
                                         statusCarouselItem=""
                                         imagen="{{ asset('img/image2.png') }}"
-                                        titulo="Tendencias emergentes en la interacción humano-computadora"
+                                        titulo="Tendencias emergentes en la <br> interacción humano-computadora"
                                         texto="Estas nuevas tecnologías de realidad virtual cambiarán la forma en la que se diseñan las interfaces de usuario e, incluso, la forma en la que se interactúe con los sistemas al igual que lo hicieron en su momento los teléfonos inteligentes" />
 
           <x-eventos.light-box_carousel diapositiva="slide-3"
                                         lugar="Third slide"
                                         statusCarouselItem=""
                                         imagen="{{ asset('img/image3.png') }}"
-                                        titulo="Desafíos y soluciones en la usabilidad de aplicaciones móviles"
+                                        titulo="Desafíos y soluciones en la <br> usabilidad de aplicaciones móviles"
                                         texto="Existen una variedad de desafíos en todo el ciclo de vida del desarrollo de aplicaciones móviles. Estos van desde elegir el mejor enfoque para desarrollar la aplicación, hasta crear una aplicación que sea lo suficientemente buena para destacarse de la competencia." />
                                       
           <x-eventos.light-box_carousel diapositiva="slide-4"
                                         lugar="Fourth slide"
                                         statusCarouselItem=""
                                         imagen="{{ asset('img/image4.png') }}"
-                                        titulo="Como mejorar la retención de usuarios en aplicaciones móviles"
+                                        titulo="Como mejorar la retención de <br> usuarios en aplicaciones móviles"
                                         texto="Saber cómo retener usuarios en una app es igual o más importante que saber atraerlos. Para ello es necesario crear las estrategias adecuadas que permitan desarrollar nuevas formas de conectar con los usuarios y crear así relaciones a largo plazo." />                              
         </div>
       
@@ -60,8 +60,7 @@
         <div class="contenedorSubtituloConferencistas">
             <div class="subtituloConferencistas">Conferencistas</div>
         </div>
-        <div class="contenedorCards">
-
+        <div class="contenedorCardsEventos">
             <x-eventos.cards-eventos color="rgb(79, 158, 190)" imagen="{{ asset('photos/Ing. Carlos Alberto.png') }}"
                 titulo="Ing. Carlos Alberto Martínez Sandoval" />
 
