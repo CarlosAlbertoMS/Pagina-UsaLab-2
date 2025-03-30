@@ -2,10 +2,10 @@
 
 /* Contenedor de la sección "Háblanos de tu proyecto" */
 .hablanosContainer {
-    width: 1728px;
+    width: 1358px;
     display: flex;
     justify-content: center;
-    margin-bottom: 156px;
+    margin-bottom: 256px;
 }
 
 /* Subcontenedor de la sección "Hablanos de tu proyecto" */

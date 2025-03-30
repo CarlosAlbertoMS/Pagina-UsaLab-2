@@ -1,12 +1,11 @@
 /**************** SECCIÓN: PUBLICACIONES ****************/
 
-/* Contenedor de la sección "Publicaciones" */
-.publicaciones-container {
-    width: 1728px;
-    height: 1180px;
-    display: grid;
-}
-
+    .publicaciones-container {
+        width: 100%;
+        max-width: 1728px;
+        height: 1180px;
+        display: grid;
+    }   
 /* Titulo "Publicaciones" */
 .publicaciones-title {
     justify-self: center;
