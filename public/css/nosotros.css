@@ -1,5 +1,5 @@
 .container1 {
-    border: solid peru 10px;
+    /*border: solid peru 10px;*/
     box-sizing: border-box;
 }
 
@@ -24,15 +24,19 @@
 
 /*Fondo del contenedor azul*/
 .fondoazul {
-    width: 90%; /* Adjust width as needed */
+    width: 90%;
+    /* Adjust width as needed */
     /* Remove fixed height */
     position: absolute;
     background: #06052D;
     z-index: 1;
-    top: 50%; /* Vertically center the background */
-    transform: translateY(-50%); /* Adjust for the top: 50% */
+    top: 50%;
+    /* Vertically center the background */
+    transform: translateY(-50%);
+    /* Adjust for the top: 50% */
     /* You might need to adjust these values based on your exact layout */
-    height: auto; /* Let the height be determined by content */
+    height: auto;
+    /* Let the height be determined by content */
 }
 
 /*Contenedor de los elementos*/
@@ -47,7 +51,8 @@
     gap: 40px;
     z-index: 2;
     margin-left: 0;
-    padding: 40px 0; /* Add some vertical padding to .misionvc */
+    padding: 40px 0;
+    /* Add some vertical padding to .misionvc */
 }
 
 /*Imagen Mario*/
@@ -108,7 +113,8 @@
     .misionvc {
         flex-wrap: nowrap;
         gap: 96px;
-        align-items: center; /* Make sure items are centered vertically */
+        align-items: center;
+        /* Make sure items are centered vertically */
     }
 
     .img13 {
@@ -133,9 +139,12 @@
     }
 
     .fondoazul {
-        height: 100%; /* Make it the height of the parent */
-        top: 0; /* Reset top */
-        transform: translateY(0); /* Reset transform */
+        height: 100%;
+        /* Make it the height of the parent */
+        top: 0;
+        /* Reset top */
+        transform: translateY(0);
+        /* Reset transform */
     }
 }
 
@@ -278,12 +287,12 @@
     font-weight: 400;
     line-height: normal;
 }
-
+/*
 .trayectoriaContent {
     width: 1754px;
     height: 969.627px;
     flex-shrink: 0;
-}
+}*/
 
 /*Contenido del carrusel Trayectoria*/
 .contenidotray {
@@ -628,78 +637,112 @@
 }
 
 /*Contenedor hablanos*/
+/* 🔹 Contenedor hablanos */
+
+.hablanosContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* 🔹 Centra el contenido */
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Evita el desplazamiento horizontal */
+}
+
+/* Ajusta los contenedores para que se adapten sin forzar un tamaño específico */
+.container1 {
+    max-width: 1750px;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media query para tamaños más pequeños */
+@media screen and (max-width: 1200px) {
+    .container1 {
+        width: 95%;
+    }
+}
+
 .hablanosContainer {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-/*Contenedor texto hablanos*/
 .hablanos {
+    max-width: 90%;
+    width: 100%;
+    height: auto;
     display: flex;
-    width: 1185px;
-    height: 360px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 80px;
-    flex-shrink: 0;
+    gap: 5vw;
+    text-align: center;
 }
 
-/*Titulo hablanos*/
-.hablanos-title {
-    width: 707px;
-    height: 56px;
-    flex-shrink: 0;
-    color: #06052D;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 55px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+/* 🔹 Media query para evitar desplazamiento lateral en pantallas pequeñas */
+@media screen and (max-width: 1200px) {
+    .container1 {
+        width: 90%;
+        /* Se ajusta mejor en pantallas pequeñas */
+    }
+
+    .hablanos {
+        max-width: 95%;
+    }
 }
+
+/* 🔹 Para evitar el desplazamiento lateral en todo el sitio */
+html,
+body {
+    overflow-x: hidden;
+}
+
 
 /*Texto hablanos*/
 .hablanos-text {
+    max-width: 90%;
     width: 1185px;
-    height: 80px;
-    flex-shrink: 0;
+    height: auto;
     color: #000;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(18px, 3vw, 32px);
     font-weight: 400;
-    line-height: normal;
 }
 
 /*Boton hablanos*/
 .hablanos-button {
     width: 272px;
     height: 64px;
-    flex-shrink: 0;
-    border-radius: var(--Corner-Full, 1000px);
+    border-radius: 1000px;
     background: #06052D;
     display: flex;
-    /* width: 176px;
-    height: 32px; */
-    flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
+    align-items: center;
     color: #FFF;
-    text-align: center;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(16px, 2vw, 32px);
     font-weight: 400;
-    line-height: normal;
-    transition: width 1.0s ease, height 1.0s ease, font-size 1.0s ease;
+    transition: width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
 }
 
 .hablanos:hover .hablanos-button {
     width: 308.7px;
     height: 66px;
-    font-size: 36px;
+    font-size: clamp(18px, 2.5vw, 36px);
 }
