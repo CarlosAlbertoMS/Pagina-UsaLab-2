@@ -145,7 +145,7 @@
 
           <!-- Seccion formacion academica -->
           <div class="formacion">
-            <div onclick="window.location.href='{{ url('/academica') }}'" class="navbartxt">Formación Académica</div>
+            <div onclick="window.location.href='{{ url('/academica') }}'" class="navbartxt">Academia</div>
             <div class="formacionCont">
               <div onclick="window.location.href='{{ url('/academica#pruebausalab') }}'" class="facontent">
                 <div class="navbartxt">Pruebas de Usabilidad</div>
