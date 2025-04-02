@@ -5,25 +5,13 @@
     height: auto;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
     margin: auto;
     opacity: 0;
     overflow: hidden;
     animation: aparecer 1s forwards;
 }
 
-@media (min-width: 1358px) and (min-height: 878px) {
-    .container1 {
-    width: 1768px; /* Fijamos el ancho a 1768px */
-    max-width: 100%; /* Evita que se desborde en pantallas más pequeñas */
-    height: auto;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: auto;
-    opacity: 0;
-    overflow: hidden;
-    animation: aparecer 1s forwards;
-    }
+
 
     .titulousalab{
         display: flex;
@@ -130,7 +118,7 @@
 /************ESTILOS GENERALES NAVBAR**************/
 .navbar1 {
     width: 100%;
-    height: 56px;
+    height: 100%;
     flex-shrink: 0;
     background: #06052D;
     display: flex;

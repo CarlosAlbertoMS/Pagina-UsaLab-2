@@ -2,7 +2,7 @@
 
 /* Contenedor de la sección */
 .hablanosContainer {
-    width: 1358px;
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 256px;
