@@ -13,3 +13,9 @@
     height: 2px;
     background: #D4D4D4;
 }
+@media (max-width: 1300px) {
+.servicios-academia-container {
+    max-width: 100%; /* Se asegurará de que no se desborden */
+    width: 100%; /* Asegura que el elemento ocupe el 100% de su contenedor */
+}
+}

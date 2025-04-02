@@ -1,11 +1,11 @@
-/****Seccion Clientes***/
+/**** Sección Clientes ***/
 .clientesdiv {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-/***** Titulo "Clientes" ****/
+/***** Título "Clientes" ****/
 .clientes-title {
     width: 240px;
     height: 56px;
@@ -19,31 +19,45 @@
     line-height: normal;
 }
 
-/***** Contenido imagenes "Clientes" *****/
+/***** Contenedor de las imágenes "Clientes" *****/
 .clientesContainer {
-    width: 100%;
+    width: 600%;
     display: flex;
     justify-content: center;
 }
 
 .clientes-container {
-    width: 1697px;
-    height: 488px;
+    width: 650%;
+    height: 500px; /* Aumentar altura */
     overflow: hidden;
     position: relative;
+    display: flex;
 }
 
-/***** Imagenes Clientes *****/
+/***** Imágenes Clientes (Corrección) *****/
 .img-wrapper {
+    width: 200%;
+    height: 500px;
+    background: url('../../../img/clientes-1.png') repeat-x;
+    position: relative;
+    animation: move 80s linear infinite;
+}
+
+.img-wrapper::after {
+    content: "";
     width: 100%;
     height: 100%;
-    background-image: url(../../../img/clientes-1.png);
-    background-size: auto 100%;
-    animation: move 35s linear infinite;
+    background: url('../../../img/clientes-1.png') repeat-x;
+    position: absolute;
+    top: 0;
+    left: 100%;
 }
 
 @keyframes move {
+    from {
+        transform: translateX(0);
+    }
     to {
-        background-position: 4998px;
+        transform: translateX(-50%);
     }
 }
