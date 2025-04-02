@@ -43,7 +43,7 @@
 /* Estilo para el contenedor para los términos y condiciones */
 .terminosYBotonContainer {
     display: flex;
-    gap: 12px;
+    gap: 30px;
     align-items: center;
 }
 

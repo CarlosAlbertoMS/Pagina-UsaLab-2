@@ -24,10 +24,11 @@
 
 /************ Contenedor de los eventos ***************/
 .eventosContainer {
-    width: 1010px;
+    width: 100%;
     height: 520px;
     overflow-x: auto;
-    scrollbar-width: none;
+    overflow-y: hidden;
+    scrollbar-width: auto;
     margin-left: 712px;
     margin-top: -327px;
     display: flex;
@@ -35,13 +36,18 @@
 }
 
 .eventosContainer::-webkit-scrollbar {
-    display: none;
+    height: 8pxs;
 }
 
 .scroll-container {
     display: inline-block;
 }
 
+.eventosContainer::after {
+    content: "";
+    display: block;
+    min-width: 50vw;
+}
 /************* Tarjetas ultimos eventos *************/
 .event-card {
     display: flex;

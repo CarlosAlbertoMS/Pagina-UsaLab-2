@@ -1,16 +1,11 @@
 /* CONTENEDOR DE LA VENTANA INVESTIGACIÓN */
-.investigacion-window-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* width: 1728px; */
-    gap: 160px;
-}
 
-@media (min-width: 1358px) and (min-height: 878px) {
+
     .investigacion-window-container {
-        gap: 100px; /* Cambia el espacio entre elementos si lo deseas */
-        max-width: 100%; /* Ajusta el ancho */
-        overflow-y: hidden;
+        gap: 10px; /* Cambia el espacio entre elementos si lo deseas */
+        width: 100%; /* Ajusta el ancho */
+        max-width: 1358px;
+        height: 100%;
     }
 
     .carousel-caption {
@@ -36,4 +31,4 @@
     padding: 10px; /* Opcional, para mejorar la legibilidad */
 }
 
-}
+/*}

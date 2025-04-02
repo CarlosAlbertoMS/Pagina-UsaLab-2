@@ -1,15 +1,17 @@
-/******************************header*******************************/
 
+/******************************header*******************************/
 .container1 {
     width: 100%;
     height: auto;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
     margin: auto;
     opacity: 0;
     overflow: hidden;
     animation: aparecer 1s forwards;
 }
+
 @media (min-width: 1358px) and (min-height: 878px) {
     .container1 {
     width: 1768px; /* Fijamos el ancho a 1768px */
@@ -22,6 +24,7 @@
     overflow: hidden;
     animation: aparecer 1s forwards;
     }
+
     .titulousalab{
         display: flex;
         width: 100%;
@@ -37,10 +40,10 @@
     text-align: center;
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
     font-family: Montserrat;
-    font-size: 80px;
+    font-size: 70px;
     font-style: normal;
     font-weight:900;
-    line-height: 40px;
+    line-height: 35px;
     letter-spacing: 0.8px;
 }
 .contenidousalab {
@@ -57,7 +60,7 @@
     width: 1268px; /* Fijamos el ancho a 1768px */
     max-width: 80%;
     max-height: 152px;
-    font-size: 28px;
+    font-size: 25px;
     line-height: 1.2;
     text-align: justify;
     color: #fcfeff;
@@ -68,9 +71,6 @@
     padding: 0;
     flex-shrink: 1;
     overflow: hidden; /* Evita que el texto se desborde */
-}
-
-
 }
 
 
@@ -129,6 +129,10 @@
 /**********************Barra de navegacion****************************/
 /************ESTILOS GENERALES NAVBAR**************/
 .navbar1 {
+    width: 100%;
+    height: 56px;
+    flex-shrink: 0;
+    background: #06052D;
     display: flex;
     flex-direction: row;
     align-items: center; 
@@ -258,7 +262,102 @@
     flex-direction: column;
 }
 
-/* Sub-submenús para "Servicios" (Industria y Academia) */
+
+  /* Texto de la barra de navegación */
+.navbartxt {
+    color: #FFF;
+    width: 192px;
+    padding: 13.5px 8.5px;
+    box-sizing: border-box;
+    display: block;
+    transition: background-color 0.5s ease;
+}
+
+.servicioacademiaCont .sracontent:hover {
+    background-color: #06052D;
+}
+
+.srcontent:hover .servicioacademiaCont {
+    display: flex;
+    flex-direction: column
+}
+
+/*Seccion investigaciones*/
+
+
+
+  /* Ajustes para pantallas pequeñas */
+@media (max-width: 1188px) {
+    .navbar1 {
+            flex-wrap: wrap;
+            justify-content: center;
+    }
+    .iniciotxt, .navbartxt {
+        font-size: 1.1rem;
+    }
+    .inicio{
+        margin-right: 0rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar1 {
+        justify-content: center;
+}
+.inicio,
+.acercade,
+.servicios,
+.investigaciones,
+.formacion,
+.eventos,
+.idioma {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .inicio{
+        margin-right: 0rem;
+    }
+}
+.separador {
+    height: 56px;
+    width: 100%;
+}
+
+.servicios {
+    position: relative;
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #06052D;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+}
+.servicios:hover {
+    background: #58A3C1;
+}
+
+  /* El primer submenú que sale de "Servicios" */
+.serviciosCont {
+    display: none;
+    position: absolute;
+    top: 100%;    /* Justo debajo del botón "Servicios" */
+    left: 0;
+    background: #A4C732;
+    z-index: 999; /* Evita que quede debajo de otros elementos */
+    flex-direction: column;
+    min-width: 200px;  /* Ajusta para que quepa todo el texto */
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+}
+
+/* Cuando se hace hover en el contenedor "Servicios", se muestra .serviciosCont */
+.servicios:hover .serviciosCont {
+    display: flex;
+}
 .srcontent {
     position: relative;
     padding: 0.5rem 1rem;
@@ -417,6 +516,11 @@
 
 /*************************************************/
 /***********************Carrusel*********************/
+
+.carousel-caption{
+    left: 0%;
+    right: 0%;
+}
 /*
 .titulousalab{
     display: flex;
@@ -428,18 +532,31 @@
     margin-bottom: -384px;
     animation: titulousalab 1.5s forwards;
 }
+
+@media (max-width:1400px){
+    .titulousalab{
+        width: 100%;
+    }
+}
 */
 @keyframes titulousalab {
     to {
         margin-bottom: 120px;
     }
 }
-
 .img1{
     background: rgba(0, 0, 0, 0.30);
+    width: 100%;
     filter: brightness(70%);
 }
-/*
+
+@media (max-width:1400px){
+    .img1{
+        width: 100%;
+        height: 50%;
+    }
+}
+
 .titulousalabtxt {
     color: #FFF;
     text-align: center;
@@ -451,29 +568,45 @@
     line-height: 40px;
     letter-spacing: 0.8px;
 }
+@media (max-width:1400px){
+    .titulousalabtxt{
+        
+        font-size: 70px;
+    }
+}
 
 .contenidousalab {
-    width: 1728px;
-    height: 248px;
+    width: 100%;/*1728*/
+    height: 50%;/*248*/
     display: flex;
     margin-bottom: -288px;
-    margin-left: -260px;
+    margin-left: 0px;
+
     flex-shrink: 0;
     background: rgba(192, 192, 192, 0.30);
     justify-content: center;
     align-items: center;
     animation: contenidousalab 1.5s forwards;
 }
-*/
+
+
+@media (max-width:1400px){
+    .contenidousalab{
+        width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+        height: 50%;
+        justify-content: center; /* Mantiene el contenido centrado */
+    }
+}
+
 @keyframes contenidousalab {
     to{
         margin-bottom: -20px;
     }
     
 }
-/*
+
 .contenidousalabtxt {
-    width: 1392px;
+    width: 90%;
     height: 152px;
     flex-shrink: 0;
     color: #FFFCFC;
@@ -485,11 +618,29 @@
     line-height: 40px;
     letter-spacing: 0.32px;
 }
-    */
+@media (max-width:1400px){
+    .contenidousalabtxt{
+        width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+        height: 50%;
+        justify-content: center; /* Mantiene el contenido centrado */
+        font-size: 25px;
+    }
+}
+    
+
+@keyframes contenidousalab {
+    to{
+        margin-bottom: -40px;
+    }
+    
+}
 
 /********************************************************footer**************************************************************/
 footer {
     width: 100%;
+    height: 580px;
+    flex-shrink: 0;
+    opacity: 0.95;
     padding: 2rem 4rem;           /* Espaciado interno */
     background: #06052D;
     display: flex;
