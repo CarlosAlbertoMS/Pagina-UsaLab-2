@@ -4,9 +4,9 @@
 .investigaciones-mas-destacadas-container {
     display: grid;
     width: 100%;
-    max-width: 1358px;
+  
     height: 100%;
-    min-height: 1222px; /* O bien height: auto; */
+
     display: grid;
     gap: 80px;
     margin-bottom: 80px;
