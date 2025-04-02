@@ -29,6 +29,8 @@
 
 /* Titulo de la subsección "¿Qué ofrecemos?" */
 .queOfrecemosTitle {
+    width: 100%;
+    text-align: center;
     margin-top: 80px;
     margin-bottom: 80px;
     color: #000;

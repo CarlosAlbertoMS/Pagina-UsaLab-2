@@ -9,6 +9,8 @@
 
 /* Estilos del titulo de la sección */
 .accesoALaboratorioTitle {
+    width: 100%;
+    text-align: center;
     margin-top: 160px;
     margin-bottom: 75px;
     color: #000;

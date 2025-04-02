@@ -1,6 +1,6 @@
 /* Estilos para el contenedor de la sección */
 .tecnicasDeEstudioDeUsabilidadContainer {
-    width: 1728px;
+    width: 100%;
     height: 1171px;
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +10,7 @@
 
 /* Contenedor del título de la sección */
 .tecnicasDeEstudioDeUsabilidadTitleContainer {
-    width: 1728px;
+    width: 100%;
     height: 324px;
     margin-bottom: 99px;
     background: url(../../../img/tecnicas-de-estudios-de-usabilidad.png) lightgray 50% / cover no-repeat;
@@ -22,7 +22,7 @@
 
 /* Estilo del titulo de la sección */
 .tecnicasDeEstudioDeUsabilidadTitle {
-    width: 1349px;
+    width: 100%;
     height: 134px;
     flex-shrink: 0;
     color: #FFF;
@@ -37,8 +37,8 @@
 
 /* Estilo del texto de la sección */
 .tecnicasDeEstudioDeUsabilidadText {
-    width: 1341px;
-    height: 195px;
+    width: 80%;
+    height: auto;
     margin-bottom: 80px;
     color: #000;
     text-align: center;
