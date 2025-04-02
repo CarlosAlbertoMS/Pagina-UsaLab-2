@@ -1,17 +1,21 @@
-/**************** SECCIÓN: INVESTIGACIONES MÁS DESTACADAS ****************/
+/*@media (min-width: 1358px) and (min-height: 878px) {
 
 /* Contenedor para la sección "Investigaciones más destacadas" */
 .investigaciones-mas-destacadas-container {
+    display: grid;
     width: 100%;
+    max-width: 1358px;
     height: 100%;
+    min-height: 1222px; /* O bien height: auto; */
     display: grid;
     gap: 80px;
+    margin-bottom: 80px;
 }
 
 /* Titulo "Investigaciones más destacadas" */
 .investigaciones-mas-destacadas-title {
     justify-self: center;
-    width: 932px;
+    
     height: 61px;
     flex-shrink: 0;
     color: #000;
@@ -24,7 +28,7 @@
 
 /* Contenedor para la investigación */
 .research-container {
-    width: 1728px;
+    width: 100%;
     height: 631px;
     display: flex;
     flex-wrap: wrap;
@@ -130,3 +134,5 @@
 #investigacion-2:hover .line, #investigacion-2:hover .descripcion-investigacion { 
     display: block;
 }
+
+/*}

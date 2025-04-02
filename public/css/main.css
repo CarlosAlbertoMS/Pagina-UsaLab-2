@@ -5,11 +5,11 @@
     height: auto;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: 0 auto;
+
+    margin: auto;
     opacity: 0;
     overflow: hidden;
     animation: aparecer 1s forwards;
-    box-sizing: border-box;
 }
 
 
@@ -28,10 +28,10 @@
     text-align: center;
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
     font-family: Montserrat;
-    font-size: 80px;
+    font-size: 70px;
     font-style: normal;
     font-weight:900;
-    line-height: 40px;
+    line-height: 35px;
     letter-spacing: 0.8px;
 }
 .contenidousalab {
@@ -48,7 +48,7 @@
     width: 1268px; /* Fijamos el ancho a 1768px */
     max-width: 80%;
     max-height: 152px;
-    font-size: 28px;
+    font-size: 25px;
     line-height: 1.2;
     text-align: justify;
     color: #fcfeff;
@@ -60,7 +60,6 @@
     flex-shrink: 1;
     overflow: hidden; /* Evita que el texto se desborde */
 }
-
 
 
 @keyframes aparecer {
@@ -253,11 +252,25 @@
   /* Texto de la barra de navegación */
 .navbartxt {
     color: #FFF;
-    font-family: Montserrat, sans-serif;
-    font-size: 1.2rem; 
-    font-weight: 500;
-    line-height: 1.2;
+    width: 192px;
+    padding: 13.5px 8.5px;
+    box-sizing: border-box;
+    display: block;
+    transition: background-color 0.5s ease;
 }
+
+.servicioacademiaCont .sracontent:hover {
+    background-color: #06052D;
+}
+
+.srcontent:hover .servicioacademiaCont {
+    display: flex;
+    flex-direction: column
+}
+
+/*Seccion investigaciones*/
+
+
 
   /* Ajustes para pantallas pequeñas */
 @media (max-width: 1188px) {

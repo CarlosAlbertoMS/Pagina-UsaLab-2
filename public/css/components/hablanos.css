@@ -2,10 +2,13 @@
 
 /* Contenedor de la sección */
 .hablanosContainer {
+    width: 1358px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 256px;
     max-width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 10vh;
     padding: 0 5%;
 }
 
