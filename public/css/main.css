@@ -9,7 +9,7 @@
     opacity: 0;
     overflow: hidden;
     animation: aparecer 1s forwards;
-}*/
+}
 @media (min-width: 1358px) and (min-height: 878px) {
     .container1 {
     width: 1768px; /* Fijamos el ancho a 1768px */
@@ -127,12 +127,12 @@
 }
 
 /**********************Barra de navegacion****************************/
-
+/************ESTILOS GENERALES NAVBAR**************/
 .navbar1 {
     display: flex;
     flex-direction: row;
     align-items: center; 
-    justify-content: space-between; /* "Inicio" a la izquierda y menu1 a la derecha */
+    justify-content: space-between;
     width: 100%;
     background: #06052D;
     padding: 0 2rem; 
@@ -142,9 +142,8 @@
     flex-wrap: wrap;
 }
 
-/* Sección de "Inicio" */
 .inicio {
-    margin-left: 0rem;
+    margin-left: 0;
     margin-right: 5rem;
     width: auto;
     display: flex;
@@ -168,7 +167,6 @@
     line-height: 1.2;
 }
 
-  /* Contenedor de los demás ítems */
 .menu1 {
     display: flex;
     flex-direction: row;
@@ -178,14 +176,12 @@
     flex-wrap: wrap;
 }
 
-  /* Estilo base para cada ítem del menú */
 .acercade,
 .servicios,
 .investigaciones,
 .formacion,
 .eventos,
 .idioma {
-    width: auto;
     padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
@@ -197,10 +193,6 @@
     position: relative;
 }
 
-.idioma{
-    color:#FFF;
-}
-
 .acercade:hover,
 .servicios:hover,
 .investigaciones:hover,
@@ -210,25 +202,33 @@
     background: #58A3C1;
 }
 
+.navbartxt {
+    color: #FFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
 /* Dropdowns para submenús */
 .acercadeCont,
 .serviciosCont,
 .investigacionesCont,
 .formacionCont,
 .eventosCont {
-    display: none;         
-    position: absolute;    
-    top: 100%;             /* Posicionado justo debajo del padre */
-    left: 0;               
-    background: #A4C732;   
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #A4C732;
     z-index: 999;
     flex-direction: column;
-    min-width: 180px;      
-    padding: 0.5rem 0;     
+    min-width: 180px;
+    padding: 0.5rem 0;
     box-sizing: border-box;
 }
 
-/* Estilos para cada item dentro del dropdown */
+/* Ítems dentro de los dropdowns */
 .adcontent,
 .srcontent,
 .incontent,
@@ -248,7 +248,7 @@
     background-color: #06052D;
 }
 
-  /* Mostrar el dropdown al hover */
+/* Mostrar dropdown al hover */
 .acercade:hover .acercadeCont,
 .servicios:hover .serviciosCont,
 .investigaciones:hover .investigacionesCont,
@@ -258,90 +258,10 @@
     flex-direction: column;
 }
 
-  /* Texto de la barra de navegación */
-.navbartxt {
-    color: #FFF;
-    font-family: Montserrat, sans-serif;
-    font-size: 1.2rem; 
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-  /* Ajustes para pantallas pequeñas */
-@media (max-width: 1188px) {
-    .navbar1 {
-            flex-wrap: wrap;
-            justify-content: center;
-    }
-    .iniciotxt, .navbartxt {
-        font-size: 1.1rem;
-    }
-    .inicio{
-        margin-right: 0rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar1 {
-        justify-content: center;
-}
-.inicio,
-.acercade,
-.servicios,
-.investigaciones,
-.formacion,
-.eventos,
-.idioma {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-    .inicio{
-        margin-right: 0rem;
-    }
-}
-.separador {
-    height: 56px;
-    width: 100%;
-}
-
-.servicios {
-    position: relative;
-    width: auto;
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: #06052D;
-    transition: background-color 0.5s ease;
-    cursor: pointer;
-}
-.servicios:hover {
-    background: #58A3C1;
-}
-
-  /* El primer submenú que sale de "Servicios" */
-.serviciosCont {
-    display: none;
-    position: absolute;
-    top: 100%;    /* Justo debajo del botón "Servicios" */
-    left: 0;
-    background: #A4C732;
-    z-index: 999; /* Evita que quede debajo de otros elementos */
-    flex-direction: column;
-    min-width: 200px;  /* Ajusta para que quepa todo el texto */
-    padding: 0.5rem 0;
-    box-sizing: border-box;
-}
-
-/* Cuando se hace hover en el contenedor "Servicios", se muestra .serviciosCont */
-.servicios:hover .serviciosCont {
-    display: flex;
-}
+/* Sub-submenús para "Servicios" (Industria y Academia) */
 .srcontent {
-    position: relative;     /* Importante para el sub-submenú */
-    padding: 0.5rem 1rem;  /* Espacio interno de cada opción */
+    position: relative;
+    padding: 0.5rem 1rem;
     transition: background-color 0.3s ease;
 }
 
@@ -353,8 +273,8 @@
 .servicioacademiaCont {
     display: none;
     position: absolute;
-    top: 0;       /* Se alinea en la parte superior del padre .srcontent */
-    left: 100%;   /* Se abre a la derecha del padre */
+    top: 0;
+    left: 100%;
     background: #58A3C1;
     z-index: 999;
     flex-direction: column;
@@ -363,24 +283,139 @@
     box-sizing: border-box;
 }
 
-/* Al hacer hover en .srcontent, se muestra el sub-submenú */
 .srcontent:hover .servicioindustriaCont,
 .srcontent:hover .servicioacademiaCont {
     display: flex;
 }
+
 .sricontent,
 .sracontent {
     display: block;
-    padding: 0.5rem 1rem; 
+    padding: 0.5rem 1rem;
     box-sizing: border-box;
     transition: background-color 0.3s ease;
 }
 
-/* Hover en cada opción */
 .sricontent:hover,
 .sracontent:hover {
     background-color: #06052D;
 }
+
+/*************************************************/
+/*********************MEDIA QUERYS****************************/
+
+@media (max-width: 1188px) {
+    .navbar1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .iniciotxt,
+    .navbartxt {
+        font-size: 1.1rem;
+    }
+    .inicio {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar1 {
+        justify-content: center;
+    }
+    .inicio,
+    .acercade,
+    .servicios,
+    .investigaciones,
+    .formacion,
+    .eventos,
+    .idioma {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .inicio {
+        margin-right: 0;
+    }
+    /* Para móviles, forzamos que los dropdowns se desplieguen en columna a ancho completo */
+    .acercadeCont,
+    .serviciosCont,
+    .investigacionesCont,
+    .formacionCont,
+    .eventosCont,
+    .servicioindustriaCont,
+    .servicioacademiaCont {
+        position: static;
+        display: none; /* Se mostrarán al hover o mediante toggle */
+        width: 150%; 
+        background: #2b6589;
+        margin-top: 0;
+        padding: 0.5rem 0;
+        box-sizing: border-box;
+        flex-direction: column;
+        border-top: 1px solid #FFF;
+        z-index: 999;
+    }
+    .acercade:hover,
+    .servicios:hover,
+    .investigaciones:hover,
+    .formacion:hover,
+    .eventos:hover,
+    .idioma:hover {
+        background: #06052D;
+    }
+    .adcontent:hover,
+    .srcontent:hover,
+    .incontent:hover,
+    .facontent:hover,
+    .evcontent:hover {
+        background-color: rgba(18, 14, 128, 0.205);
+    }
+    .adcontent,
+    .srcontent,
+    .incontent,
+    .facontent,
+    .evcontent {
+        border-bottom: 1px solid #7991e7;
+        padding: 0.75rem 1rem;
+    }
+    .adcontent:last-child,
+    .srcontent:last-child,
+    .incontent:last-child,
+    .facontent:last-child,
+    .evcontent:last-child {
+        border-bottom: none;
+    }
+    /* Para los sub-submenús, forzamos que se desplieguen en columna */
+    .srcontent:hover .servicioindustriaCont,
+    .srcontent:hover .servicioacademiaCont {
+        display: flex;
+        flex-direction: column;
+    }
+    .sricontent,
+    .sracontent {
+    width: 150%;           /* Asegura que cubra todo el ancho del contenedor */
+    justify-content: center;   /* Centra horizontalmente */
+    border-bottom: 1px solid #7991e7; /* Borde inferior para separar opciones */
+    padding: 0.75rem 1rem; /* Ajusta el espaciado interno */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    display: block;
+    text-align: center; 
+    }
+    .sricontent:hover,
+    .sracontent:hover {
+        background-color: #06052D;
+    }
+
+    .sricontent:last-child,
+    .sracontent:last-child {
+    border-bottom: none;
+    }
+}
+
+
+/*************************************************/
 /***********************Carrusel*********************/
 /*
 .titulousalab{
