@@ -1,9 +1,10 @@
 .contenedorConcursos{
     display: flex;
+    width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 160px;
 }
 
 .contenedorSubtituloConcursos{
@@ -24,15 +25,13 @@
 }
 
 .contenedorslider1 {
-    width: 1728px; 
-    height: 418px;
+    width: 100%;
     flex-shrink: 0;
     margin-top: 80px;
 }
 
 .contenedorslider2 {
-    width: 1728px; 
-    height: 418px;
+    width: 100%;
     flex-shrink: 0;
     margin-top: 80px;
     margin-bottom: 160px;
