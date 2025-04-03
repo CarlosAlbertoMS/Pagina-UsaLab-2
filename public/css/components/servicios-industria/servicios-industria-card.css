@@ -1,12 +1,13 @@
 /* Estilo de las cards */
 .serviciosIndustriaCard { 
     flex: 0 0 auto;
-    width: 626px;
+    width: 33%;
     height: 443px;
     background: #F9F9F9;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+ 
     justify-content: center;
 }
 

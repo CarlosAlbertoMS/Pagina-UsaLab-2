@@ -1,6 +1,6 @@
 /* Estilo del contenedor de la sección */
 .consultoriaEnUX-UIContainer {
-    width: 1728px;
+    width: 100%;
     height: 2135px;
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +23,7 @@
 
 /* Contenedor del subtítulo de la sección */
 .consultoriaEnUX-UISubtitleContainer {
-    width: 1728px;
+    width: 100%;
     height: 435px;
     margin-top: 89px;
     margin-bottom: 80px;
@@ -36,12 +36,12 @@
 
 /* Estilo del subtítulo de la sección */
 .consultoriaEnUX-UISubtitle {
-    width: 1560px;
+    width: 100%;
     height: 55px;
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
-    font-size: 55px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -70,7 +70,7 @@
     width: 100%;
     height: 473px;
     display: flex;
-    overflow-x: hidden; /* Ocultar la barra de desplazamiento por defecto */
+    overflow-y: scroll; /* Ocultar la barra de desplazamiento por defecto */
     gap: 6px;
     box-sizing: border-box;
 }

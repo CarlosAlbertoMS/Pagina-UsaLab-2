@@ -1,6 +1,6 @@
 /* Estilo del contenedor de la sección */
 .desarrolloDePrototiposContainer {
-    width: 1728px;
+    width: 100%;
     height: 2355px;
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +39,7 @@
 .creacion-de-prototipo {
     margin-top: 58px;
     margin-bottom: 128px;
-    width: 1728px;
+    width: 100%;
     height: 631px;
     flex-shrink: 0;
     display: flex;
