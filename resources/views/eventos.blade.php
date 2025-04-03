@@ -33,7 +33,8 @@
 
                 <!-- Titulo "Eventos -->
                 @section('tituloc')
-                    <br><br>Eventos
+                    <!-- <br><br> -->
+                    Eventos
                 @endsection
     
                     <!-- Descripción de la página Eventos -->
