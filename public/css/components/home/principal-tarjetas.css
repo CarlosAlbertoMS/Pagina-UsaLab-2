@@ -3,12 +3,13 @@
     display: flex;
     justify-content: center;
     gap: 24px;
+    width: 100%;
 }
 
 .card {
     display: flex;
-    width: 440px;
-    height: 664px;
+    width: 420px;
+    height: 644px;
     flex-direction: column;
     align-items: center;
     gap: 273px;
@@ -20,7 +21,7 @@
 
 .card-figure svg {
     width: 448px;
-    height: 290px;
+    height: 280px;
     flex-shrink: 0;
     opacity: 0.90;
     /* width: 100%;
@@ -28,7 +29,6 @@
     color: #A4C732;
     transition: color 1.0s ease;
 }
-
 .card:hover .card-figure svg {
     color: #4F9EBE;
 }

@@ -39,7 +39,7 @@
             <!-- Carrousel -->
             @section('img')
             <div class="carousel-item active">
-                <img class="d-block w-10 img1" src="{{ asset('photos/slide9.png') }}" alt="First slide">
+                <img class="d-block w-100 img1" src="{{ asset('photos/slide9.png') }}" alt="First slide">
             </div>
             @endsection
     
