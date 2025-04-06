@@ -1,8 +1,7 @@
 /* Estilo del contenedor de la sección */
 .asesoriasEspecializadasContainer {
     width: 100%;
-    max-width: 1728px;
-    min-height: 100vh;
+    height: auto;
     /*height: 1920px;*/
     display: flex;
     flex-wrap: wrap;
@@ -13,6 +12,7 @@
 /* Estilo del titulo de la sección */
 .asesoriasEspecializadasTitle {
     width: 100%;
+    height: auto;
     margin-top: 160px;
     margin-bottom: 80px;
     color: #000;
@@ -27,6 +27,7 @@
 
 /* Estilo del titulo de la subsección */
 .comoSolicitarAsesoriasTitle {
+    width: 100%;
     margin-top: 80px;
     margin-bottom: 80px;
     color: #000;
@@ -36,17 +37,23 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.55px;
+    text-align: center;
 }
 
 /* Contenedor de las cards de la subsección "¿Cómo Solicitar Asesorías?" */
 .comoSolicitarAsesoriasCardsContainer {
     width: 100%;
-    height: 697px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     box-sizing: border-box;
 }
-
+@media (min-width:2000px ){
+    .comoSolicitarAsesoriasCardsContainer{
+        width: 85%;
+    }
+}
 /* Estilo de las cards de la subsección "¿Qué ofrecemos?" */
 .comoSolicitarAsesoriasCard {
     width: 30%;
@@ -71,8 +78,9 @@
     position: absolute;
     margin-left: 0 ;
     left: 0;
-    width: 100%;
-    height: 100%;
+    margin-left: -3px;
+    width: 102%;
+    height: 102%;
 }
 
 
@@ -101,12 +109,13 @@
     line-height: normal;
     letter-spacing: 0.32px;
     position: absolute;
-    bottom: 48px;
-    left: 107px;
+    bottom: 40px;
+    left: 80px;
 }
-@media (max-width: 1560px){
+@media (max-width: 1200px){
     .comoSolicitarAsesoriasCardContent{
-        font-size: 24px;
-        left: 50px;
+        font-size: 20px;
+        left: 20px;
+        bottom: 10px;
     }
 }

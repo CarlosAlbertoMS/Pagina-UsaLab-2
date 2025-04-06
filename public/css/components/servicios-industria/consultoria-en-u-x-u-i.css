@@ -1,7 +1,7 @@
 /* Estilo del contenedor de la sección */
 .consultoriaEnUX-UIContainer {
     width: 100%;
-    height: 2135px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -26,7 +26,7 @@
 /* Contenedor del subtítulo de la sección */
 .consultoriaEnUX-UISubtitleContainer {
     width: 100%;
-    height: 435px;
+    height: 324px;
     margin-top: 89px;
     margin-bottom: 80px;
     background: url(../../../img/consultoria-de-experiencia-de-usuario.png) lightgray 50% / cover no-repeat;
@@ -38,8 +38,8 @@
 
 /* Estilo del subtítulo de la sección */
 .consultoriaEnUX-UISubtitle {
-    width: 1560px;
-    height: 55px;
+    width: 100%;
+    height: auto;
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
@@ -54,8 +54,8 @@
 .etapasTitle {
     margin-top: 80px;
     margin-bottom: 80px;
-    width: 617px;
-    height: 67px;
+    width: 100%;
+    height: auto;
     flex-shrink: 0;
     color: #000;
     text-align: center;
@@ -70,7 +70,7 @@
 /* Estilo del contenedor de las cards de la sección */
 .etapasConsultoriaEnUX-UICardsContainer {
     width: 100%;
-    height: 473px;
+    height: auto;
     display: flex;
     overflow-x: hidden; /* Ocultar la barra de desplazamiento por defecto */
     gap: 6px;
