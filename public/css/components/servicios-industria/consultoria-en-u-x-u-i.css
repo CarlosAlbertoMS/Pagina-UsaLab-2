@@ -43,7 +43,7 @@
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
-    font-size: 55px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -72,7 +72,7 @@
     width: 100%;
     height: auto;
     display: flex;
-    overflow-x: hidden; /* Ocultar la barra de desplazamiento por defecto */
+    overflow-y: scroll; /* Ocultar la barra de desplazamiento por defecto */
     gap: 6px;
     box-sizing: border-box;
 }

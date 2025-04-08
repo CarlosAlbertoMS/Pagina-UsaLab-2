@@ -1,7 +1,9 @@
 /* Contenedor de la sección */
 .estudiosDeUsabilidadContainer {
     width: 100%;
+
     height: auto;
+
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

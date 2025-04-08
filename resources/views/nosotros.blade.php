@@ -1,4 +1,6 @@
 <!-- Exportamos el layout de la pagina principal -->
+
+
 @extends('layouts.main')
 
 
@@ -38,6 +40,8 @@
         <div class="misionvc">
             <!-- Imagen mision vision -->
             <img class="img13" src="{{ asset('photos/182234778_10156808451192325_5374785971353130951_n.jpg') }}" alt="" srcset="">
+
+            
             <!-- Contenido mision-vision -->
             <div class="misionvision">
                 <!-- Mision -->
@@ -56,7 +60,9 @@
             </div>
         </div>
         <!-- Fondo de la seccion -->
+         
         <div class="fondoazul">
+
         </div>
     </div>
     <div class="separador2"></div>
@@ -110,7 +116,7 @@
                     </div>
                     <!-- Contenido del carrusel -->
                     <div class="contenidotray">
-                    <p class="contenidotraytxt">UsaLab ha demostrado su capacidad para llevar a cabo proyectos innovadores y de alta calidad que tienen un impacto significativo tanto en el ámbito académico como en el sector industrial. Nuestros proyectos reflejan nuestra dedicación a la excelencia y nuestra capacidad para colaborar efectivamente con diversas entidades. A través de nuestras iniciativas, buscamos no solo avanzar en el conocimiento de la usabilidad y la HCI, sino también proporcionar soluciones prácticas y efectivas que beneficien a una amplia gama de usuarios y organizaciones.</p>
+                        <p class="contenidotraytxt">UsaLab ha demostrado su capacidad para llevar a cabo proyectos innovadores y de alta calidad que tienen un impacto significativo tanto en el ámbito académico como en el sector industrial. Nuestros proyectos reflejan nuestra dedicación a la excelencia y nuestra capacidad para colaborar efectivamente con diversas entidades. A través de nuestras iniciativas, buscamos no solo avanzar en el conocimiento de la usabilidad y la HCI, sino también proporcionar soluciones prácticas y efectivas que beneficien a una amplia gama de usuarios y organizaciones.</p>
                     </div>
                 </div>
             </div>
@@ -282,6 +288,96 @@
     <!-- Seccion hablanos -->
     <x-hablanos />
     <div class="separador2"></div>
+ 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Seleccionamos los elementos clave
+    const fondoAzul = document.querySelector('.fondoazul');
+    const imagen = document.querySelector('.img13');
+    const textoContenedor = document.querySelector('.misionvision');
+    const misionVcContenedor = document.querySelector('.misionvc');
+    const contenedorPadre = document.querySelector('.misionContent');
 
+    // --- AJUSTE AQUÍ ---
+    // Define cuántos píxeles extra quieres añadir a la derecha
+    const extraAnchoDerecha = 30; // <-- ¡CAMBIA ESTE NÚMERO SEGÚN NECESITES! (e.g., 20, 40, 50...)
+    // --------------------
 
+    // Función para calcular y aplicar la posición/tamaño
+    function actualizarPosicionFondo() {
+        if (!fondoAzul || !imagen || !textoContenedor || !contenedorPadre || !misionVcContenedor) {
+            console.error('Error: No se encontraron los elementos necesarios.');
+            return;
+        }
+
+        const imagenRect = imagen.getBoundingClientRect();
+        const textoRect = textoContenedor.getBoundingClientRect();
+        const misionvcRect = misionVcContenedor.getBoundingClientRect();
+        const padreRect = contenedorPadre.getBoundingClientRect();
+
+        console.log('--- Actualizando Posición Fondo Azul ---');
+        console.log('Imagen Rect:', imagenRect);
+        console.log('Texto Rect:', textoRect);
+        console.log('MisionVC Rect:', misionvcRect);
+        console.log('Padre Rect:', padreRect);
+
+        if (imagenRect.width <= 0 || imagenRect.height <= 0) {
+            console.warn('La imagen (.img13) parece no tener dimensiones aún.');
+        }
+
+        // Calculamos la posición RELATIVA al contenedorPadre
+        const inicioHorizontal = (imagenRect.left + (imagenRect.width / 2)) - padreRect.left;
+        const finHorizontal = textoRect.right - padreRect.left; // Borde derecho del texto
+
+        // Ancho: desde mitad de imagen hasta fin de texto... MÁS el extra
+        let anchoCalculado = (finHorizontal - inicioHorizontal) + extraAnchoDerecha; // <-- AÑADIMOS EL EXTRA AQUÍ
+
+        // Vertical (usando misionvcRect)
+        const inicioVertical = misionvcRect.top - padreRect.top;
+        const altoCalculado = misionvcRect.height;
+
+        console.log('Calculado (con extra ancho):', { // Mensaje actualizado
+            top: inicioVertical,
+            left: inicioHorizontal,
+            width: anchoCalculado, // Muestra el ancho final
+            height: altoCalculado
+        });
+
+        if (anchoCalculado <= 0 || altoCalculado <= 0) {
+            console.warn('Ancho o alto calculado para .fondoazul es cero o negativo.');
+            fondoAzul.style.display = 'none';
+            return;
+        } else {
+            fondoAzul.style.display = 'block';
+        }
+
+        // Aplicamos los estilos
+        fondoAzul.style.left = `${inicioHorizontal}px`;
+        fondoAzul.style.top = `${inicioVertical}px`;
+        fondoAzul.style.width = `${anchoCalculado}px`; // Aplicamos el ancho final
+        fondoAzul.style.height = `${altoCalculado}px`;
+    }
+
+    // --- Ejecución Inicial Mejorada (sin cambios aquí) ---
+    const tryUpdate = () => {
+        setTimeout(actualizarPosicionFondo, 50);
+    };
+    if (imagen && imagen.complete) {
+        console.log('Imagen ya cargada, actualizando posición.');
+        tryUpdate();
+    } else if (imagen) {
+        console.log('Imagen no cargada aún, esperando evento load...');
+        imagen.addEventListener('load', () => {
+            console.log('Evento load de imagen disparado, actualizando posición.');
+            tryUpdate();
+        });
+        imagen.addEventListener('error', () => {
+            console.error('Error al cargar la imagen .img13');
+        });
+    } else {
+        tryUpdate();
+    }
+    window.addEventListener('resize', actualizarPosicionFondo);
+});
+</script>
 @endsection

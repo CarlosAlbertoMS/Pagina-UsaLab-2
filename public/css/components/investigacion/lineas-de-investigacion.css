@@ -1,11 +1,11 @@
-/**************** SECCIÓN: LÍNEAS DE INVESTIGACIÓN ****************/
 
 /* Contenedor de la sección "Líneas de Investigación"*/
 .lineas-de-investigacion-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 1728px;
+    width: 100%;
+    
     height: 1222px;
     flex-shrink: 0;
     background: #06052D;

@@ -1,7 +1,9 @@
 /* Estilo del contenedor de la sección */
 .desarrolloDePrototiposContainer {
     width: 100%;
+
     height: auto;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

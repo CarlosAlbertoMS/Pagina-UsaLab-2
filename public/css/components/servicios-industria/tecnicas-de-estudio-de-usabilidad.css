@@ -1,7 +1,9 @@
 /* Estilos para el contenedor de la sección */
 .tecnicasDeEstudioDeUsabilidadContainer {
     width: 100%;
+
     height: auto;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -54,9 +56,10 @@
     width: 100%;
     height: auto;
     display: flex;
-    overflow-x: hidden; /* Ocultar la barra de desplazamiento por defecto */
+   
     gap: 6px;
     box-sizing: border-box;
+    overflow-y: scroll;
 }
 
 /* Mostrar la barra de desplazamiento al hacer hover */

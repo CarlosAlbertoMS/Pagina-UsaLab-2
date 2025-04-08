@@ -3,7 +3,9 @@
     margin-top: 160px;
     margin-bottom: 160px;
     width: 100%;
+
     height: auto;
+
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
@@ -28,12 +30,13 @@
 /* Estilo del texto de la sección */
 .desarrolloComercialText {
     width: 100%;
+
     color: #FAFAF9;
     text-align: justify;
     font-family: Montserrat;
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 250;
     line-height: normal;
     letter-spacing: 0.64px;
     padding-left: 100px;
