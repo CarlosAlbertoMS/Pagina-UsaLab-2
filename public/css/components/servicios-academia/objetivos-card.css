@@ -1,7 +1,7 @@
 /* Estilo de la Card de objetivos */
 .objetivosDeLaIncorporacionDeHciCard {
     width: 100%;/*1728*/
-    height: 418px;
+    height: auto;
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
@@ -27,7 +27,7 @@
     margin-top: 40px;
     margin-left: 10% ;
     width: 670px;
-    height: 134px;
+    height: auto;
     flex-shrink: 0;
     color: #FFF;
     font-family: Montserrat;
@@ -44,8 +44,9 @@
     margin-top: 80px;
     margin-left: auto;  /* Centra el contenedor automáticamente */
     margin-right: auto;
-    width: 1079px;
-    height: 124px;
+    padding-bottom: 20px;
+    width: 70%;
+    height: auto;
     flex-shrink: 0;
     color: #FFF;
     text-align: center;

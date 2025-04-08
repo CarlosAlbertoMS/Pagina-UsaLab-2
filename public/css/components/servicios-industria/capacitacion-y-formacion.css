@@ -1,7 +1,7 @@
 /* Estilo del contenedor de la sección */
 .capacitacionYFormacionContainer {
     width: 100%;
-    height: 2048px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,6 +10,8 @@
 
 /* Estilo para el titulo de la sección */
 .capacitacionYFormacionTitle {
+    width: 100%;
+    text-align: center;
     color: #000;
     font-family: Montserrat;
     font-size: 55px;
@@ -59,7 +61,7 @@
 /* Estilo del contenedor de las cards */
 .areasClaveCardsContainer {
     width: 100%;
-    height: 473px;
+    height: auto;
     display: flex;
     overflow-x: hidden; /* Ocultar la barra de desplazamiento por defecto */
     gap: 6px;
