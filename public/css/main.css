@@ -45,7 +45,7 @@
     animation: contenidousalab 1.5s forwards;
 }
 .contenidousalabtxt {
-    width: 1268px; /* Fijamos el ancho a 1768px */
+    width: 1768px; /* Fijamos el ancho a 1768px */
     max-width: 80%;
     max-height: 152px;
     font-size: 25px;

@@ -1,6 +1,6 @@
 /* Contenedor de la sección */
 .estudiosDeUsabilidadContainer {
-    width: 1728px;
+    width: 100%;
     height: 964px;
     display: flex;
     justify-content: center;
