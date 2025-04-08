@@ -1,8 +1,8 @@
 /* Carousel */
 .contenedorImageText {
     display: flex;
-    width: 1126px;
-    height: 114px;
+    width: 100%;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
@@ -13,7 +13,7 @@
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-family: Montserrat;
-    font-size: 55px;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -39,11 +39,12 @@
 
 /* Animaciones para el texto adicional */
 .extra-text {
-    width: 667px;
-    height: 147px;
+    width: 50%;
+    /* height: auto; */
+    height: 40%;
     transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: white;
     position: absolute;
     right: 5%; /* Ajustar según diseño */
@@ -51,9 +52,9 @@
     transform: translateY(-50%) translateX(20%); /* Desplazamiento inicial */
     text-align: center;
     font-family: Montserrat;
-    font-size: 24px;
+    /* font-size: 24px; */
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: normal;
 }
 
@@ -66,7 +67,7 @@
 
 .btn-mas-info {
     /* Layout */
-    width: 280.64px;
+    width: 40%;
     height: 60px;
     flex-shrink: 0;
     
@@ -94,33 +95,68 @@
 }
 
 .carousel-fade .carousel-item {
-    transition: opacity .3s ease-in-out; /* Reduced from default .6s */
+    transition: opacity .4s ease-in-out; /* Reduced from default .6s */
 }
 
-.carousel-fade .carousel-item.active.item {
-    transition: opacity .3s ease-in-out; /* Reduced from default .6s */
+.carousel-fade .carousel-item .active.item {
+    transition: opacity .6s ease-in-out; /* Reduced from default .6s */
 }
 
-.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .-next.carousel-item-start,
 .carousel-fade .carousel-item-prev.carousel-item-end {
-    transition: opacity .3s ease-in-out; /* Reduced from default .6s */
+    transition: opacity .6s ease-in-out; /* Reduced from default .6s */
 }
 
 .carousel-indicators {
     display: none;
 }
 
+@media (min-width: 1921px) {
+    .tipografiaImageText {
+        font-size: 2.5rem;
+    }
+    
+    .extra-text {
+        font-size: 1.2rem;
+    }
+}
 
-/* Responsividad para textos */
+@media (max-width: 1440px) {
+    .tipografiaImageText {
+        font-size: 1.5rem;
+    }
+    
+    .extra-text {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 768px) {
-    .tipografiaImage1Text,
-    .tipografiaImage2Text,
-    .tipografiaImage3Text {
-        font-size: 45px; /* Reducir tamaño de títulos */
+    .tipografiaImageText {
+        font-size: 1.2rem;
+    }
+    
+    .carousel-item img {
+        height: 30vh;
+        object-fit: cover;
     }
 
     .extra-text {
         font-size: 1rem; /* Ajustar tamaño del texto adicional */
         right: 5%; /* Ajustar posición para pantallas pequeñas */
+    }
+
+    .slide-title.shrink {
+        display: none;
+    }
+
+    .extra-text {
+        width: 85%;
+    }
+}
+
+@media (max-width: 425px) {
+    .tipografiaImageText {
+        font-size: 0.8rem;
     }
 }
