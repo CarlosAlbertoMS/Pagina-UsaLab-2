@@ -2,34 +2,12 @@ body {
     width: 100vw;
 }
 
-.carousel-inner {
-    /* width: 100%; */
-    /* margin: auto; */
-    object-fit: contain;
-}
-
-/* PRUEBA - ESTO ES TEMPORAL */
 .container1 {
-    width: 85%;
-}
-
-.carousel-caption {
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    bottom: 0;
-}
-
-.titulousalab {
     width: 100%;
-    height: auto;
 }
 
-.titulousalabtxt {
-    font-size: 3rem;
-    font-weight: bolder;
+.carousel-inner {
+    object-fit: contain;
 }
 
 .img-container {
@@ -45,37 +23,99 @@ body {
     width: 100%;
 }
 
-.contenidousalabtxt {
-    max-width: 100%;
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    min-height: auto;
-    font-size: 1.3rem;
-    line-height: normal;
-    overflow: visible;
+    bottom: 0;
 }
 
-@media (max-width: 1440px) {
+.titulousalab {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    z-index: 10;
+}
+
+.titulousalabtxt {
+    font-size: 3rem;
+}
+
+.contenidousalab {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    /* Esto está en pixeles porque esta wea tiene una animación que lo deja a -40px en bottom, 
+    no sé porqué xdxdxd. Y esto es lo mejor que se me ocurrió, no me maten por favor :emoji_manos_rezando: */
+    bottom:  40px;
+}
+
+.contenidousalabtxt {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+    line-height: normal;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1441px) and (max-width: 2560px) {
+    .titulousalab {
+        font-size: 5rem;
+    }
+
     .contenidousalab {
-        display: none;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .contenidousalabtxt {
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .contenidousalab {
+        padding: 1rem 1.5rem;
+    }
+
+    .contenidousalabtxt {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
     .titulousalabtxt {
         font-size: 2rem;
     }
 
     .contenidousalabtxt {
-      font-size: 0.8rem; 
+        font-size: 1rem; 
     }
 }
 
-@media (min-width: 1921px) {
-    .titulousalabtxt {
-        font-size: 5rem;
-    }
-
+@media (min-width: 768px) and (max-width: 896px) {
     .contenidousalabtxt {
-      font-size: 2rem;
+        font-size: 0.8rem; 
     }
 }
+
+/* Test */
+@media (min-width: 431px) and (max-width: 767px) {
+    .titulousalabtxt {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 430px) {
+    .titulousalabtxt {
+        font-size: 1rem;
+    }
+}
+
