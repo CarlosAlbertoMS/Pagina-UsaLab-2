@@ -45,7 +45,7 @@
     animation: contenidousalab 1.5s forwards;
 }
 .contenidousalabtxt {
-    width: 1268px; /* Fijamos el ancho a 1768px */
+    width: 1768px; /* Fijamos el ancho a 1768px */
     max-width: 80%;
     max-height: 152px;
     font-size: 25px;
@@ -596,6 +596,7 @@
 .contenidousalabtxt {
     width: 90%;
     height: 152px;
+    
     flex-shrink: 0;
     color: #FFFCFC;
     text-align: justify;
@@ -609,7 +610,7 @@
 @media (max-width:1400px){
     .contenidousalabtxt{
         width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
-        height: 50%;
+        height: auto;
         justify-content: center; /* Mantiene el contenido centrado */
         font-size: 25px;
     }

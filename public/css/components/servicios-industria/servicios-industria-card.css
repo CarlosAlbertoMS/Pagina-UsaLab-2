@@ -1,20 +1,22 @@
 /* Estilo de las cards */
 .serviciosIndustriaCard { 
     flex: 0 0 auto;
-    width: 626px;
-    height: 443px;
+    width: 34%;
+    height: auto;
+    min-height: 340px;
     background: #F9F9F9;
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
+    /*align-content: center;*/
     justify-content: center;
 }
 
 /* Estilo del titulo de la card */
 .serviciosIndustriaCardTitle { 
+    width: 95%;
     margin-left: 40px;
     margin-right: 40px;
-    margin-bottom: 24px;
+    padding-bottom: 10px;
     color: #000;
     text-align: center;
     font-family: Montserrat;
@@ -24,8 +26,18 @@
     line-height: normal;
 }
 
+@media (max-width: 1000px) {
+    .serviciosIndustriaCardTitle{
+
+     
+        font-size: 35px;
+        
+    }
+}
 /* Estilo del texto de la card */
 .serviciosIndustriaCardText { 
+    width: 100%;
+    height: auto;
     margin-left: 30px;
     margin-right: 30px;
     color: #000;
@@ -35,4 +47,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+@media (max-width: 1000px) {
+    .serviciosIndustriaCardText{
+        width: 95%;  /* Se reduce el ancho */
+     
+        font-size: 28px;
+        
+    }
 }

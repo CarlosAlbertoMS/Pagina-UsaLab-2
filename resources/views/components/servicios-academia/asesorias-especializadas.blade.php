@@ -18,7 +18,7 @@
             <div class="comoSolicitarAsesoriasCardTitle">Visitar al profesor</div>
             <!-- Figura SVG de la card -->
             <div class="comoSolicitarAsesoriasCardFigure">
-                <svg xmlns="http://www.w3.org/2000/svg" width="560" height="293" viewBox="0 0 560 293" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 560 293" fill="none">
                 <g filter="url(#filter0_d_1120_561)">
                     <path d="M4.00001 187.323C4.00002 44.6384 354.886 26.0132 542.385 0.880248C549.622 -0.0897528 556 5.53107 556 12.8323L556 273C556 279.627 550.627 285 544 285L16 285C9.37256 285 4 279.632 4 273.005L4.00001 187.323Z" fill="#4890B0" fill-opacity="0.9" shape-rendering="crispEdges"/>
                 </g>
@@ -45,7 +45,7 @@
             <div class="comoSolicitarAsesoriasCardTitle">Consulta de horarios</div>
             <!-- Figura SVG de la card -->
             <div class="comoSolicitarAsesoriasCardFigure">
-                <svg xmlns="http://www.w3.org/2000/svg" width="560" height="293" viewBox="0 0 560 293" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 293" fill="none">
                 <g filter="url(#filter0_d_1120_561)">
                     <path d="M4.00001 187.323C4.00002 44.6384 354.886 26.0132 542.385 0.880248C549.622 -0.0897528 556 5.53107 556 12.8323L556 273C556 279.627 550.627 285 544 285L16 285C9.37256 285 4 279.632 4 273.005L4.00001 187.323Z" fill="#4890B0" fill-opacity="0.9" shape-rendering="crispEdges"/>
                 </g>
@@ -72,7 +72,7 @@
             <div class="comoSolicitarAsesoriasCardTitle">Disposición y asistencia</div>
             <!-- Figura SVG de la card -->
             <div class="comoSolicitarAsesoriasCardFigure">
-                <svg xmlns="http://www.w3.org/2000/svg" width="560" height="293" viewBox="0 0 560 293" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 293" fill="none">
                 <g filter="url(#filter0_d_1120_561)">
                     <path d="M4.00001 187.323C4.00002 44.6384 354.886 26.0132 542.385 0.880248C549.622 -0.0897528 556 5.53107 556 12.8323L556 273C556 279.627 550.627 285 544 285L16 285C9.37256 285 4 279.632 4 273.005L4.00001 187.323Z" fill="#4890B0" fill-opacity="0.9" shape-rendering="crispEdges"/>
                 </g>

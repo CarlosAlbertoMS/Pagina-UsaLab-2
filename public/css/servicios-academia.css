@@ -9,8 +9,8 @@
 .separador-servicios-academia {
     margin-top: 153px;
     margin-bottom: 126px;
-    width: 1295px;
-    height: 2px;
+    width: 100%;
+    height: auto;
     background: #D4D4D4;
 }
 @media (max-width: 1300px) {
