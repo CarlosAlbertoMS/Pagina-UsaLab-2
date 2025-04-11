@@ -6,6 +6,8 @@
     <div id="carouselConcursos1" class="carousel slide carousel-fade contenedorslider1">
         <div class="carousel-inner">
             <x-eventos.light-box_carousel 
+                customClassBiggerText="bigger-title"
+                customClassWidth="more-width"
                 diapositiva="slide-1" 
                 lugar="First slide" 
                 statusCarouselItem="active" 
@@ -17,8 +19,10 @@
 
     <!-- Segundo carrusel -->
     <div id="carouselConcursos2" class="carousel slide carousel-fade contenedorslider2">
-        <div class="carousel-inner">
+        <div class="carousel-inner concurso">
             <x-eventos.light-box_carousel 
+                customClassBiggerText="bigger-title"
+                customClassWidth="more-width"
                 diapositiva="slide-2" 
                 lugar="Second slide" 
                 statusCarouselItem="active" 

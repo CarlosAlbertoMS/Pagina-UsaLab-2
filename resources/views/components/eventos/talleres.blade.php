@@ -28,8 +28,7 @@
         <div class="contenedorSubtituloTalleristas">
             <div class="subtituloTalleristas">Talleristas</div>
         </div>
-        <div class="contenedorCards">
-
+        <div class="cards-container">
             <x-eventos.cards-eventos color="rgb(167, 199, 65)" imagen="{{ asset('photos/Dr. Carlos.png') }}"
                 titulo="Dr. Carlos Alberto Fernandez" />
 
@@ -41,11 +40,8 @@
 
             <x-eventos.cards-eventos color="rgb(167, 199, 65)" imagen="{{ asset('photos/M.E.C. Celia.png') }}"
                 titulo="M.E.C. Celia Bertha Reyes" />
-
-
         </div>
     </div>
     <div class="separadorTalleres"></div> 
-
 </div>
 

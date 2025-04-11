@@ -81,9 +81,8 @@
     margin-top: 80px;
     margin-bottom: 0px;
 }
-/************************Estilo para el contenedor de toda la subseccion conferencistas cards *********************/
 
-.contenedorCardsEventos {
+.cards-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -99,10 +98,10 @@
     width: 1320px;
     height: 2px;
     background: #DADADA;
-    margin-top: 160px;
+    margin-top: 10rem;
 }
 
-@media (min-width: 1921px) {
+@media (min-width: 1441px) and (max-width: 2560px) {
     .ProximosEventosTitulo {
         font-size: 5rem;
     }
@@ -113,21 +112,30 @@
     }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
     .ContenedorSubtituloConferencias,
     .ContenedorSubtituloConferencistas {
         margin-bottom: 3rem;
         margin-top: 3rem;
     }
     
-    .contenedorCardsEventos {
-        height: 90vh;
+    .cards-container {
+        height: auto;
         gap: 4rem;
         margin-top: 3rem;
     }
+
+    .subtituloConferencistas,
+    .SubtituloConferencias {
+        font-size: 4rem;
+    }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ProximosEventosContenedorTitulo {
+        margin-top: 0;
+    }
+
     .ProximosEventosTitulo {
         font-size: 3rem;
     }
@@ -140,22 +148,29 @@
 
     .SubtituloConferencias,
     .subtituloConferencistas {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
-    .contenedorCardsEventos {
-        gap: 1rem;
+    .cards-container {
+        height: 120vh;
+        max-height: 50rem;
+        gap: 3rem;
+        margin-top: 2rem;
     }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 375px) and (max-width: 430px) {
+    .ProximosEventosContenedorTitulo {
+        margin-top: 0;
+    }
+
     .ProximosEventosTitulo {
         font-size: 2rem;
     }
 
     .SubtituloConferencias,
     .subtituloConferencistas {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .ContenedorSubtituloConferencias,
@@ -164,9 +179,13 @@
         margin-top: 1rem;
     }
 
-    .contenedorCardsEventos {
+    .cards-container {
         height: 180vh;
         gap: 0rem;
         margin-top: 0.5rem;
+    }
+    
+    .separadorConferencias {
+        margin-top: 1rem;
     }
 }

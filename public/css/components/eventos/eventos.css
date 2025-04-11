@@ -6,6 +6,7 @@ body {
     width: 100%;
 }
 
+/* ----- A PARTIR DE AQUÍ ES LA WEA CON LA IMAGEN QUE DICE EVENTOS (LO DE HASTA ARRIBA XD). ----- */
 .carousel-inner {
     object-fit: contain;
 }
@@ -80,7 +81,7 @@ body {
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
     .contenidousalab {
         padding: 1rem 1.5rem;
     }
@@ -90,7 +91,7 @@ body {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .titulousalabtxt {
         font-size: 2rem;
     }
@@ -106,7 +107,6 @@ body {
     }
 }
 
-/* Test */
 @media (min-width: 431px) and (max-width: 767px) {
     .titulousalabtxt {
         font-size: 1rem;
@@ -118,4 +118,3 @@ body {
         font-size: 1rem;
     }
 }
-

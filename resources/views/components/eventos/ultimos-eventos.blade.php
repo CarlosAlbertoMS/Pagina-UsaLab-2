@@ -1,6 +1,7 @@
 <div class="ultimos-eventos-container">
 	<header class="ultimos-eventos-title" id="ultimos-eventos">
-		<h2>Últimos <br> eventos</h2>
+		<h2>Últimos <br class="responsive"> eventos</h2>
+		<!-- <h2>Últimos <br> eventos</h2> -->
 	</header>	
 
 	<div class="ultimos-eventos-cards">
@@ -27,33 +28,3 @@
     	</div>
 	</div>
 </div>
-
-	<!-- <div class="ContenedorUltimosEventos">
-  		<div class="eventosContainer">
-    		<div id="event1-card" class="event-card">
-      			<div id="event1" class="content-event-card">
-        			<div class="title-event-card">HCI</div>
-        			<div class="text-event-card">
-						Descubra qué es la Interacción Humano-Computadora y en qué se centra el estudio
-        			</div>
-      			</div>
-    		</div>
-
-    	<div id="event2-card" class="event-card">
-      	<div id="event2" class="content-event-card">
-        	<div class="title-event-card">
-				Concurso de Diseño Estudiantil en CHI 2025
-			</div>
-      	</div>
-    	</div>
-
-    <div id="event3-card" class="event-card">
-      <div id="event3" class="content-event-card">
-        <div class="title-event-card">
-			Ferias tecnológicas
-		</div>
-      </div>
-    </div>
-  </div>
-</div>
-</div> -->

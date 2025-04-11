@@ -60,7 +60,7 @@
         <div class="contenedorSubtituloConferencistas">
             <div class="subtituloConferencistas">Conferencistas</div>
         </div>
-        <div class="contenedorCardsEventos">
+        <div class="cards-container">
             <x-eventos.cards-eventos color="rgb(79, 158, 190)" imagen="{{ asset('photos/Ing. Carlos Alberto.png') }}"
                 titulo="Ing. Carlos Alberto Martínez Sandoval" />
 
