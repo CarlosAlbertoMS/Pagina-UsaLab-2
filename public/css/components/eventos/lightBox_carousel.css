@@ -1,4 +1,8 @@
 /* Carousel */
+.carousel-item {
+    border: solid red 5px;
+}
+
 .contenedorImageText {
     display: flex;
     width: 100%;
@@ -6,6 +10,8 @@
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
+
+    border: solid purple 5px;
 }
 
 .tipografiaImageText {
@@ -17,6 +23,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+
+    border: solid cyan 5px;
 }
 
 /* --------- Animaciones del carousel --------- */
@@ -32,9 +40,14 @@
 }
 
 .slide-title.shrink {
-    transform: translateX(-6%) scale(0.7);
+    transform: translateX(-2%) scale(0.9);
     width: 60%;
-    /* opacity: 0.7; */
+    opacity: 0.7;
+}
+
+.carousel-caption p {
+    border: solid orange 5px;
+    height: auto;
 }
 
 /* Animaciones para el texto adicional */
@@ -46,21 +59,22 @@
     font-size: 1rem;
     color: white;
     position: absolute;
-    right: 5%;
+    right: 4%;
     margin-top: 3rem;
     transform: translateY(-50%) translateX(20%); /* Desplazamiento inicial */
     text-align: center;
     font-family: Montserrat;
-    /* font-size: 24px; */
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+
+    border: solid cyan 5px;
 }
 
 /* Texto adicional cuando se muestra */
 .extra-text.show {
     opacity: 1;
-    transform: translateY(-50%) translateX(0); /* Animación hacia su posición final */
+    transform: translateY(-35%) translateX(0); /* Animación hacia su posición final */
 }
 
 .btn-mas-info {
@@ -79,14 +93,14 @@
     color: #FFF;
     font-family: Montserrat;
     font-size: 1rem;
-    padding: 1rem 0;
+    padding: 0.6rem 0;
     font-style: normal;
     text-align: center;
     font-weight: 400;
     line-height: normal;
     
     /* Position */
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     cursor: pointer;
     display: block;
     margin-left: auto;
@@ -124,7 +138,7 @@
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+/* @media (min-width: 1025px) and (max-width: 1440px) {
     .tipografiaImageText {
         font-size: 1.6rem;
     }
@@ -134,7 +148,7 @@
         width: 50%;
         height: 50%;
     }
-}
+} */
 
 /* --------- ESTO ES PARA TABLETS ---------- */
 @media (min-width: 821px) and (max-width: 1024px) {

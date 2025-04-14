@@ -1,15 +1,16 @@
 .ultimos-eventos-container {
     display: flex;
     width: 95%;
-    height: 50%;
+    height: 45%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0;
+    margin-top: 4rem;
+    /* padding: 3rem 0; */
 }
 
 .ultimos-eventos-title {
-    width: 30%;
+    width: 40%;
 }
 
 .ultimos-eventos-title h2 {
@@ -20,7 +21,7 @@
 }
 
 .ultimos-eventos-cards {
-    width: 70%;
+    width: 60%;
     height: 50vh;
     display: flex;
     flex-direction: row;
@@ -40,7 +41,7 @@
     border-radius: var(--Corner-Medium, 12px);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 1.5rem 2rem 1.5rem;
+    padding: 0 0.8rem 2rem 0.8rem;
 }
 
 .event-card::before {
@@ -73,7 +74,7 @@
 .title-event-card {
     color: #FFF;
     font-family: Montserrat;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -88,20 +89,21 @@
 .text-event-card {
     color: #FFF;
     font-family: Montserrat;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-style: normal;
-    text-align: left;
+    text-align: justify;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.32px;
 }
 
-.carousel-control-prev, .carousel-control-next {
-    width: 5%;
+.carousel-control-prev,
+.carousel-control-next {
+    width: 4%;
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-@media (min-width: 1921px) {
+/* @media (min-width: 1921px) {
     .ultimos-eventos-title h2 {
         font-size: 3rem;
     }
@@ -109,9 +111,9 @@
     .text-event-card {
         font-size: 1rem;
     }
-}
+} */
 
-@media (max-width: 1440px) {
+@media (min-width: 1440px) and (max-width: 2100px){
     .title-event-card h2 {
         font-size: 3rem;
     }
@@ -121,7 +123,7 @@
     }
 
     .event-card {
-        width: 60%;
+        /* width: 60%; */
     }
 
     .ultimos-eventos-title {

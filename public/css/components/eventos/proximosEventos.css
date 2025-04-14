@@ -13,8 +13,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 160px;
-    margin-bottom: 0px;
+    margin-top: 4rem;
 }
 
 .ContenedorProximosEventos {
@@ -38,23 +37,30 @@
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
-.SubtituloConferencias{
+/* TODO: esta cosa puede que sea general para todo el apartado de eventos. 
+         Si sí es así moverlo al archivo CSS general. */
+.subtitulo {
     color: #000;
     text-align: center;
     font-family: Montserrat;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
 
-
-/**********************************************/
-
-/*         Conferencistas                   */
+/* .SubtituloConferencias{
+    color: #000;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+} */
 
 .contenedorConferencistas {
     display: flex;
@@ -63,15 +69,15 @@
     width: 95%;
 }
 
-.subtituloConferencistas {
+/* .subtituloConferencistas {
     color: #000;
     text-align: center;
     font-family: Montserrat;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
+} */
 
 .contenedorSubtituloConferencistas {
     display: flex;
@@ -112,7 +118,7 @@
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+/* @media (min-width: 1025px) and (max-width: 1440px) {
     .ContenedorSubtituloConferencias,
     .ContenedorSubtituloConferencistas {
         margin-bottom: 3rem;
@@ -129,7 +135,7 @@
     .SubtituloConferencias {
         font-size: 4rem;
     }
-}
+} */
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .ProximosEventosContenedorTitulo {

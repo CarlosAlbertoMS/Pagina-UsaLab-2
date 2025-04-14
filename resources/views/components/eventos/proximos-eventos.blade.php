@@ -4,7 +4,7 @@
   </div>
 
     <div class="ContenedorConferencias" id="conferencias"> 
-      <div class="ContenedorSubtituloConferencias SubtituloConferencias"> Conferencias </div>
+      <div class="ContenedorSubtituloConferencias subtitulo"> Conferencias </div>
 
       <div id="carouselProximosEventos" class="carousel slide carousel-fade">
 
@@ -58,7 +58,7 @@
 
     <div class="contenedorConferencistas">
         <div class="contenedorSubtituloConferencistas">
-            <div class="subtituloConferencistas">Conferencistas</div>
+            <div class="subtitulo">Conferencistas</div>
         </div>
         <div class="cards-container">
             <x-eventos.cards-eventos color="rgb(79, 158, 190)" imagen="{{ asset('photos/Ing. Carlos Alberto.png') }}"

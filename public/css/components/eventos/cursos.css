@@ -8,7 +8,7 @@
 }
 
 /************************Estilo para los titulos cursos y profesores *********************/
-.subtitulo{
+/* .subtitulo{
     color: #000;
     text-align: center;
     font-family: Montserrat;
@@ -16,7 +16,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
+} */
 
 .contenedorSubtituloCursos{
     display: flex;
