@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
+    
 }
 
 /* Estilos del titulo de la sección */
@@ -40,21 +41,16 @@
 }
 
 .pasosParaReservacionCardsContainer {
-    width: 100%;
+    width: 98%;
     height: auto;
     display: flex;
     overflow-x: hidden;
     gap: 40px;
     box-sizing: border-box;
-    margin-left: 5%;
+    margin-left: 2%;
 }
 
-@media (max-width: 1400px){
-    .pasosParaReservacionCardsContainer{
-        width: 90%;
-    }
 
-}
 
 /* Mostrar la barra de desplazamiento al hacer hover */
 .pasosParaReservacionCardsContainer:hover {
@@ -63,7 +59,7 @@
 
 /* Estilo de las cards de la subsección "Pasos para reservación" */
 .pasoParaReservacionCard {
-    width: 38%;
+    flex: 0 0 calc(33.33% - 20px); 
     height: auto;
     flex-shrink: 0;
     border-radius: 16px;
@@ -71,9 +67,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 20px;
 }
+@media(max-width:1000px){
+    .pasoParaReservacionCard{
+        flex: 0 0 calc(50% - 20px)
+    }
 
+}
 
 /* Estilo de número de paso */
 .pasoDeReservacion {

@@ -1,7 +1,7 @@
 /* Estilo de las cards */
 .serviciosIndustriaCard { 
-    flex: 0 0 auto;
-    width: 34%;
+    flex: 0 0 calc(33.33% - 10px);
+  
     height: auto;
     min-height: 340px;
     background: #F9F9F9;
@@ -11,6 +11,11 @@
     justify-content: center;
 }
 
+@media(max-width:800px){
+    .serviciosIndustriaCard{
+        flex: 0 0 calc(50% - 10px);
+    }
+}
 /* Estilo del titulo de la card */
 .serviciosIndustriaCardTitle { 
     width: 95%;

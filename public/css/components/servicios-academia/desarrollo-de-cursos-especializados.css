@@ -45,6 +45,7 @@
     overflow-x: hidden;
     gap: 34px;
     box-sizing: border-box;
+    margin-left: auto;
 }
 @media (min-width:2000px){
     .queOfrecemosCardsContainer{
@@ -60,6 +61,7 @@
 
 /* Estilo de las cards de la subsección "¿Qué ofrecemos?" */
 .queOfrecemosCard {
+    margin: 0 auto 0 auto;
     min-width: calc((100% - 2 * 34px) / 3);
     height: auto;
     flex-shrink: 0;
@@ -68,6 +70,12 @@
     position: relative;
     display: flex;
     /*justify-content: center;*/
+}
+
+@media(max-width:800px){
+    .queOfrecemosCard{
+        min-width: calc((100% - 2 * 34px) / 2); 
+    }
 }
 
 /* Estilos de la figura de la card */

@@ -77,12 +77,13 @@
     height: auto;
     flex-shrink: 0;
     color: #000;
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
     font-family: Montserrat;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.1;
     letter-spacing: 0.32px;
     overflow: hidden;
 }
