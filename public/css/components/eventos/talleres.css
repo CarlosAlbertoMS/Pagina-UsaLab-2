@@ -1,88 +1,11 @@
-.contenedorTalleres{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 0px;
-}
-
-.contenedorSubtituloTalleres{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 8rem;
-    margin-bottom: 4rem;
-}
-
-.subtituloTalleres{
-    color: #000;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-
-/*        Talleristas                  */
-.contenedorTalleristas {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0px;
-    width: 95%;
-}
-
-.subtituloTalleristas {
-    color: #000;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.contenedorSubtituloTalleristas {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
-    margin-bottom: 0px;
-}
-
-/************************Estilo para el contenedor de toda la subseccion conferencistas cards *********************/
-.contenedorCards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    height: 45vh;
-    margin-top: 4rem;
-    gap: 1rem;
-
-    border: solid purple 5px;
-}
-
-/************************Estilo para el separador a final de la seccion *********************/
-
-.separadorTalleres{
-    width: 1320px;
-    height: 2px;
-    background: #DADADA;
-    margin-top: 10rem;
-}
-
-@media (min-width: 1921px) {
+/* @media (min-width: 1921px) {
     .subtituloTalleres,
     .subtituloTalleristas {
         font-size: 4rem;
     }
-}
+} */
 
-@media (max-width: 1440px) {
+/* @media (max-width: 1440px) {
     .contenedorSubtituloTalleres,
     .contenedorSubtituloTalleristas {
         margin-top: 3rem;
@@ -93,7 +16,7 @@
         gap: 4rem;
         margin-top: 3rem;
     }
-}
+} */
 
 @media (max-width: 768px) {
     .contenedorSubtituloTalleres {

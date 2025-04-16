@@ -1,8 +1,7 @@
 <div class="ultimos-eventos-container">
 	<header class="ultimos-eventos-title" id="ultimos-eventos">
 		<h2>Últimos <br class="responsive"> eventos</h2>
-		<!-- <h2>Últimos <br> eventos</h2> -->
-	</header>	
+	</header>
 
 	<div class="ultimos-eventos-cards">
     	<!-- Tarjeta HCI -->
