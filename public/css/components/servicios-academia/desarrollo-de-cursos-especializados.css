@@ -39,13 +39,14 @@
 
 /* Contenedor de las cards de la subsección "¿Qué ofrecemos?" */
 .queOfrecemosCardsContainer {
+    display: flex;
     width: 100%;
     height: 718px;
     display: flex;
     overflow-x: hidden;
     gap: 34px;
     box-sizing: border-box;
-    margin-left: auto;
+    margin-left: 5%;
 }
 @media (min-width:2000px){
     .queOfrecemosCardsContainer{
@@ -62,7 +63,7 @@
 /* Estilo de las cards de la subsección "¿Qué ofrecemos?" */
 .queOfrecemosCard {
     margin: 0 auto 0 auto;
-    min-width: calc((100% - 2 * 34px) / 3);
+    flex: 0 0 calc(33.33% - 30px);
     height: auto;
     flex-shrink: 0;
     border-radius: var(--Corner-Large, 16px);
@@ -74,9 +75,15 @@
 
 @media(max-width:800px){
     .queOfrecemosCard{
-        min-width: calc((100% - 2 * 34px) / 2); 
+        flex: 0 0 calc(50% - 30px);
     }
 }
+@media(max-width:500px){
+    .queOfrecemosCard{
+        flex: 0 0 calc(100% - 30px);
+    }
+}
+
 
 /* Estilos de la figura de la card */
 .queOfrecemosCardFigure {

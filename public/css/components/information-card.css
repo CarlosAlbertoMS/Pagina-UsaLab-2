@@ -92,7 +92,28 @@
         /* Se reduce el ancho */
      
         font-size: 26px;
+        margin: 0;
         
     }
 }
 
+@media (max-width: 500px) {
+    .informationCardContainer {
+        flex-direction: column;
+    }
+
+    .imagenInformationCard,
+    .textoInformationCardContainer {
+        width: 100%;
+        border-radius: 16px 16px 16 px 16px; /* opcional, si quieres redondear solo arriba */
+    }
+
+    .textoInformationCardContainer {
+        border-radius: 0 0 16px 16px; /* redondea solo la parte de abajo */
+    }
+
+    .textoInformationCard {
+        font-size: 20px;
+        padding: 10px;
+    }
+}

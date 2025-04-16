@@ -51,6 +51,7 @@
     gap: 10px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    margin-left: 5%;
 }
 @media (min-width:2000px ){
     .comoSolicitarAsesoriasCardsContainer{
@@ -62,7 +63,7 @@
 }
 /* Estilo de las cards de la subsección "¿Qué ofrecemos?" */
 .comoSolicitarAsesoriasCard {
-    flex: 0 0 calc(33.33% - 10px);
+    flex: 0 0 calc(33.33% - 20px);
     height: 688px;
     flex-shrink: 0;
     border-radius: var(--Corner-Large, 16px);
@@ -72,15 +73,21 @@
     justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin: 0;
+   
+   
 }
 
-@media(max-width:800px){
+@media(max-width:1000px){
     .comoSolicitarAsesoriasCard{
         flex: 0 0 calc(50% - 10px);
     }
 }
-
+@media(max-width:500px){
+    .comoSolicitarAsesoriasCard{
+        flex: 0 0 calc(100% - 5px);
+        
+    }
+}
 /* Estilos de la figura de la card */
 .comoSolicitarAsesoriasCardFigure {
     display: flex;

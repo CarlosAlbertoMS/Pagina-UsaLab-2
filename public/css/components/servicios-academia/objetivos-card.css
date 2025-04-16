@@ -20,7 +20,7 @@
 .objetivosDeLaIncorporacionDeHciCardTitle {
     
     margin: 40px auto 0 auto;
-    width: 80%;
+    width: 90%;
     height: auto;
     flex-shrink: 0;
     color: #FFF;
@@ -28,26 +28,40 @@
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 1.1;
     text-align: center;
   
 }
-
+@media(max-width:500px){
+    .objetivosDeLaIncorporacionDeHciCardTitle{
+        font-size: 45px;
+        line-height: 0.9;
+    }
+}
 
 /* Estilo del texto de la card */
 .objetivosDeLaIncorporacionDeHciCardText {
   
     padding: auto;
-    width: 100%;
+    width: 90%;
     height: auto;
     flex-shrink: 0;
     color: #FFF;
-    text-align: center;
+    margin: 0 auto;
+    text-align: justify;
     font-family: Montserrat;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.1;
     letter-spacing: 0.32px;
+    hyphens: auto;
+  
 }
 
+@media(max-width:500px){
+    .objetivosDeLaIncorporacionDeHciCardText{
+        font-size: 28px;
+        line-height: 0.9;
+    }
+}
