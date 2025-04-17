@@ -1,9 +1,10 @@
 /* Estilo del contenedor del formulario */
 .formularioContactanosContainer{
     margin-top: 164px;
-    width: 1014px;
+    max-width: 1200px;
+    width: 100%;
+    
 }
-
 /* Estilo del titulo del formulario */
 .formularioContactanosTitle {
     margin-bottom: 72px;
@@ -15,38 +16,32 @@
     font-weight: 600;
     line-height: normal;
 }
-
 /* Estilo del formulario */
 .formularioContactanos {
     display: flex;
     flex-direction: column;
     gap: 40px
 }
-
 /* Estilo del contenedor de los campos Nombre y Apellidos */
 .nombreApellidosContainer{
     display: flex;
     gap: 3%;
 }
-
 /* Estilos de los contenedores de los inputs */
 .inputContainer {
     min-width: 48.5%;
     position: relative;
 }
-
 /* Estilos de los contenedores de losTextArea */
 .textAreaContainer {
     position: relative;
 }
-
 /* Estilo para el contenedor para los términos y condiciones */
 .terminosYBotonContainer {
     display: flex;
     gap: 30px;
     align-items: center;
 }
-
 /* Estilo para Términos y condiciones */
 .terminosYCondiciones {
     width: 722px;
@@ -57,7 +52,6 @@
     font-weight: 400;
     line-height: normal;
 }
-
 /* Estilo para Botón enviar */
 .boton-enviar {
     width: 280.64px;
@@ -75,9 +69,7 @@
     font-weight: 400;
     line-height: normal;
 }
-
 /* ESTILO GENERALES PARA EL FORMULARIO */
-
 /* Estilos de los labels */
 label {
     top: 18px;
@@ -94,7 +86,6 @@ label {
     position: absolute;
     transition: all 0.5s ease;
 }
-
 /* Estilos para los input y textarea */
 input,
 textarea {
@@ -105,33 +96,28 @@ textarea {
     border-color: #9797A0;
     border-radius: 12px;
 }
-
 /* Cambiar el color de los inputs y textarea al hacer hover */
 input:hover,
 textarea:hover {
     border-color: #000;
 }
-
 /* Cambiar el color del label al hacer hover */
 input:hover + label,
 textarea:hover + label {
     color: #000; /* Color negro */
 }
-
 /* Mantener borde gris cuando el input tiene contenido válido */
 input:valid,
 textarea:valid {
     border-color: #9797A0;
     outline: none;
 }
-
 /* Mantener borde azul cuando el input tiene focus */
 input:focus,
 textarea:focus {
     border-color: #58A3C1;
     outline: none;
 }
-
 /* Mantener label arriba y con color gris cuando el input tiene contenido */
 input:valid + label,
 textarea:valid + label {
@@ -141,7 +127,6 @@ textarea:valid + label {
     font-size: 16px;
     font-weight: 700;
 }
-
 /* Mantener label arriba y con color azul cuando el input tiene focus */
 input:focus + label,
 textarea:focus + label {
@@ -151,7 +136,6 @@ textarea:focus + label {
     font-size: 16px;
     font-weight: 700;
 }
-
 /* Configuraciones para el tamaño de los input */
 input[type="text"],
 input[type="email"],
@@ -159,10 +143,75 @@ input[type="tel"] {
     height: 62px;
     min-width: 48.5%;
 }
-
 /* Confuguraciones para los textarea */
 textarea {
     /* padding-top: 21px; */
     height: 125px;
     resize: none;
+}
+@media (max-width: 680px) {
+    /* --- Ajustes del Formulario --- */
+
+    /* Contenedor de Términos y Botón */
+    .terminosYBotonContainer {
+        flex-direction: column; /* Apila los elementos (botón abajo) */
+        align-items: center;   /* Centra los elementos horizontalmente (el botón) */
+        gap: 25px;             /* Espacio entre el texto y el botón */
+    }
+
+    /* Texto de Términos y Condiciones */
+    .terminosYCondiciones {
+        width: 100%;           /* Ocupa todo el ancho disponible */
+        text-align: center;    /* Centra el texto de los términos */
+        font-size: 16px;       /* Opcional: Reduce tamaño de fuente si es necesario */
+        order: 1;              /* Asegura que el texto vaya primero (por si acaso) */
+    }
+
+    /* Botón Enviar */
+    .boton-enviar {
+        width: 50%;            
+        max-width: 280.64px;   
+        order: 2;              /* Asegura que el botón vaya después */
+        font-size: 24px;       /* Opcional: Reduce tamaño de fuente del botón */
+        height: 55px;          /* Opcional: Ajusta altura */
+    }
+
+    /* Opcional: Apilar Nombre y Apellidos */
+    .nombreApellidosContainer {
+        flex-direction: column; /* Apila nombre y apellidos */
+        gap: 40px; /* Mismo gap que entre los otros campos */
+    }
+     
+     .formularioContactanosTitle {
+        font-size: 32px;
+        margin-bottom: 40px;
+     }
+
+     /* Opcional: Reducir tamaño general de labels y inputs */
+     label {
+        font-size: 18px;
+     }
+     input:valid + label,
+     textarea:valid + label,
+     input:focus + label,
+     textarea:focus + label {
+        font-size: 14px;
+     }
+     input[type="text"], input[type="email"], input[type="tel"] {
+        height: 55px;
+     }
+     textarea {
+        height: 110px;
+     }
+
+    .frase {
+        text-align: justify;    /* Justifica el texto */
+        text-align-last: center;/* Centra la última línea */
+        font-size: 28px;        /* Reduce tamaño de fuente */
+        margin-top: 100px;      /* Reduce margen superior */
+        margin-bottom: 100px;   /* Reduce margen inferior */
+        width: 80%;
+        /* display: block; */  
+    }
+    
 }

@@ -2,29 +2,30 @@
 .trabajemos-juntos-window-container {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 20px; 
     justify-content: center;
+    margin: 0 auto;
 }
 
 /* Estilo de la frase en la ventana */
 .frase {
+    max-width: 1015px;  
+    width: 100%;        /* Que se adapte al 100% del contenedor hasta el max-width */
     margin-top: 160px;
     margin-bottom: 160px;
     display: flex;
-    width: 1015px;
-    height: 253px;
     flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
     color: #000;
     text-align: right;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 40px;
     font-style: italic;
     font-weight: bold;
-    line-height: normal;
+    line-height: 1.2;
+    
 }
 @media (min-width: 1358px) and (min-height: 878px) {
-   
     .carousel-caption {
     width: 100%;
     left: 0;
@@ -34,7 +35,7 @@
 
 .carousel-item img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarse */
     display: block;
 }
@@ -43,9 +44,9 @@
 
 .descripcion-container {
     text-align: center;
-    max-width: 800px; /* Opcional, para limitar el ancho del texto */
-    margin: 0 auto; /* Centra el bloque horizontalmente */
-    padding: 10px; /* Opcional, para mejorar la legibilidad */
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 10px; 
 }
 
 }
