@@ -1,145 +1,116 @@
-.ofrecimento
-{
+.ofrecimento {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
-    margin-bottom: 45px;
+    padding-left: 5%;
+    margin-bottom: 5%;
 }
 
-.tituloT
-{
+.tituloT {
     color: #000;
     font-family: Montserrat;
-    font-size: 55px;
-    font-style: normal;
+    font-size: 5vw; /* Usamos 'vw' para el tamaño relativo al ancho de la pantalla */
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.55px;
     justify-content: center;
     display: flex;
-    margin-top: 45px;
+    margin-top: 5%;
 }
-.tableQOT
-{
+
+.tableQOT {
     display: flex;
     flex-direction: row;
     flex-shrink: 0;
+    overflow-x: auto; /* Asegura que si el contenido se desborda, se pueda desplazar horizontalmente */
 }
 
-.tabla1
-{
+.tabla1, .tabla2, .tabla3 {
     flex-direction: column;
-    width: 468px;
-    padding: 0px 0px 0px 50px;
     flex-shrink: 0;
+    width: 468px; /* Se vuelve a establecer el ancho original */
+    margin: 0 20px; /* Añadí márgenes para espacio entre las tablas */
 }
 
-.tabla2
-{
-    flex-direction: column;
-    width: 550px;
-    flex-shrink: 0;
-}
 
-#TP2
-{
-    width: 545px;
-    padding-left: 23px;
-    padding-right: 17px;
 
-}
-
-.tabla3
-{
-    flex-direction: column;
-    width: 460px;
-    flex-shrink: 0;
-}
-
-.lineaTT
-{
+.lineaTT {
     width: 1164px;
     height: 2px;
     background-color: #000;
     margin: 23px auto 28px auto;
 }
 
-.lineaTT1
-{
+.lineaTT1 {
     background-color: #000;
     width: 2px;
     height: 435px;
     margin: 0px 43px 11px 36px;
 }
 
-.tituloQOT
-{
+.tituloQOT {
     color: #000;
     font-family: Montserrat;
     font-size: 32px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.32px;
     display: flex;
     justify-content: center;
     margin-bottom: 72px;
 }
 
-.parrafoQOT
-{
-    color:#000;
+.parrafoQOT {
+    color: #000;
     text-align: justify;
     font-family: Montserrat;
     font-size: 32px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    letter-spacing: -0.96px;
 }
 
-.requisitosTesis
-{
+.contRT{
+    width: initial;
+    height: 80%;
+}
+.requisitosTesis {
     background-color: #06052D;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-.tituloRT
-{
+.tituloRT {
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
-    font-size: 55px;
-    font-style: normal;
+    font-size: 55px; /* Ajuste para hacerlo más pequeño y responsivo */
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.55px;
-    margin: 67px 185px 0px 186px;
+    margin: 5% ;
+    flex-basis: 100%; /* Asegura que el título ocupe el 100% del ancho */
 }
 
-.subRT
-{
+.subRT {
     color: #FFF;
     text-align: justify;
     font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
+    font-size: 32px; /* Ajuste para el subtítulo */
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.32px;
-    margin: 45px 49px 0px 66px;
+    margin: 5%;
+    flex-basis: 48%; /* Coloca este elemento en una columna */
 }
 
-.cuerpoRT
-{
-    color:#FFF;
+.cuerpoRT {
+    color: #FFF;
     text-align: justify;
     font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
+    font-size: 32px; /* Ajuste para el cuerpo del texto */
     font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.32px;
-    margin: 52px 49px 0px 66px;
+    margin:  5%;
 }
+
+.requisitosTesis img {
+    width: 40%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover;
+}
+
+

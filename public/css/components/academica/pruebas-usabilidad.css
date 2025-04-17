@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
+    width: 610px;
 }
 
 .pruebausalabtitle {
@@ -40,8 +41,8 @@
 }
 
 .pruebausalabimg {
-    width: 624px;
-    height: 832px;
+    width: 604px;
+    height: 812px;
     flex-shrink: 0;
     border-radius: var(--Corner-Medium, 12px);
 }
@@ -51,7 +52,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 138px;
+    gap: 68px;
 }
 
 .pruebaslaboratoriotitle {
@@ -85,7 +86,7 @@
 }
 
 .pruebas1 {
-    width: 1728px;
+    width: 100%;
     height: 513.677px;
     flex-shrink: 0;
     object-fit: cover;
@@ -96,7 +97,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 138px;
+    gap: 68px;
 }
 
 .usabilidadtitle {
@@ -127,7 +128,7 @@
 }
 
 .pruebas2 {
-    width: 1728px;
+    width: 100%;
     height: 484.571px;
     flex-shrink: 0;
     object-fit: cover;
@@ -138,8 +139,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 137px;
+    gap: 30px;
 }
+
 
 .heuristicatitle {
     width: 313px;
@@ -204,14 +206,18 @@
     line-height: normal;
 }
 
-/*****Estilos para las tarjetas del svg UnU***********/
-.contenedorTar
-{
+/*****Estilos para las tarjetas del svg***********/
+.contenedorTar {
     display: flex;
-    padding: 0px 132px 0px 132px;
     flex-direction: row;
+    justify-content: center; 
+    align-items: flex-start;
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    gap: 24px;
+    padding: 20px;
+    width: 100%;
 }
-
 .tarjeta
 {
     display: flex;
@@ -236,7 +242,7 @@
     fill: rgba(72, 144, 176, 0.90);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-/* Cambio de color uwu */
+/* Cambio de color */
 .tarjeta:hover path{
     fill: #A7C741;
 }
