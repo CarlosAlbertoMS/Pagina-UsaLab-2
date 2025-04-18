@@ -1,5 +1,4 @@
-
-/******************************header*******************************/
+/***********header**********/
 .container1 {
     width: 100%;
     height: auto;
@@ -7,7 +6,6 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin: auto;
     opacity: 0;
-    overflow: hidden;
     animation: aparecer 1s forwards;
 }
 
@@ -26,10 +24,10 @@
     text-align: center;
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
     font-family: Montserrat;
-    font-size: 70px;
+    font-size: 80px;
     font-style: normal;
     font-weight:900;
-    line-height: 35px;
+    line-height: 40px;
     letter-spacing: 0.8px;
 }
 .contenidousalab {
@@ -46,7 +44,7 @@
     width: 1768px; /* Fijamos el ancho a 1768px */
     max-width: 80%;
     max-height: 152px;
-    font-size: 25px;
+    font-size: 28px;
     line-height: 1.2;
     text-align: justify;
     color: #fcfeff;
@@ -58,6 +56,9 @@
     flex-shrink: 1;
     overflow: hidden; /* Evita que el texto se desborde */
 }
+
+
+
 
 
 @keyframes aparecer {
@@ -111,38 +112,31 @@
       margin-right:5%; /* Margen final desde el borde derecho */
     }
 }
-
-/**********************Barra de navegacion****************************/
-/************ESTILOS GENERALES NAVBAR**************/
+/*******Barra de navegacion*********/
+/*****ESTILOS GENERALES NAVBAR*****/
 .navbar1 {
-    width: 100%;
-    height: 100%;
-    flex-shrink: 0;
-    background: #06052D;
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between; /* Mantiene Inicio a la izquierda y menú a la derecha */
     width: 100%;
     background: #06052D;
-    padding: 0 2rem; 
+    padding: 0 1.5rem; /* Padding general, ajustado */
     box-sizing: border-box;
-    gap: 1rem; 
-    column-gap: 0.5rem;
-    flex-wrap: wrap;
+    gap: 1rem; /* Espacio entre Inicio y el menú */
+    /* flex-wrap: wrap; - Eliminado por defecto */
 }
 
 .inicio {
-    margin-left: 0;
-    margin-right: 5rem;
-    width: auto;
+   
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 1.5rem; 
+    padding: 0.75rem 1.2rem; /* Padding ajustado */
     background: #06052D;
     transition: background-color 0.5s ease;
     cursor: pointer;
+    flex-shrink: 0; /* Evita que 'Inicio' se encoja demasiado */
 }
 
 .inicio:hover {
@@ -152,18 +146,19 @@
 .iniciotxt {
     color: #FFF;
     font-family: Montserrat, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Tamaño base ligeramente reducido */
     font-weight: 500;
     line-height: 1.2;
+    white-space: nowrap; /* Evita que 'Inicio' se parta */
 }
 
 .menu1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 0.8rem; /* Espacio base entre elementos del menú */
+    justify-content: flex-end; /* Alinea items a la derecha */
+    flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
 }
 
 .acercade,
@@ -172,16 +167,23 @@
 .formacion,
 .eventos,
 .idioma {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1rem; /* Padding base ajustado */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    /* gap: 10px; <-- Puede no ser necesario */
     background: #06052D;
     transition: background-color 0.5s ease;
     cursor: pointer;
     position: relative;
+    flex-shrink: 1; /* Permite que los elementos se encojan */
+    min-width: 0; /* Importante para que flex-shrink funcione bien */
 }
+
+/* Eliminamos el min-width fijo por defecto para .eventos */
+/* .eventos {
+    min-width: 180px;
+} */
 
 .acercade:hover,
 .servicios:hover,
@@ -195,12 +197,17 @@
 .navbartxt {
     color: #FFF;
     font-family: Montserrat, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Tamaño base ligeramente reducido */
     font-weight: 500;
     line-height: 1.2;
+    white-space: nowrap; /* Evita que el texto se parta en varias líneas */
 }
 
-/* Dropdowns para submenús */
+.idioma img {
+    margin-right: 5px; /* Espacio entre icono y texto de idioma */
+}
+
+/* --- Dropdowns  --- */
 .acercadeCont,
 .serviciosCont,
 .investigacionesCont,
@@ -213,12 +220,13 @@
     background: #A4C732;
     z-index: 999;
     flex-direction: column;
-    min-width: 180px;
+    min-width: 100%; 
     padding: 0.5rem 0;
     box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Añade sombra para destacar */
 }
 
-/* Ítems dentro de los dropdowns */
+/* ... (resto de tus estilos de dropdown y sub-dropdown sin cambios)... */
 .adcontent,
 .srcontent,
 .incontent,
@@ -228,6 +236,7 @@
     padding: 0.5rem 1rem;
     box-sizing: border-box;
     transition: background-color 0.3s ease;
+    white-space: normal; /* Permite wrap dentro del dropdown */
 }
 
 .adcontent:hover,
@@ -238,175 +247,82 @@
     background-color: #06052D;
 }
 
-/* Mostrar dropdown al hover */
 .acercade:hover .acercadeCont,
 .servicios:hover .serviciosCont,
 .investigaciones:hover .investigacionesCont,
 .formacion:hover .formacionCont,
 .eventos:hover .eventosCont {
     display: flex;
-    flex-direction: column;
 }
 
-
-  /* Texto de la barra de navegación */
-.navbartxt {
-    color: #FFF;
-    width: 192px;
-    padding: 13.5px 8.5px;
-    box-sizing: border-box;
-    display: block;
-    transition: background-color 0.5s ease;
-}
-
-.servicioacademiaCont .sracontent:hover {
-    background-color: #06052D;
-}
-
-.srcontent:hover .servicioacademiaCont {
-    display: flex;
-    flex-direction: column
-}
-
-/*Seccion investigaciones*/
-
-
-
-  /* Ajustes para pantallas pequeñas */
-@media (max-width: 1188px) {
-    .navbar1 {
-            flex-wrap: wrap;
-            justify-content: center;
-    }
-    .iniciotxt, .navbartxt {
-        font-size: 1.1rem;
-    }
-    .inicio{
-        margin-right: 0rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar1 {
-        justify-content: center;
-}
-.inicio,
-.acercade,
-.servicios,
-.investigaciones,
-.formacion,
-.eventos,
-.idioma {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-    .inicio{
-        margin-right: 0rem;
-    }
-}
-.separador {
-    height: 56px;
-    width: 100%;
-}
-
-.servicios {
-    position: relative;
-    width: auto;
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: #06052D;
-    transition: background-color 0.5s ease;
-    cursor: pointer;
-}
-.servicios:hover {
-    background: #58A3C1;
-}
-
-  /* El primer submenú que sale de "Servicios" */
-.serviciosCont {
-    display: none;
-    position: absolute;
-    top: 100%;    /* Justo debajo del botón "Servicios" */
-    left: 0;
-    background: #A4C732;
-    z-index: 999; /* Evita que quede debajo de otros elementos */
-    flex-direction: column;
-    min-width: 200px;  /* Ajusta para que quepa todo el texto */
-    padding: 0.5rem 0;
-    box-sizing: border-box;
-}
-
-/* Cuando se hace hover en el contenedor "Servicios", se muestra .serviciosCont */
-.servicios:hover .serviciosCont {
-    display: flex;
-}
 .srcontent {
     position: relative;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */ /* Ya tiene padding .srcontent*/
     transition: background-color 0.3s ease;
 }
 
-.srcontent:hover {
-    background-color: #58A3C1;
-}
+/*****************/
+/********MEDIA QUERYS*********/
 
-.servicioindustriaCont,
-.servicioacademiaCont {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background: #58A3C1;
-    z-index: 999;
-    flex-direction: column;
-    min-width: 200px;
-    padding: 0.5rem 0;
-    box-sizing: border-box;
-}
-
-.srcontent:hover .servicioindustriaCont,
-.srcontent:hover .servicioacademiaCont {
-    display: flex;
-}
-
-.sricontent,
-.sracontent {
-    display: block;
-    padding: 0.5rem 1rem;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease;
-}
-
-.sricontent:hover,
-.sracontent:hover {
-    background-color: #06052D;
-}
-
-/*************************************************/
-/*********************MEDIA QUERYS****************************/
-
-@media (max-width: 1188px) {
+/* --- Media Query Unificada para Tablet y Escritorio (> 768px) --- */
+@media (min-width: 768px) {
     .navbar1 {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: nowrap; /* Forzar una sola línea */
     }
-    .iniciotxt,
-    .navbartxt {
-        font-size: 1.1rem;
+    .menu1 {
+        flex-wrap: nowrap; /* Forzar una sola línea */
     }
-    .inicio {
-        margin-right: 0;
+
+    /* Estilos específicos para el rango donde SÍ se rompía (ajusta max-width según necesites) */
+    /* Por ejemplo, si se rompía entre 768px y 1100px */
+    @media (min-width: 768px) and (max-width: 1188px) { /* Usa el límite superior donde aún se ve mal */
+        .navbar1 {
+            padding: 0 1rem; /* Menos padding horizontal general */
+            gap: 0.5rem;      /* Menos espacio entre Inicio y Menú */
+        }
+        .menu1 {
+            gap: 0.2rem;      /* Menos espacio entre ítems del menú */
+        }
+        .inicio {
+             padding: 0.75rem 0.8rem; /* Menos padding en Inicio */
+        }
+        .acercade,
+        .servicios,
+        .investigaciones,
+        .formacion,
+        .eventos,
+        .idioma {
+            padding: 0.75rem 0.5rem; /* Menos padding en items del menú */
+            color: #FFF;
+        }
+        .iniciotxt,
+        .navbartxt {
+            font-size: 0.90rem; /* Fuente más pequeña en este rango específico */
+        }
     }
 }
 
+
+/* --- Media Query para Móviles (< 768px) --- */
 @media (max-width: 768px) {
+    /* Navbar en columna y totalmente centrado */
     .navbar1 {
-        justify-content: center;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center; /*  <-- Para centrar horizontalmente */
+      padding: 0.5rem 0;
+      flex-wrap: wrap;
     }
+  
+    .menu1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;  /*  <-- Para centrar a lo largo del eje horizontal */
+      width: 100%;
+      gap: 0;
+    }
+  
+    /* Ajusta cada item en modo columna */
     .inicio,
     .acercade,
     .servicios,
@@ -414,15 +330,30 @@
     .formacion,
     .eventos,
     .idioma {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      margin: 0 auto;      /*  <-- Quita márgenes laterales, centrándolo */
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
+      position: relative;
     }
+  
+    /* Elimina margen de .inicio si se aplicó en estilo base */
     .inicio {
-        margin-right: 0;
+      margin-right: 0 !important; 
+      margin-left: 0 !important;
+      border-top: none;
     }
-    /* Para móviles, forzamos que los dropdowns se desplieguen en columna a ancho completo */
+  
+    /* Evita recortes si la palabra es larga */
+    .navbartxt {
+      text-align: center;
+      white-space: normal; /* Permite que el texto se parta en varias líneas */
+    }
+  
+    /* Ajusta dropdowns en columna y centrado */
     .acercadeCont,
     .serviciosCont,
     .investigacionesCont,
@@ -430,77 +361,62 @@
     .eventosCont,
     .servicioindustriaCont,
     .servicioacademiaCont {
-        position: static;
-        display: none; /* Se mostrarán al hover o mediante toggle */
-        width: 150%; 
-        background: #2b6589;
-        margin-top: 0;
-        padding: 0.5rem 0;
-        box-sizing: border-box;
-        flex-direction: column;
-        border-top: 1px solid #FFF;
-        z-index: 999;
+      position: static;
+      display: none;
+      width: 150%;
+      background: #2b6589;
+      margin-top: 0;
+      padding: 0.5rem 0;
+      box-sizing: border-box;
+      flex-direction: column;
+      
+      z-index: 999;
+      align-items: center; /* <-- Centra también el contenido interno */
     }
-    .acercade:hover,
-    .servicios:hover,
-    .investigaciones:hover,
-    .formacion:hover,
-    .eventos:hover,
-    .idioma:hover {
-        background: #06052D;
-    }
-    .adcontent:hover,
-    .srcontent:hover,
-    .incontent:hover,
-    .facontent:hover,
-    .evcontent:hover {
-        background-color: rgba(18, 14, 128, 0.205);
-    }
+  
     .adcontent,
     .srcontent,
     .incontent,
     .facontent,
     .evcontent {
-        border-bottom: 1px solid #7991e7;
-        padding: 0.75rem 1rem;
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #04060b;
+      background-color: rgba(6, 5, 45, 0.2);
     }
+  
     .adcontent:last-child,
     .srcontent:last-child,
     .incontent:last-child,
     .facontent:last-child,
     .evcontent:last-child {
-        border-bottom: none;
+      border-bottom: none;
     }
-    /* Para los sub-submenús, forzamos que se desplieguen en columna */
+  
+    /* Sub-submenús en columna y centrados */
     .srcontent:hover .servicioindustriaCont,
     .srcontent:hover .servicioacademiaCont {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+  
     .sricontent,
     .sracontent {
-    width: 150%;           /* Asegura que cubra todo el ancho del contenedor */
-    justify-content: center;   /* Centra horizontalmente */
-    border-bottom: 1px solid #7991e7; /* Borde inferior para separar opciones */
-    padding: 0.75rem 1rem; /* Ajusta el espaciado interno */
-    box-sizing: border-box;
-    transition: background-color 0.3s ease;
-    display: block;
-    text-align: center; 
+      width: 100%;
+      display: block;
+      text-align: center;
+      border-bottom: 1px solid #7991e7;
+      padding: 0.75rem 1rem;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease;
     }
-    .sricontent:hover,
-    .sracontent:hover {
-        background-color: #06052D;
-    }
-
     .sricontent:last-child,
     .sracontent:last-child {
-    border-bottom: none;
+      border-bottom: none;
     }
-}
-
-
-/*************************************************/
+  }
 /***********************Carrusel*********************/
 
 .carousel-caption{
@@ -565,7 +481,6 @@
     width: 100%;/*1728*/
     height: 50%;/*248*/
     display: flex;
-    margin-bottom: -288px;
     margin-left: 0px;
 
     flex-shrink: 0;
@@ -604,11 +519,13 @@
     font-weight: 400;
     line-height: 40px;
     letter-spacing: 0.32px;
+    margin-top:3%;
+    margin-bottom: 4%;
 }
 @media (max-width:1400px){
     .contenidousalabtxt{
-        width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
-        height: auto;
+        width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+        height: 50%;
         justify-content: center; /* Mantiene el contenido centrado */
         font-size: 25px;
     }
@@ -622,10 +539,110 @@
     
 }
 
+
+/* Pantallas Grandes (Laptops ~1400px) */
+@media (max-width: 1400px) {
+    .titulousalabtxt {
+        font-size: 70px; /* Reducción 1 */
+    }
+    .contenidousalabtxt {
+        font-size: 25px; /* Reducción 1 */
+    }
+}
+
+/* Pantallas Medianas (Laptops/Tablets ~1200px) */
+@media (max-width: 1200px) {
+    .titulousalabtxt {
+        font-size: 60px; /* Reducción 2 */
+    }
+    .contenidousalabtxt {
+        font-size: 22px; /* Reducción 2 */
+    }
+}
+
+/* Pantallas Tablet ( ~992px) */
+@media (max-width: 992px) {
+    .titulousalabtxt {
+        font-size: 48px; /* Reducción 3 */
+        line-height: 1.1;
+    }
+    .contenidousalabtxt {
+        font-size: 18px; /* Reducción 3 */
+        line-height: 1.5;
+        text-align: left; /* Justificar puede verse mal con poco espacio */
+    }
+    /* Ajusta el contenedor si es necesario */
+    .carousel-caption { /* Si el texto está dentro de .carousel-caption */
+        padding: 15px;
+        bottom: 5%;
+    }
+}
+
+/* Pantallas Móviles ( ~768px) */
+@media (max-width: 767.98px) {
+    /* Posiciona el texto debajo o de forma diferente si usas .carousel-caption */
+    .carousel-caption { /* O .contenidousalab si es ese el contenedor */
+        display: block !important; /* Fuerza a que sea visible */
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important; /* Asegura que tenga altura */
+        position: absolute !important; /* Sobreescribe 'absolute' si es necesario */
+        /* Mantén los demás estilos que ya tenías */
+        bottom: auto;
+        left: 0;
+        right: 0;
+        padding: 10px 10px; /* Aumenta padding por si acaso */
+        text-align: justify;
+        margin-top: 0;
+        border-radius: 0;
+        z-index: 10;
+    }
+
+    .titulousalabtxt {
+        display: block !important; /* Fuerza visibilidad */
+        visibility: visible !important;
+        opacity: 1 !important;
+        /* Mantén los demás estilos */
+        font-size: 36px;
+        line-height: 1.2;
+        text-shadow: none;
+        text-align: center;
+        color: #fff !important; 
+        margin-bottom: 10px;
+    }
+    .contenidousalabtxt {
+        display: block !important; /* Fuerza visibilidad */
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important; /* Asegura altura */
+        /* Mantén los demás estilos */
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: left;
+        width: 100%;
+        margin: 0 0 10px 0;
+        color: #f0f0f0 !important; /* Fuerza color */
+        overflow: visible !important; /* Evita que se oculte por overflow */
+    }
+}
+
+/* Pantallas Móviles Pequeñas ( ~576px) */
+@media (max-width: 576px) {
+    .titulousalabtxt {
+        font-size: 28px; /* Reducción 5 */
+    }
+    .contenidousalabtxt {
+        font-size: 14px; /* Reducción 5 */
+    }
+    .carousel-caption {
+        padding: 10px;
+    }
+}
+
 /********************************************************footer**************************************************************/
 footer {
     width: 100%;
-    height: 580px;
+    height: 100%;
     flex-shrink: 0;
     opacity: 0.95;
     padding: 2rem 4rem;           /* Espaciado interno */
@@ -772,5 +789,35 @@ footer {
 .utmfooter,
 .usalabfooter {
       width: 80px; /* Ajusta a un tamaño menor para móviles */
+    }
+}
+
+/***************************Investigaciones******************************************/
+@media (min-width: 768px) and (max-width: 1024px) and (min-height: 512px) and (max-height: 1366px) {
+ 
+    .titulousalabtxt {
+        font-size: 5vw;
+        margin-bottom: -150px;
+        line-height: 30px;
+    }
+
+    .contenidousalabtxt {
+        font-size: 2vw;
+        max-width: 90%;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .titulousalabtxt {
+        font-size: clamp(18px, 5vw, 26px);
+        margin-bottom: -10px;
+        line-height: 3px;
+    }
+
+    .contenidousalabtxt {
+        font-size: clamp(14px, 4vw, 20px);
+        max-width: 90%;
+        line-height: 2px;
     }
 }
