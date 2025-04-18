@@ -1,7 +1,7 @@
 .pruebausalab {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 100px;
     justify-content: center;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .pruebausalabp {
-    width: 687px;
+    width: 650px;
     height: 409px;
     flex-shrink: 0;
     color: #000;
@@ -39,6 +39,7 @@
     line-height: normal;
     letter-spacing: 0.32px;
 }
+
 
 .pruebausalabimg {
     width: 604px;
@@ -75,7 +76,7 @@
 }
 
 .pruebaslaboratoriop {
-    width: 941px;
+    width: 900px;
     color: #000;
     text-align: justify;
     font-family: Montserrat;
@@ -117,7 +118,7 @@
 }
 
 .usabilidadp {
-    width: 941px;
+    width: 900px;
     color: #000;
     text-align: justify;
     font-family: Montserrat;
@@ -126,7 +127,6 @@
     font-weight: 400;
     line-height: normal;
 }
-
 .pruebas2 {
     width: 100%;
     height: 484.571px;
@@ -161,7 +161,7 @@
 }
 
 .heuristicap {
-    width: 941px;
+    width: 900px;
     height: 428px;
     flex-shrink: 0;
     color: #000;
@@ -209,24 +209,20 @@
 /*****Estilos para las tarjetas del svg***********/
 .contenedorTar {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center; 
-    align-items: flex-start;
-    flex-wrap: nowrap; 
-    overflow-x: auto; 
-    gap: 24px;
+    gap: 24px; 
+    max-width: 1378px; 
+    margin: 0 auto; 
     padding: 20px;
-    width: 100%;
 }
-.tarjeta
-{
-    display: flex;
-    width: 448px;
-    height: 624px;
+
+.tarjeta {
+    width: 410px;
+    height: 614px;
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
-    margin: 0px 20px 0px 20px;
 }
 
 .tituloTar
