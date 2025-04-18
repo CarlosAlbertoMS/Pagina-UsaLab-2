@@ -14,12 +14,12 @@
     /* Titulo "Proyectos actuales" */
     .proyectos-actuales-title {
         justify-self: center;
-        width: 545px;
+        width: auto;
         height: 10%;
         flex-shrink: 0;
         color: #000;
         font-family: Montserrat;
-        font-size: 55px;
+        font-size: 5vw;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
