@@ -15,7 +15,7 @@
 /* Titulo "Investigaciones más destacadas" */
 .investigaciones-mas-destacadas-title {
     justify-self: center;
-    width: 100%;
+    width: auto;
     height: 61px;
     flex-shrink: 0;
     color: #000;
@@ -61,6 +61,11 @@
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
+    text-shadow: 
+    1px 1px 0px black,   /* Derecha y abajo */
+    -1px -1px 0px black, /* Izquierda y arriba */
+    1px -1px 0px black,  /* Derecha y arriba */
+    -1px 1px 0px black;  /* Izquierda y abajo */
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
@@ -165,7 +170,7 @@
         font-size: 5vw;
         width: 100%;
         flex-shrink: 0;
-        margin-top: 100px;
+        margin-top: 200px;
         transition: width 1.0s, height 1.0s, font-size 1.0s ease, letter-spacing 1.0s ease, margin-top 1.0s ease;
     }
     
@@ -280,7 +285,7 @@
         letter-spacing: 0.48px;
         width: 90%;
         height: 56px;
-        margin-top: 107px;
+        margin-top: 50px;
     }
     
     /* Animación para el titulo de la investigación destacada 2 */
@@ -289,7 +294,7 @@
         letter-spacing: 0.48px;
         width: 80%;
         height: 56px;
-        margin-top: 76px;
+        margin-top: 50px;
     }
     
     .line {
