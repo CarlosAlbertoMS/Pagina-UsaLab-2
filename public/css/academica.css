@@ -46,18 +46,17 @@
 
 /*****Texto del contenido del carrusel Nosotros*****/
 .contenidonosotrostxt {
-    width: 100%;
+    width: 85%;
     flex-shrink: 0;
     color: #FFF;
     text-align: justify;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.02em;
 }
-
 
 .separador2 {
     height: 10vh;
