@@ -16,6 +16,12 @@
         flex: 0 0 calc(50% - 10px);
     }
 }
+
+@media(max-width:500px){
+    .serviciosIndustriaCard{
+        flex: 0 0 calc(100% - 10px);
+    }
+}
 /* Estilo del titulo de la card */
 .serviciosIndustriaCardTitle { 
     width: 95%;

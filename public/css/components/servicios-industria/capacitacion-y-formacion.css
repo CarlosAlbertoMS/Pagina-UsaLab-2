@@ -42,7 +42,7 @@
     text-align: center;
     font-family: Montserrat;
     font-size: 32px;
-    font-style: normal;
+    font-style: 1.1;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.32px;
@@ -50,7 +50,13 @@
     padding-right: 100px;
     align-items: center;
 }
-
+@media(max-width:500px){
+    .masInformacionCapacitacionYFormacion{
+        padding:20px;
+        font-size:30px;
+        hyphens: auto;
+    }
+}
 /* Estilo para el subtitulo de la sección */
 .capacitacionYFormacionSubtitle {
     margin-top: 80px;
