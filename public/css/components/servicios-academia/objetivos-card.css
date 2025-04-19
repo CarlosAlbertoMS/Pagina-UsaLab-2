@@ -8,13 +8,7 @@
     overflow: hidden;
 
 }
-@media (max-width: 1400px) {
-    .objetivosDeLaIncorporacionDeHciCard {
-        width: 90%; /* Ajusta el ancho a un 85% para reducir el espacio a la derecha */        
-        margin-left: 5%; /* Añade un margen izquierdo para mantener el espacio */
-       
-    }
-}
+
 @media (min-width: 1400px) {
     .objetivosDeLaIncorporacionDeHciCard {
         width: 90%; /* Ajusta el ancho a un 85% para reducir el espacio a la derecha */        
@@ -24,9 +18,9 @@
 }
 /* Estilo del titulo de la card */
 .objetivosDeLaIncorporacionDeHciCardTitle {
-    margin-top: 40px;
-    margin-left: 10% ;
-    width: 670px;
+    
+    margin: 40px auto 0 auto;
+    width: 90%;
     height: auto;
     flex-shrink: 0;
     color: #FFF;
@@ -34,27 +28,40 @@
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 1.1;
+    text-align: center;
   
 }
-
+@media(max-width:500px){
+    .objetivosDeLaIncorporacionDeHciCardTitle{
+        font-size: 45px;
+        line-height: 0.9;
+    }
+}
 
 /* Estilo del texto de la card */
 .objetivosDeLaIncorporacionDeHciCardText {
-    margin-top: 80px;
-    margin-left: auto;  /* Centra el contenedor automáticamente */
-    margin-right: auto;
-    padding-bottom: 20px;
-    width: 70%;
+  
+    padding: auto;
+    width: 90%;
     height: auto;
     flex-shrink: 0;
     color: #FFF;
-    text-align: center;
+    margin: 0 auto;
+    text-align: justify;
     font-family: Montserrat;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.1;
     letter-spacing: 0.32px;
+    hyphens: auto;
+  
 }
 
+@media(max-width:500px){
+    .objetivosDeLaIncorporacionDeHciCardText{
+        font-size: 28px;
+        line-height: 0.9;
+    }
+}

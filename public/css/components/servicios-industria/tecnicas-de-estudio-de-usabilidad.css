@@ -49,6 +49,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    hyphens: auto;
 }
 
 /* Estilo del contenedor de las cards de la sección */

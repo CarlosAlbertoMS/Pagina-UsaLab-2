@@ -18,7 +18,7 @@
     margin-top: 80px;
     margin-bottom: 82px;
     color: #FCFEF9;
-    text-align: justify;
+    text-align: center;
     font-family: Montserrat;
     font-size: 55px;
     font-style: normal;
@@ -37,9 +37,17 @@
     font-size: 28px;
     font-style: normal;
     font-weight: 250;
-    line-height: normal;
+    line-height: 1.1;
     letter-spacing: 0.64px;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 100px;
+    hyphens: auto;
+}
+
+@media(max-width:500px){
+    .desarrolloComercialText{
+        font-size: 26px;
+        padding: 20px;
+    }
 }

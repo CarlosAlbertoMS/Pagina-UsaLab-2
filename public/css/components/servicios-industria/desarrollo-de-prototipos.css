@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
+    align-items:center;
 }
 
 /* Estilo para el titulo de la sección */
@@ -49,12 +50,13 @@
     flex-shrink: 0;
     display: flex;
     justify-content: center;
+    align-items:center;
 }
 
 /* Estilo del texto de la subsección */
 .creacion-de-prototipo-text {
     width: 100%;
-    margin-top: 159px;
+    
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
@@ -65,4 +67,5 @@
     letter-spacing: 0.32px;
     padding-left: 50px;
     padding-right: 50px;
+    align-items:center;
 }
