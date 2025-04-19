@@ -5,7 +5,7 @@
 
 .requisitossCard{
     position: relative;
-    width: 1728px;
+    width: 100%;
     height: 324px;
     margin: 20px 0 20px 0;
 }
@@ -21,14 +21,14 @@
     flex-shrink: 0;
     color: #FFF;
     font-family: Montserrat;
-    font-size: 55px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 
     position: absolute;
     top:50%;
-    left: 119px;
+    left: 50px;
     transform: translate(0%, -50%);
 }
 
@@ -47,6 +47,6 @@
 
     position: absolute;
     top:50%;
-    right: 120px;
+    right: 0px;
     transform: translate(0%, -50%);
 }

@@ -22,12 +22,12 @@
 /***** Contenido imagenes "Clientes" *****/
 .clientesContainer {
     width: 100%;
-    display: flex;
+    
     justify-content: center;
 }
 
 .clientes-container {
-    width: 1697px;
+    width: 1728px;
     height: 488px;
     overflow: hidden;
     position: relative;

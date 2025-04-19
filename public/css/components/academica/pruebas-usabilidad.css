@@ -1,7 +1,7 @@
 .pruebausalab {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 100px;
     justify-content: center;
 }
 
@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
+    width: 590px;
 }
 
 .pruebausalabtitle {
@@ -26,7 +27,7 @@
 }
 
 .pruebausalabp {
-    width: 687px;
+    width: 650px;
     height: 409px;
     flex-shrink: 0;
     color: #000;
@@ -40,8 +41,8 @@
 }
 
 .pruebausalabimg {
-    width: 624px;
-    height: 832px;
+    width: 604px;
+    height: 812px;
     flex-shrink: 0;
     border-radius: var(--Corner-Medium, 12px);
 }
@@ -51,11 +52,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 138px;
+    gap: 68px;
 }
 
 .pruebaslaboratoriotitle {
-    width: 312px;
+    width: 300px;
     height: 132px;
     flex-shrink: 0;
     color: #090000;
@@ -74,7 +75,7 @@
 }
 
 .pruebaslaboratoriop {
-    width: 941px;
+    width: 900px;
     color: #000;
     text-align: justify;
     font-family: Montserrat;
@@ -85,7 +86,7 @@
 }
 
 .pruebas1 {
-    width: 1728px;
+    width: 100%;
     height: 513.677px;
     flex-shrink: 0;
     object-fit: cover;
@@ -96,7 +97,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 138px;
+    gap: 68px;
 }
 
 .usabilidadtitle {
@@ -116,7 +117,7 @@
 }
 
 .usabilidadp {
-    width: 941px;
+    width: 900px;
     color: #000;
     text-align: justify;
     font-family: Montserrat;
@@ -127,7 +128,7 @@
 }
 
 .pruebas2 {
-    width: 1728px;
+    width: 100%;
     height: 484.571px;
     flex-shrink: 0;
     object-fit: cover;
@@ -138,7 +139,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 137px;
+    gap: 30px;
 }
 
 .heuristicatitle {
@@ -159,7 +160,7 @@
 }
 
 .heuristicap {
-    width: 941px;
+    width: 900px;
     height: 428px;
     flex-shrink: 0;
     color: #000;
@@ -205,23 +206,24 @@
 }
 
 /*****Estilos para las tarjetas del svg UnU***********/
-.contenedorTar
-{
+.contenedorTar {
     display: flex;
-    padding: 0px 132px 0px 132px;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 24px; 
+    max-width: 1378px; 
+    margin: 0 auto; 
+    padding: 20px;
 }
 
-.tarjeta
-{
-    display: flex;
-    width: 448px;
-    height: 624px;
+.tarjeta {
+    width: 410px;
+    height: 614px;
     flex-shrink: 0;
     position: relative;
     overflow: hidden;
-    margin: 0px 20px 0px 20px;
 }
+
 
 .tituloTar
 {
