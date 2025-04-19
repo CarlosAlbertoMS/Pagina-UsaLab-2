@@ -4,8 +4,8 @@
 .investigacion-window-container {
     gap: 10px; /* Cambia el espacio entre elementos si lo deseas */
     width: 100%; /* Ajusta el ancho */
-   
-    height: 100%;
+    margin-top: 50px;
+    height: auto;
 }
 
 
