@@ -21,7 +21,7 @@
 
 /***** Contenedor de las imágenes "Clientes" *****/
 .clientesContainer {
-    width: 600%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -40,7 +40,7 @@
     height: 500px;
     background: url('../../../img/clientes-1.png') repeat-x;
     position: relative;
-    animation: move 80s linear infinite;
+    animation: move 10s linear infinite;
 }
 
 .img-wrapper::after {
