@@ -261,6 +261,44 @@
     transition: background-color 0.3s ease;
 }
 
+/* ---------- sub‑submenús para “Servicios” (Industria / Academia) ---------- */
+.servicioindustriaCont,
+.servicioacademiaCont {
+    display: none;                 /* Ocultos por defecto */
+    position: absolute;
+    top: 0;                        /* Alineados con su opción padre */
+    left: 100%;                    /* Se despliegan hacia la derecha */
+    background: #A4C732;
+    z-index: 999;
+    flex-direction: column;
+    min-width: 200px;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+}
+
+/* Mostrar sub‑submenú al pasar el mouse por la opción padre */
+.srcontent:hover .servicioindustriaCont,
+.srcontent:hover .servicioacademiaCont {
+    display: flex;
+}
+
+/* ---------- estilo base y hover de los ítems de los sub‑submenús ---------- */
+.servicioindustriaCont .sricontent,
+.servicioacademiaCont .sracontent {
+    /* mismo verde que el contenedor padre */
+    background: #A4C732;
+    color: #06052D;
+    padding: 0.65rem 1.25rem;   /* más alto para mejor clic */
+    margin: 2px 0;              /* separación vertical */
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.servicioindustriaCont .sricontent:hover,
+.servicioacademiaCont .sracontent:hover {
+    background: #06052D;        /* azul marino como el resto de la navbar */
+    color: #FFFFFF;
+}
+
 /*****************/
 /********MEDIA QUERYS*********/
 
