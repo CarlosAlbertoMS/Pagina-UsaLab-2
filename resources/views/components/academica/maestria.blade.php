@@ -7,11 +7,11 @@
                 <div class="carousel-caption d-none d-md-block">
                     <!-- Titulo del carrusel -->
                     <div class="titulonosotros">
-                    <p class="titulonosotrostxt">Maestría en medios interactivos </p>
+                    <p class="titulonosotrostxt">Maestría en Medios Interactivos </p>
                     </div>
                     <!-- Contenido del carrusel -->
                     <div class="contenidonosotros">
-                    <p class="contenidonosotrostxt">Está dirigido a aspirantes que posean conocimientos previos, preferntemente en las áreas de diseño gráfico e industrial, ciencias de la comunicación, artes visuales, musica, informática y sistemas computacionales, así como en software y diseño. Los candidatos indeales son aquellos que seaean profundizar en el estudio de la usabilidad y el diseño centrado en el usuario</p>
+                    <p class="contenidonosotrostxt">Está dirigido a aspirantes que posean conocimientos previos, preferentemente en las áreas de diseño gráfico e industrial, ciencias de la comunicación, artes visuales, musica, informática y sistemas computacionales, así como en software y diseño. Los candidatos ideales son aquellos que desean profundizar en el estudio de la usabilidad y el diseño centrado en el usuario</p>
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@
                 Fechas
             </div>
             <div class="procesoAdministrativoFechasTexto">
-                -Solicitud y entrega de documentos <b>16 de febrero al 26 de junio de 2024</b><br>
+                -Entrega de documentos <b>16 de febrero al 26 de junio de 2024</b><br>
                 -Examen de selección <b>01 de julio de 2024</b><br>
                 -Entrevista <b>02 de julio de 2024</b><br>
                 -Inscripciónes al curso propedéutico <b>04 al 12 de julio de 2024</b><br>

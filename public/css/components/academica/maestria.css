@@ -208,7 +208,6 @@
     font-size: 55px; /* Tamaño de fuente relativo al tamaño de la pantalla */
     font-weight: 700;
     line-height: normal;
-    margin-top: 5%;
 }
 
 .procesoAdministrativoDocumentacionTexto {
@@ -250,6 +249,7 @@
     font-weight: 400;
     line-height: normal;
     text-align: center;
+    margin-top: 2%;
     width: 90%; /* Usamos porcentaje para que se ajuste al tamaño de la pantalla */
 }
 

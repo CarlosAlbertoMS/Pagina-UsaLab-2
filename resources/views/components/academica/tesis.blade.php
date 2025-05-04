@@ -37,7 +37,7 @@
             </div>
             <div class="lineaTT1"></div>
             <div class="tabla2">
-                <div class="tituloQOT">Acceso a tecnologías avanzadas</div>
+                <div class="tituloQOT">Tecnologías avanzadas</div>
                 <div class="parrafoQOT" id="TP2">UsaLab con herramientas especializadas y software de última generación que permiten realizar pruebas de usabilidad, prototipado y análisis de interfaces con precisión.</div>
             </div>
             <div class="lineaTT1"></div>
