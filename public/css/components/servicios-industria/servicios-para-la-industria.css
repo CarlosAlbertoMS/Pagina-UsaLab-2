@@ -5,7 +5,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-content: space-between;
+    align-content: space-between; 
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 /* Titulo de la sección */
