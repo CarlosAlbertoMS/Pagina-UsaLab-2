@@ -56,11 +56,6 @@
     line-height: 40px;
     letter-spacing: 0.32px;
 }
-
-
-
-
-
 @keyframes aparecer {
     to {
         opacity: 1.5;
@@ -74,6 +69,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index:900; 
 }
   /* Modificados logos - responsive */
 .logoutm {
@@ -112,6 +108,30 @@
       margin-right:5%; /* Margen final desde el borde derecho */
     }
 }
+/* ---------- Logo mini ---------- */
+.logo-mini{
+    width:42px;     /* ajusta a gusto */
+    height:auto;
+    margin-left:.6rem;
+    display:none;   /* visible sólo con .sticky */
+}
+
+/* ---------- Sticky SOLO en desktop (>992 px) ---------- */
+@media (min-width:992px){
+  .navbar-wrapper.sticky{
+      position:fixed;
+      top:0; left:0; width:100%;
+      z-index:1000;
+      box-shadow:0 2px 6px rgba(0,0,0,.15);
+  }
+  .navbar-wrapper.sticky .logo-mini{
+      display:inline-block;
+  }
+}
+
+/* Espaciador (el JS le asigna la altura real) */
+#navSpacer{display:none;}
+@media (min-width:992px){#navSpacer{display:block;height:0}}
 /*******Barra de navegacion*********/
 /*****ESTILOS GENERALES NAVBAR*****/
 .navbar1 {
@@ -178,12 +198,9 @@
     position: relative;
     flex-shrink: 1; /* Permite que los elementos se encojan */
     min-width: 0; /* Importante para que flex-shrink funcione bien */
+    color:#FFF
 }
 
-/* Eliminamos el min-width fijo por defecto para .eventos */
-/* .eventos {
-    min-width: 180px;
-} */
 
 .acercade:hover,
 .servicios:hover,
