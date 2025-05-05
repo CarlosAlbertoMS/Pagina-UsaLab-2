@@ -1,7 +1,7 @@
 /************************Ultimos eventos****************************/
 /*****************Fondo Ultimos eventos****************/
 .fondo-azul {
-    width: 1728px;
+    width: 100%;
     height: 912px;
     flex-shrink: 0;
     background: #F9F9F9;
@@ -24,7 +24,6 @@
 
 /************ Contenedor de los eventos ***************/
 .eventosContainer {
-    width: 100%;
     height: 520px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -45,7 +44,7 @@
 
 .eventosContainer::after {
     content: "";
-    display: block;
+    display: none;
     min-width: 50vw;
 }
 /************* Tarjetas ultimos eventos *************/

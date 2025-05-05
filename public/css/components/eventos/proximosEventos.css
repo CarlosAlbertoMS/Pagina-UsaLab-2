@@ -1,108 +1,4 @@
-.ProximosEventosTitulo {
-    color: #000;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;;
-}
-
-.ProximosEventosContenedorTitulo {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 160px;
-    margin-bottom: 0px;
-}
-
-.ContenedorProximosEventos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-    width: 100%;
-}
-
-.ContenedorConferencias{
-    flex-wrap: wrap;
-    margin-top: 0px;
-    width: 100%;
-}
-
-.ContenedorSubtituloConferencias{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-}
-
-.SubtituloConferencias{
-    color: #000;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-
-/**********************************************/
-
-/*         Conferencistas                   */
-
-.contenedorConferencistas {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0px;
-    width: 95%;
-}
-
-.subtituloConferencistas {
-    color: #000;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-
-.contenedorSubtituloConferencistas {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-    margin-bottom: 0px;
-}
-/************************Estilo para el contenedor de toda la subseccion conferencistas cards *********************/
-
-.contenedorCardsEventos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 45vh;
-    margin-top: 4rem;
-    gap: 1rem;
-}
-
-/************************Estilo para el separador a final de la seccion *********************/
-
-.separadorConferencias{
-    width: 1320px;
-    height: 2px;
-    background: #DADADA;
-    margin-top: 160px;
-}
-
-@media (min-width: 1921px) {
+@media (min-width: 1441px) and (max-width: 2560px) {
     .ProximosEventosTitulo {
         font-size: 5rem;
     }
@@ -113,21 +9,30 @@
     }
 }
 
-@media (max-width: 1440px) {
+/* @media (min-width: 1025px) and (max-width: 1440px) {
     .ContenedorSubtituloConferencias,
     .ContenedorSubtituloConferencistas {
         margin-bottom: 3rem;
         margin-top: 3rem;
     }
     
-    .contenedorCardsEventos {
-        height: 90vh;
+    .cards-container {
+        height: auto;
         gap: 4rem;
         margin-top: 3rem;
     }
-}
 
-@media (max-width: 768px) {
+    .subtituloConferencistas,
+    .SubtituloConferencias {
+        font-size: 4rem;
+    }
+} */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ProximosEventosContenedorTitulo {
+        margin-top: 0;
+    }
+
     .ProximosEventosTitulo {
         font-size: 3rem;
     }
@@ -140,22 +45,29 @@
 
     .SubtituloConferencias,
     .subtituloConferencistas {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
-    .contenedorCardsEventos {
-        gap: 1rem;
+    .cards-container {
+        height: 120vh;
+        max-height: 50rem;
+        gap: 3rem;
+        margin-top: 2rem;
     }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 375px) and (max-width: 430px) {
+    .ProximosEventosContenedorTitulo {
+        margin-top: 0;
+    }
+
     .ProximosEventosTitulo {
         font-size: 2rem;
     }
 
     .SubtituloConferencias,
     .subtituloConferencistas {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .ContenedorSubtituloConferencias,
@@ -164,9 +76,13 @@
         margin-top: 1rem;
     }
 
-    .contenedorCardsEventos {
+    .cards-container {
         height: 180vh;
         gap: 0rem;
         margin-top: 0.5rem;
+    }
+    
+    .separadorConferencias {
+        margin-top: 1rem;
     }
 }

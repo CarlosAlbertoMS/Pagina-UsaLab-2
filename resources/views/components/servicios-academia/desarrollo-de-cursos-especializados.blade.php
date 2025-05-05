@@ -16,7 +16,7 @@
         <div class="queOfrecemosCard" style="background: url({{ asset('img/que-ofrecemos-cursos-actualizados.png') }}) lightgray 50% / cover no-repeat;">
             <!-- Figura SVG de la card -->
             <div class="queOfrecemosCardFigure">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 556 358" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 20 552 358" fill="none">
                 <g filter="url(#filter0_d_1117_426)">
                     <path d="M552 120.218C552 294.235 207.459 318.324 18.7639 348.845C8.94892 350.432 0 342.89 0 332.948V16C0 7.16345 7.16344 0 16 0H536C544.837 0 552 7.1609 552 15.9975V120.218Z" fill="#121238" fill-opacity="0.9" shape-rendering="crispEdges"/>
                 </g>
@@ -42,7 +42,7 @@
         <div class="queOfrecemosCard" style="background: url({{ asset('img/que-ofrecemos-metodologia-practica.png') }}) lightgray 50% / cover no-repeat;">
             <!-- Figura SVG de la card -->
             <div class="queOfrecemosCardFigure">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 556 358" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 20 552 358" fill="none">
                 <g filter="url(#filter0_d_1117_426)">
                     <path d="M552 120.218C552 294.235 207.459 318.324 18.7639 348.845C8.94892 350.432 0 342.89 0 332.948V16C0 7.16345 7.16344 0 16 0H536C544.837 0 552 7.1609 552 15.9975V120.218Z" fill="#121238" fill-opacity="0.9" shape-rendering="crispEdges"/>
                 </g>
@@ -68,7 +68,7 @@
         <div class="queOfrecemosCard" style="background: url({{ asset('img/que-ofrecemos-instructores-especializados.png') }}) lightgray 50% / cover no-repeat;">
             <!-- Figura SVG de la card -->
             <div class="queOfrecemosCardFigure">
-                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 556 358" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 20 552 358" fill="none"><!-- 0 0 556 358-->
                 <g filter="url(#filter0_d_1117_426)">
                     <path d="M552 120.218C552 294.235 207.459 318.324 18.7639 348.845C8.94892 350.432 0 342.89 0 332.948V16C0 7.16345 7.16344 0 16 0H536C544.837 0 552 7.1609 552 15.9975V120.218Z" fill="#121238" fill-opacity="0.9" shape-rendering="crispEdges"/>
                 </g>

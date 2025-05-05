@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+.contc{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 /*Separadores de la pagina*/
 .separador2 {
@@ -12,7 +20,11 @@
 /*Contenedor mision vision*/
 .misionContent {
     width: 100%;
-    min-height: 100vh;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
+    font-size: 32px;                        /* Tamaño de fuente */
+    
+    /*min-height: 100vh;*/
     display: flex;
     justify-content: center; /* Centra .misionvc horizontalmente */
     align-items: center;    /* Centra .misionvc verticalmente */
@@ -21,6 +33,7 @@
     padding: 40px 20px;
     overflow: hidden; /* Puede ayudar a prevenir desbordamientos inesperados */
 }
+
 
 /* Fondo azul REIMPLEMENTADO */
 .fondoazul {
@@ -86,7 +99,7 @@
 /*Contenido mision vision*/
 .misionp {
     color: #FAF2F2;
-    text-align: justify;
+    text-align: e;
     font-family: Montserrat;
     font-size: 24px;
     font-style: normal;
@@ -180,7 +193,7 @@
 
 .separador6 {
     width: 100%;
-    height: 80px;
+    height: 38px;
 }
 
 /*Contenido instalaciones*/
@@ -780,3 +793,7 @@ body {
     height: 66px;
     font-size: clamp(18px, 2.5vw, 36px);
 }
+
+
+
+

@@ -1,16 +1,15 @@
 .ultimos-eventos-container {
     display: flex;
     width: 95%;
-    height: 50%;
+    height: 45%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0;
+    margin-top: var(--margin-big);
 }
 
 .ultimos-eventos-title {
-    width: 30%;
-    padding-right: 70px;
+    width: 40%;
 }
 
 .ultimos-eventos-title h2 {
@@ -21,8 +20,11 @@
 }
 
 .ultimos-eventos-cards {
-    width: 70%;
+    width: 60%;
     height: 50vh;
+    /* max-width: 20rem; */
+    /* max-height: 20rem; */
+    min-height: 18rem;
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -37,12 +39,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    /* align-items: center; */
     flex-shrink: 0;
     border-radius: var(--Corner-Medium, 12px);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 1.5rem 2rem 1.5rem;
+    padding: 0 0.8rem 2rem 0.8rem;
 }
 
 .event-card::before {
@@ -75,14 +76,15 @@
 .title-event-card {
     color: #FFF;
     font-family: Montserrat;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.55px;
 }
 
-.title-event-card, .text-event-card{
+.title-event-card, 
+.text-event-card {
     position: relative;
     z-index: 1;
 }
@@ -90,7 +92,7 @@
 .text-event-card {
     color: #FFF;
     font-family: Montserrat;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-style: normal;
     text-align: justify;
     font-weight: 500;
@@ -98,40 +100,17 @@
     letter-spacing: 0.32px;
 }
 
-.carousel-control-prev, .carousel-control-next {
-    width: 5%;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-@media (min-width: 1921px) {
-    .ultimos-eventos-title h2 {
-        font-size: 3rem;
-    }
-
-    .text-event-card {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 1440px) {
-    .title-event-card h2 {
-        font-size: 3rem;
-    }
-
-    .title-event-card {
-        font-size: 1.5rem;
+@media (max-width: 1024px) {
+    .ultimos-eventos-cards {
+        width: 75%;
     }
 
     .event-card {
-        width: 60%;
-    }
-
-    .ultimos-eventos-title {
-        padding-right: 50px;
+        width: 80%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .ultimos-eventos-container {
         flex-direction: column;
         width: 100%;
@@ -143,24 +122,17 @@
     }
 
     .ultimos-eventos-cards {
-        width: 100%;
+        width: 75%;
+        min-width: 16rem;
+        min-height: 350px;
     }
 
-    .title-event-card h2 {
-        font-size: 1.5rem;
-    }
-    
     .event-card {
         width: 85%;
+        max-width: 15rem;
     }
 
-    .carousel-control-prev, .carousel-control-next {
-        width: 10%;
-    }
-}
-
-@media (max-width: 400px) {
-    .event-card {
-        width: 90%;
+    br.responsive {
+        display: none;
     }
 }
