@@ -16,7 +16,7 @@
     font-size: 2rem;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    line-height: 1.5;
 }
 
 /* --------- Animaciones del carousel --------- */
@@ -24,6 +24,10 @@
 .slide-image.dimmed {
     filter: brightness(0.5);
     transition: filter 0.5s ease;
+}
+
+.slide-image.offset {
+    transform: translateY(24px);
 }
 
 /* Animaciones para el título */
@@ -67,7 +71,6 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
 }
 
 /* Texto adicional cuando se muestra */
