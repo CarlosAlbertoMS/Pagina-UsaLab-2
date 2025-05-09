@@ -28,11 +28,14 @@
       <!-- Barra de navegacion -->
       <div class="navbar-wrapper" id="navbarWrapper">   
         <div class="navbar1">
+        <img src="{{ asset('img/Logo-UTM-1.png') }}" class="logo-mini" alt="UTM mini">
+        <img src="{{ asset('img/logo Usalab 3-03 1.png') }}" class="logo-mini usalab-mini" alt="UsaLab mini">
         <!-- Seccion Inicio -->
         <div class="inicio" onclick="window.location.href='{{ url('/') }}'">
-              <span class="iniciotxt">Inicio</span>
+              
               <!-- logo mini -->
-              <img src="{{ asset('img/Logo UTM Color 1.png') }}" class="logo-mini" alt="UTM mini">
+              
+              <span class="iniciotxt">Inicio</span>
           </div>
         <!-- Termina seccion Inicio -->
         <div class="menu1">
