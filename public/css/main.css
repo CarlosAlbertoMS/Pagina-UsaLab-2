@@ -9,7 +9,7 @@
     animation: aparecer 1s forwards;
 }
 
-    .titulousalab{
+.titulousalab{
         display: flex;
         width: 100%;
         height: 136px;
@@ -18,8 +18,8 @@
         flex-shrink: 0;
         margin-bottom: -384px;
         animation: titulousalab 1.5s forwards;
-    }
-    .titulousalabtxt {
+}
+.titulousalabtxt {
     color: #FFF;
     text-align: center;
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
@@ -56,11 +56,6 @@
     line-height: 40px;
     letter-spacing: 0.32px;
 }
-
-
-
-
-
 @keyframes aparecer {
     to {
         opacity: 1.5;
@@ -74,16 +69,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index:900; 
 }
   /* Modificados logos - responsive */
 .logoutm {
-    /* Tamaño flexible: mínimo 60px, ideal 6vw y máximo 128px */
     width: 5%;
     height: auto; /* Mantiene la proporción */
     object-fit: contain;
     flex-shrink: 0;
-    /* Comienza fuera de la vista, hacia la izquierda */
-    margin-left: -80px; /* Valor inicial negativo */
+    /* comienza fuera de la vista hacia la izquierda */
+    margin-left: -80px; /* valor inicial negativo */
     /* Animación para deslizar el logo hacia adentro */
     animation: logoutm 1s forwards ease-out;
 }
@@ -96,7 +91,6 @@
 
 
 .logousalab {
-    /* Tamaño flexible: mínimo 60px, ideal 6vw y máximo 136px */
     width: 5%;
     height: auto;
     object-fit: contain;
@@ -112,19 +106,54 @@
       margin-right:5%; /* Margen final desde el borde derecho */
     }
 }
+/* ---------- Logo mini navbar ---------- */
+.logo-mini{
+    width:42px;    
+    height:auto;
+    margin-left:.6rem;
+    display:none;   /* visible sólo con .sticky */
+}
+/* espacio entre los dos logos */
+.utm-mini {
+  /* un poco de margen a la derecha */
+  margin-right: 0.25rem;   
+}
+
+.usalab-mini {
+  margin-left: -0.1rem;     
+}
+/* ---------- Sticky SOLO en desktop (>992 px) ---------- */
+@media (min-width:992px){
+  .navbar-wrapper.sticky{
+      position:fixed;
+      top:0; left:0; width:100%;
+      z-index:1000;
+      box-shadow:0 2px 6px rgba(0,0,0,.15);
+  }
+  .navbar-wrapper.sticky .logo-mini{
+      display:inline-block;
+  }
+}
+.logo-mini.usalab-mini {
+  /* convierte todo a blanco */
+  filter: brightness(0) invert(1);
+}
+
+/* Espaciador (el JS le asigna la altura real) */
+#navSpacer{display:none;}
+@media (min-width:992px){#navSpacer{display:block;height:0}}
 /*******Barra de navegacion*********/
 /*****ESTILOS GENERALES NAVBAR*****/
 .navbar1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; /* Mantiene Inicio a la izquierda y menú a la derecha */
+    justify-content: space-between; /* para mantener Inicio a la izquierda y menú a la derecha */
     width: 100%;
     background: #06052D;
-    padding: 0 1.5rem; /* Padding general, ajustado */
+    padding: 0 1.5rem; /* padding general */
     box-sizing: border-box;
     gap: 1rem; /* Espacio entre Inicio y el menú */
-    /* flex-wrap: wrap; - Eliminado por defecto */
 }
 
 .inicio {
@@ -132,11 +161,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 1.2rem; /* Padding ajustado */
+    padding: 0.75rem 1.2rem; 
     background: #06052D;
     transition: background-color 0.5s ease;
     cursor: pointer;
-    flex-shrink: 0; /* Evita que 'Inicio' se encoja demasiado */
+    flex-shrink: 0; 
 }
 
 .inicio:hover {
@@ -171,19 +200,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* gap: 10px; <-- Puede no ser necesario */
     background: #06052D;
     transition: background-color 0.5s ease;
     cursor: pointer;
     position: relative;
-    flex-shrink: 1; /* Permite que los elementos se encojan */
-    min-width: 0; /* Importante para que flex-shrink funcione bien */
+    flex-shrink: 1; /* permite que los elementos se encojan */
+    min-width: 0; 
+    color:#FFF
 }
 
-/* Eliminamos el min-width fijo por defecto para .eventos */
-/* .eventos {
-    min-width: 180px;
-} */
 
 .acercade:hover,
 .servicios:hover,
@@ -197,7 +222,7 @@
 .navbartxt {
     color: #FFF;
     font-family: Montserrat, sans-serif;
-    font-size: 1.1rem; /* Tamaño base ligeramente reducido */
+    font-size: 1.1rem; /* tamaño base  reducido */
     font-weight: 500;
     line-height: 1.2;
     white-space: nowrap; /* Evita que el texto se parta en varias líneas */
@@ -223,10 +248,9 @@
     min-width: 100%; 
     padding: 0.5rem 0;
     box-sizing: border-box;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Añade sombra para destacar */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
 }
 
-/* ... (resto de tus estilos de dropdown y sub-dropdown sin cambios)... */
 .adcontent,
 .srcontent,
 .incontent,
@@ -236,7 +260,7 @@
     padding: 0.5rem 1rem;
     box-sizing: border-box;
     transition: background-color 0.3s ease;
-    white-space: normal; /* Permite wrap dentro del dropdown */
+    white-space: normal; /* permite wrap dentro del dropdown */
 }
 
 .adcontent:hover,
@@ -257,16 +281,15 @@
 
 .srcontent {
     position: relative;
-    /* padding: 0.5rem 1rem; */ /* Ya tiene padding .srcontent*/
     transition: background-color 0.3s ease;
 }
 
-/* ---------- sub‑submenús para “Servicios” (Industria / Academia) ---------- */
+/* sub‑submenús para Servicios (Industria/Academia) */
 .servicioindustriaCont,
 .servicioacademiaCont {
     display: none;                 /* Ocultos por defecto */
     position: absolute;
-    top: 0;                        /* Alineados con su opción padre */
+    top: 0;                        /* Alineados con LA opción padre */
     left: 100%;                    /* Se despliegan hacia la derecha */
     background: #A4C732;
     z-index: 999;
@@ -276,33 +299,33 @@
     box-sizing: border-box;
 }
 
-/* Mostrar sub‑submenú al pasar el mouse por la opción padre */
+/* Mostrar sub submenú al pasar el mouse por la opción padre */
 .srcontent:hover .servicioindustriaCont,
 .srcontent:hover .servicioacademiaCont {
     display: flex;
 }
 
-/* ---------- estilo base y hover de los ítems de los sub‑submenús ---------- */
+/* estilo y hover de los ítems de los subsubmenús */
 .servicioindustriaCont .sricontent,
 .servicioacademiaCont .sracontent {
-    /* mismo verde que el contenedor padre */
+    /* mismo color que el contenedor padre */
     background: #A4C732;
     color: #06052D;
-    padding: 0.65rem 1.25rem;   /* más alto para mejor clic */
+    padding: 0.65rem 1.25rem;   
     margin: 2px 0;              /* separación vertical */
     transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .servicioindustriaCont .sricontent:hover,
 .servicioacademiaCont .sracontent:hover {
-    background: #06052D;        /* azul marino como el resto de la navbar */
+    background: #06052D;       
     color: #FFFFFF;
 }
 
 /*****************/
 /********MEDIA QUERYS*********/
 
-/* --- Media Query Unificada para Tablet y Escritorio (> 768px) --- */
+/* Media query tablet y scritorio (> 768px) */
 @media (min-width: 768px) {
     .navbar1 {
         flex-wrap: nowrap; /* Forzar una sola línea */
@@ -311,18 +334,16 @@
         flex-wrap: nowrap; /* Forzar una sola línea */
     }
 
-    /* Estilos específicos para el rango donde SÍ se rompía (ajusta max-width según necesites) */
-    /* Por ejemplo, si se rompía entre 768px y 1100px */
-    @media (min-width: 768px) and (max-width: 1188px) { /* Usa el límite superior donde aún se ve mal */
+    @media (min-width: 768px) and (max-width: 1188px) { 
         .navbar1 {
-            padding: 0 1rem; /* Menos padding horizontal general */
-            gap: 0.5rem;      /* Menos espacio entre Inicio y Menú */
+            padding: 0 1rem; /*menos padding horizontal general */
+            gap: 0.5rem;      /*menos espacio entre inicio y menú */
         }
         .menu1 {
-            gap: 0.2rem;      /* Menos espacio entre ítems del menú */
+            gap: 0.2rem;      /*menos espacio entre ítems del menú */
         }
         .inicio {
-             padding: 0.75rem 0.8rem; /* Menos padding en Inicio */
+            padding: 0.75rem 0.8rem; 
         }
         .acercade,
         .servicios,
@@ -330,36 +351,34 @@
         .formacion,
         .eventos,
         .idioma {
-            padding: 0.75rem 0.5rem; /* Menos padding en items del menú */
+            padding: 0.75rem 0.5rem; /*menos padding en items del menú */
             color: #FFF;
         }
         .iniciotxt,
         .navbartxt {
-            font-size: 0.90rem; /* Fuente más pequeña en este rango específico */
+            font-size: 0.90rem; /* Fuente más pequeña */
         }
     }
 }
 
 
-/* --- Media Query para Móviles (< 768px) --- */
+/* media query para móviles (< 768px) */
 @media (max-width: 768px) {
-    /* Navbar en columna y totalmente centrado */
+    
     .navbar1 {
-      flex-direction: column; 
-      justify-content: center;
-      align-items: center; /*  <-- Para centrar horizontalmente */
-      padding: 0.5rem 0;
-      flex-wrap: wrap;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center; 
+        padding: 0.5rem 0;
+        flex-wrap: wrap;
     }
-  
     .menu1 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;  /*  <-- Para centrar a lo largo del eje horizontal */
-      width: 100%;
-      gap: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 100%;
+        gap: 0;
     }
-  
     /* Ajusta cada item en modo columna */
     .inicio,
     .acercade,
@@ -368,93 +387,88 @@
     .formacion,
     .eventos,
     .idioma {
-      width: 100%;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-      margin: 0 auto;      /*  <-- Quita márgenes laterales, centrándolo */
-      padding: 0.8rem 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
-      position: relative;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin: 0 auto;     
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
+        position: relative;
     }
-  
-    /* Elimina margen de .inicio si se aplicó en estilo base */
-    .inicio {
-      margin-right: 0 !important; 
-      margin-left: 0 !important;
-      border-top: none;
+
+.inicio {
+        margin-right: 0 !important; 
+        margin-left: 0 !important;
+        border-top: none;
+}
+.navbartxt {
+        text-align: center;
+        white-space: normal; 
+}
+
+.acercadeCont,
+.serviciosCont,
+.investigacionesCont,
+.formacionCont,
+.eventosCont,
+.servicioindustriaCont,
+.servicioacademiaCont {
+        position: static;
+        display: none;
+        width: 150%;
+        background: #2b6589;
+        margin-top: 0;
+        padding: 0.5rem 0;
+        box-sizing: border-box;
+        flex-direction: column;
+        z-index: 999;
+        align-items: center;
     }
-  
-    /* Evita recortes si la palabra es larga */
-    .navbartxt {
-      text-align: center;
-      white-space: normal; /* Permite que el texto se parta en varias líneas */
-    }
-  
-    /* Ajusta dropdowns en columna y centrado */
-    .acercadeCont,
-    .serviciosCont,
-    .investigacionesCont,
-    .formacionCont,
-    .eventosCont,
-    .servicioindustriaCont,
-    .servicioacademiaCont {
-      position: static;
-      display: none;
-      width: 150%;
-      background: #2b6589;
-      margin-top: 0;
-      padding: 0.5rem 0;
-      box-sizing: border-box;
-      flex-direction: column;
-      
-      z-index: 999;
-      align-items: center; /* <-- Centra también el contenido interno */
-    }
-  
-    .adcontent,
-    .srcontent,
-    .incontent,
-    .facontent,
-    .evcontent {
-      width: 100%;
-      text-align: center;
-      padding: 0.75rem 1rem;
-      border-bottom: 1px solid #04060b;
-      background-color: rgba(6, 5, 45, 0.2);
-    }
-  
-    .adcontent:last-child,
-    .srcontent:last-child,
-    .incontent:last-child,
-    .facontent:last-child,
-    .evcontent:last-child {
-      border-bottom: none;
-    }
-  
-    /* Sub-submenús en columna y centrados */
-    .srcontent:hover .servicioindustriaCont,
-    .srcontent:hover .servicioacademiaCont {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .sricontent,
-    .sracontent {
-      width: 100%;
-      display: block;
-      text-align: center;
-      border-bottom: 1px solid #7991e7;
-      padding: 0.75rem 1rem;
-      box-sizing: border-box;
-      transition: background-color 0.3s ease;
-    }
-    .sricontent:last-child,
-    .sracontent:last-child {
-      border-bottom: none;
-    }
-  }
+
+.adcontent,
+.srcontent,
+.incontent,
+.facontent,
+.evcontent {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #04060b;
+        background-color: rgba(6, 5, 45, 0.2);
+}
+
+.adcontent:last-child,
+.srcontent:last-child,
+.incontent:last-child,
+.facontent:last-child,
+.evcontent:last-child {
+        border-bottom: none;
+}
+
+    /* Sub-submenús en columna  */
+.srcontent:hover .servicioindustriaCont,
+.srcontent:hover .servicioacademiaCont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.sricontent,
+.sracontent {
+        width: 100%;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #7991e7;
+        padding: 0.75rem 1rem;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease;
+}
+.sricontent:last-child,
+.sracontent:last-child {
+        border-bottom: none;
+        }
+}
 /***********************Carrusel*********************/
 
 .carousel-caption{
