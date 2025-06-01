@@ -29,7 +29,6 @@
     color: #A4C732;
     transition: color 1.0s ease;
 }
-
 .card:hover .card-figure svg {
     color: #4F9EBE;
 }
@@ -117,4 +116,40 @@
     position: absolute;
     left: 80px;
     top: 88px;
+}
+
+/*************************tableta******************************************/
+@media (min-width: 768px) and (max-width: 1024px) and (min-height: 512px) and (max-height: 1366px){
+    .cards-container {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 0 16px;
+      }
+    
+    .card {
+        flex: 0 0 auto;
+        margin-right: 0px;
+        width: 340px;
+        height: 520px;
+        gap: 205px;
+    }
+
+    .card-figure svg {
+        height: 225px;
+    }
+
+    #nuestros-servicios-title {
+        left: 70px;
+    }
+
+    #nosotros-title{
+        left: 75px;
+    }
+
+    #investigacion-title {
+        left: 14px;
+        top: 73px;
+    }
+
 }

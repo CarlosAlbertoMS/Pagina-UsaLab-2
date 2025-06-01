@@ -74,6 +74,7 @@
         <!-- Sección "Estudios de Usabilidad" -->
         <x-servicios-industria.estudios-de-usabilidad />
         
+        
         <!-- Sección "Técnicas para llevar a cabo los estudios de usabilidad" -->
         <x-servicios-industria.tecnicas-de-estudio-de-usabilidad />
         

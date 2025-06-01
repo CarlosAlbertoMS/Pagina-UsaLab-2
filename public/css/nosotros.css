@@ -1,58 +1,72 @@
+.container1 {
+    box-sizing: border-box;
+}
+
+
 /*Separadores de la pagina*/
 .separador2 {
-    height: 160px;
+    height: 80px;
     width: 100%;
 }
 
 /*Contenedor mision vision*/
 .misionContent {
     width: 100%;
-    height: 1143px;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center; /* Centra .misionvc horizontalmente */
+    align-items: center;    /* Centra .misionvc verticalmente */
+    flex-direction: column; /* Asegura que funciona si .misionvc necesita apilarse */
+    position: relative;     /* Necesario para .fondoazul position:absolute */
+    padding: 40px 20px;
+    overflow: hidden; /* Puede ayudar a prevenir desbordamientos inesperados */
 }
 
-/*Fondo del contenedor azul*/
+/* Fondo azul REIMPLEMENTADO */
 .fondoazul {
-    width: 1368px;
-    height: 1143px;
-    flex-shrink: 0;
     position: absolute;
-    background: #06052D;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-left: 360px;
-    z-index: 1;
+    background: hsl(242, 80%, 10%);  /* Tu color */
+    z-index: 0;           /* Detrás del contenido */
+    border-radius: 8px;   /* Opcional */
+    /* top, left, width, height: Serán añadidos por JavaScript */
+    /* Puedes dejar unos valores iniciales para evitar un 'flash' */
+    width: 90%;
+
+    display: block; /* Asegurar que sea visible por defecto */
 }
+
+
 
 /*Contenedor de los elementos*/
 .misionvc {
-    width: 1472px;
-    height: 956px;
+    max-width: 1472px;
+    width: 95%;
+    height: auto;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 96px;
-    margin-left: 96px;
+    gap: 40px;
+    position: relative;  /* <-- AÑADIR ESTO */
     z-index: 2;
+    margin-left: 0;
+    padding: 40px 0;
+    background-color: transparent;
 }
-
 /*Imagen Mario*/
 .img13 {
-    width: 576px;
-    height: 910px;
-    margin-top: -13px;
-    flex-shrink: 0;
+    max-width: 50%;
+    height: auto;
+    margin-top: 0;
+    flex-shrink: 1;
     object-fit: cover;
 }
 
 /*Contenedor del texto*/
 .misionvision {
-    width: 808px;
-    height: 956px;
+    max-width: 808px;
+    width: 95%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +77,7 @@
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
-    font-size: 55px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -74,24 +88,84 @@
     color: #FAF2F2;
     text-align: justify;
     font-family: Montserrat;
-    font-size: 32px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px;
-
+    line-height: 30px;
 }
 
 /*Separadores de la pagina*/
 .separador3 {
     width: 100%;
-    height: 42px;
+    height: 20px;
 }
 
 .linea1 {
-    width: 712px;
-    height: 3px;
+    width: 80%;
+    height: 2px;
     background: #FFF;
 }
+
+
+
+/* Titulos y Texto (asegurar visibilidad si hay problemas) */
+.titlemision, .misionp, .linea1 {
+    position: relative;
+    z-index: 4; /* Por si acaso, encima de todo */
+}
+
+/* --- Media Queries --- */
+/* Hay que ajustar .fondoazul DENTRO de cada media query */
+
+@media (min-width: 768px) {
+    .misionvc {
+        flex-wrap: nowrap; /* Lado a lado */
+        gap: 96px;
+        /* width: 85%; /* Ejemplo */
+    }
+
+    .img13 {
+        max-width: 576px;
+        height: 720px;
+        flex-shrink: 0;
+    }
+    /* Ajustes de texto como antes... */
+
+    /* Ajustar .fondoazul para layout lado a lado */
+
+}
+
+/* Para pantallas medianas (tabletas en orientación vertical, desde 600px hasta 768px) */
+@media (min-width: 600px) and (max-width: 767px) {
+    .misionvc {
+        flex-direction: column;
+        gap: 48px;
+        align-items: center;
+    }
+
+    .img13 {
+        max-width: 480px;
+        height: 600px;
+        margin-top: -10px;
+    }
+
+    .titlemision {
+        font-size: 45px;
+    }
+
+    .misionp {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .linea1 {
+        width: 500px;
+        height: 2px;
+    }
+
+
+}
+
 
 /*Separadores de la pagina*/
 .separador4 {
@@ -232,29 +306,42 @@
     font-weight: 400;
     line-height: normal;
 }
-
-.trayectoriaContent {
-    width: 1754px;
-    height: 969.627px;
-    flex-shrink: 0;
+trayectoriaContent {
+    width: 100%;
+    height: 1048px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*Contenido del carrusel Trayectoria*/
 .contenidotray {
-    width: 1728px;
+    /* O considera usar max-width para responsividad */
+    /* max-width: 1728px; */
+    width: 100%;  /* Asegura que ocupe el ancho disponible hasta el max-width */
+
     height: 399px;
-    display: flex;
-    margin-bottom: -40px;
-    margin-left: -260px;
+    display: flex; /* Esto afecta a los hijos de .contenidotray */
+
+    /* --- Cambios para centrar --- */
+    /* Quitamos el margen izquierdo negativo */
+    /* margin-left: -260px; */
+    margin-left: auto;  /* Añadimos margen automático a la izquierda */
+    margin-right: auto; /* Añadimos margen automático a la derecha */
+    /* --- Fin de Cambios --- */
+
+    margin-bottom: -40px; /* Mantenemos esto si es necesario para tu layout */
     flex-shrink: 0;
     background: rgba(192, 192, 192, 0.30);
-    justify-content: center;
-    align-items: center;
+
+    /* Estas propiedades centran el *contenido dentro* de .contenidotray */
+    justify-content: center; /* Centra los hijos horizontalmente (si hay espacio) */
+    align-items: center;     /* Centra los hijos verticalmente */
 }
 
 /*Texto del carrusel Trayectoria*/
 .contenidotraytxt {
-    width: 1392px;
+    width: 70%;
     flex-shrink: 0;
     color: #FFFCFC;
     text-align: justify;
@@ -293,18 +380,30 @@
 }
 
 /*Seccion clientes*/
-.clientesContainer {
+
+/* Este contenedor probablemente envuelve todo, lo dejamos como está
+   o ajustamos justify-content si los items *dentro* deben centrarse */
+   .clientesContainer {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
-    gap: 80px
+    /* Si .clientes-container es hijo directo y quieres centrarlo con flex: */
+    /* justify-content: center; */
+    /* Si no, déjalo como estaba o ajústalo según necesites para otros hijos: */
+     justify-content: flex-start;
+     gap: 80px;
 }
 
+/* Este es el contenedor que probablemente quieres centrar */
 .clientes-container {
-    width: 1192px;
+    width: 85%; /* Ancho fijo */
     height: 912px;
     overflow: hidden;
     position: relative;
+
+    /* --- Añadir estas líneas para centrar horizontalmente --- */
+    margin-left: center;
+
+    /* --- Fin de líneas añadidas --- */
 }
 
 /*Imagneses clientes*/
@@ -582,78 +681,102 @@
 }
 
 /*Contenedor hablanos*/
+/* 🔹 Contenedor hablanos */
+
+.hablanosContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* 🔹 Centra el contenido */
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Evita el desplazamiento horizontal */
+}
+
+/* Ajusta los contenedores para que se adapten sin forzar un tamaño específico */
+
+
+/* Media query para tamaños más pequeños */
+@media screen and (max-width: 1200px) {
+    .container1 {
+        width: 95%;
+    }
+}
+
 .hablanosContainer {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-/*Contenedor texto hablanos*/
 .hablanos {
+    max-width: 90%;
+    width: 100%;
+    height: auto;
     display: flex;
-    width: 1185px;
-    height: 360px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 80px;
-    flex-shrink: 0;
+    gap: 5vw;
+    text-align: center;
 }
 
-/*Titulo hablanos*/
-.hablanos-title {
-    width: 707px;
-    height: 56px;
-    flex-shrink: 0;
-    color: #06052D;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 55px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+/* 🔹 Media query para evitar desplazamiento lateral en pantallas pequeñas */
+@media screen and (max-width: 1200px) {
+    .container1 {
+        width: 90%;
+        /* Se ajusta mejor en pantallas pequeñas */
+    }
+
+    .hablanos {
+        max-width: 95%;
+    }
 }
+
+/* 🔹 Para evitar el desplazamiento lateral en todo el sitio */
+html,
+body {
+    overflow-x: hidden;
+}
+
 
 /*Texto hablanos*/
 .hablanos-text {
+    max-width: 90%;
     width: 1185px;
-    height: 80px;
-    flex-shrink: 0;
+    height: auto;
     color: #000;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(18px, 3vw, 32px);
     font-weight: 400;
-    line-height: normal;
 }
 
 /*Boton hablanos*/
 .hablanos-button {
     width: 272px;
     height: 64px;
-    flex-shrink: 0;
-    border-radius: var(--Corner-Full, 1000px);
+    border-radius: 1000px;
     background: #06052D;
     display: flex;
-    /* width: 176px;
-    height: 32px; */
-    flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
+    align-items: center;
     color: #FFF;
-    text-align: center;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(16px, 2vw, 32px);
     font-weight: 400;
-    line-height: normal;
-    transition: width 1.0s ease, height 1.0s ease, font-size 1.0s ease;
+    transition: width 0.3s ease, height 0.3s ease, font-size 0.3s ease;
 }
 
 .hablanos:hover .hablanos-button {
     width: 308.7px;
     height: 66px;
-    font-size: 36px;
+    font-size: clamp(18px, 2.5vw, 36px);
 }

@@ -1,52 +1,48 @@
-.requisitosscont{
+.requisitosscont {
     display: flex;
     flex-direction: column;
-}
-
-.requisitossCard{
-    position: relative;
     width: 100%;
-    height: 324px;
-    margin: 20px 0 20px 0;
 }
 
-.requisitossCard img{
+.requisitossCard {
+    position: relative;
+    width: 100%; /* Cambié el tamaño de 1728px a 100% para que se ajuste al contenedor */
+    height: auto; /* Dejo la altura automática para mantener la proporción */
+    margin: 5% 0;
+}
+
+.requisitossCard img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.requisitosstitulo{
-    width: 614px;
+.requisitosstitulo {
+    width: 35%; /* Cambié de 614px a un porcentaje */
     flex-shrink: 0;
     color: #FFF;
     font-family: Montserrat;
-    font-size: 50px;
-    font-style: normal;
+    font-size: 4vw; /* Utilizo 'vw' para que el tamaño de la fuente dependa del ancho de la ventana */
     font-weight: 700;
     line-height: normal;
-
     position: absolute;
-    top:50%;
-    left: 50px;
+    top: 50%;
+    left: 6%; /* Ajusto con un porcentaje */
     transform: translate(0%, -50%);
 }
 
-.requisitossp{
-    width: 715px;
+.requisitossp {
+    width: 40%; /* Cambié de 715px a un porcentaje */
     flex-shrink: 0;
-
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
-    font-size: 32px;
-    font-style: normal;
+    font-size: 2.5vw; /* Utilizo 'vw' para que el tamaño de la fuente dependa del ancho de la ventana */
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.32px;
-
     position: absolute;
-    top:50%;
-    right: 0px;
+    top: 50%;
+    right: 6%; /* Ajusto con un porcentaje */
     transform: translate(0%, -50%);
 }

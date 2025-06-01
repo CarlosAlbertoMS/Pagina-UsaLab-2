@@ -9,7 +9,13 @@
 .separador-servicios-academia {
     margin-top: 153px;
     margin-bottom: 126px;
-    width: 1295px;
-    height: 2px;
+    width: 100%;
+    height: auto;
     background: #D4D4D4;
+}
+@media (max-width: 1300px) {
+.servicios-academia-container {
+    max-width: 100%; /* Se asegurará de que no se desborden */
+    width: 100%; /* Asegura que el elemento ocupe el 100% de su contenedor */
+}
 }

@@ -124,9 +124,9 @@
     </div>
 
     <div class="egreso">
-        <img src="{{ asset('img/FA_MC_EG.png') }}" alt="">
+        <img src="{{ asset('img/FA_MC_EG.png') }}" class="egreso-img" alt="" >
         <div class="tituloEgreso">Perfil de egreso</div>
-        <div class="textoEgreso">El egresado es un profecional ocn habilidades en desarrollo y dirección de proyectos, investigación, creatividad e innovación tecnológica en dicha área. Este especialista podrá desarrollarse en despachos de diseño, medios de comunicación, casa productoras y pos-productoras, casas de efectos visuales y animación por computadora, cine y video, agencias de publicidad, enseñanza e investigación, empresas privadas o del Estado y ejercicio libre de la profesión.</div>
+        <div class="textoEgreso">El egresado es un profecional con habilidades en desarrollo y dirección de proyectos, investigación, creatividad e innovación tecnológica en dicha área. Este especialista podrá desarrollarse en despachos de diseño, medios de comunicación, casa productoras y pos-productoras, casas de efectos visuales y animación por computadora, cine y video, agencias de publicidad, enseñanza e investigación, empresas privadas o del Estado y ejercicio libre de la profesión.</div>
     </div>
 
     <div class="separador2"></div>

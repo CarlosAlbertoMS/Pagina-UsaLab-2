@@ -1,49 +1,97 @@
 /* Estilo para el contenido de la card */
 .informationCardContainer {
-    width: 1424px;
-    height: 688px;
+    width: 90%; /*1424*/
+    height: auto;/*688*/
     display: flex;
-    position: relative;
+    /*position: relative;*/
+    flex-direction: row;
+    align-items: stretch;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+    .informationCardContainer {
+    
+        width: 95%; 
+      
+    }
+}
+
+@media (min-width: 1400px) {
+    .informationCardContainer {
+    
+        width: 70%; 
+      
+    }
 }
 
 /* Estilo para la imagen de la card */
 .imagenInformationCard {
-    position: absolute; 
+    /*position: absolute; */
     left: 0;
     z-index: 1; /* Asegura que la imagen esté sobre el div de texto */
-    width: 552px;
-    height: 697px;
+    width: 50%;/*552*/
+    height: auto;
     flex-shrink: 0;
     border-radius: var(--Corner-Large, 16px);
     object-fit: cover;
 }
 
+
 /* Estilo para el contenedor del texto de la card */
-.textoInformationCardContainer {
-    position: absolute;
+.textoInformationCardContainer { 
+    /*position: absolute;*/
     right: 0;
     z-index: 0; /* Asegura que el div de texto esté debajo de la imagen */
-    width: 907px;
-    height: 688px;
+    width: 50%;
+    height: auto;
     flex-shrink: 0;
     border-radius: 0px 16px 16px 0px;
     background: #F9F9F9;
     display: flex;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
-}
 
+    
+}
+/*
+@media (max-width: 1400px) {
+    .imagenInformationCard
+    .textoInformationCardContainer {
+        width: 45%; 
+        min-height: 300px;
+        height: auto; 
+       
+    }
+}*/
+.imagenInformationCard {
+    aspect-ratio: 16 / 9; /* Mantiene proporción ancho/alto */
+    max-height: 90vh; /* No ocupa más del 90% de la pantalla */
+}
 /* Estilo para el texto de la card */
 .textoInformationCard {
-    margin-left: 114px;
-    width: 713px;
+    margin-left: 5%;
+    width: 100%; 
+    padding-right: 5%;   
+    height: auto;
     flex-shrink: 0;
     color: #000;
-    text-align: justify;
+    text-align: left;
     font-family: Montserrat;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.32px;
+    overflow: hidden;
 }
+@media (max-width: 1100px) {
+    .textoInformationCard {
+        /* Se reduce el ancho */
+     
+        font-size: 26px;
+        
+    }
+}
+

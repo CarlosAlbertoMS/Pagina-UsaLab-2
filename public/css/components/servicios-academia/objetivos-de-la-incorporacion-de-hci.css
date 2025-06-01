@@ -1,15 +1,19 @@
 /* Estilo para el contenedor de la sección */
 .objetivosDeLaIncorporacionDeHciContainer {
-    width: 1728px;
-    /* height: 2147px; */
+    width: 100%;
+    height: auto; 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow: hidden;
 }
 
 /* Estilo del titulo de la sección */
 .objetivosDeLaIncorporacionDeHciTitle {
+    width: 100%;
     margin-top: 80px;
+    height: auto;
+    text-align: center;
     color: #000;
     font-family: Montserrat;
     font-size: 55px;
@@ -21,9 +25,31 @@
 
 /* Estilo del conteedor de las cards de objetivos */
 .cardsObjetivosContainer {
+    
     margin-top: 80px;
     height: 1920px;
+    
     display: flex;
     flex-wrap: wrap;
     gap: 80px;
 }
+
+.objetivos-card {
+    /*background-image: url("{{ asset('img/formacion-interdiciplinaria.png') }}");
+    background-size: cover; /* Esto cubre todo el contenedor */
+    background-position: center; /* Esto centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.objetivos-card img {
+    width: 100%;  /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: contain;  /* Hace que la imagen cubra el contenedor sin distorsionarse */
+}
+
+

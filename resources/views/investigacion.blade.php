@@ -18,7 +18,6 @@
 <!-- Hoja de estilos de la sección "Hablanos" -->
 <link rel="stylesheet" href="{{ asset('css/components/hablanos.css') }}">
 @endsection
-
 @section('title','Investigaciones')
 
 @section('content')
@@ -50,7 +49,6 @@
             <!-- Descripción de la página Investigación -->
             @section('contc','La investigación en UsaLab impulsa el avance en usabilidad e interacción humano-computadora (HCI). Nos enfocamos en contribuir al ámbito académico y ofrecer soluciones innovadoras para desafíos en el diseño de sistemas y productos interactivos, explorando nuevas metodologías y evaluando tecnologías emergentes.')
         </div>
-
         <!-- Sección "Proyectos actuales" -->
         <x-investigacion.proyectos-actuales/>
 
@@ -62,7 +60,7 @@
 
         <!-- Sección "Investigaciones más destacadas" -->
         <x-investigacion.investigaciones-mas-destacadas />
-
+        
         <!-- Sección "Hablanos" -->
         <x-hablanos />
 

@@ -12,7 +12,7 @@
     color: #000;
     text-align: center;
     font-family: Montserrat;
-    font-size: 55px;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -25,24 +25,26 @@
     align-items: center;
     margin-top: 160px;
     align-self: flex-start;
-    margin-bottom:80px; 
+    font-size: 3rem;
+    margin-bottom: 80px; 
 }
+
 .contenedorSubtituloProfesores {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     margin-top: 80px;
+    font-size: 3rem;
     margin-bottom: 0px;
 }
 
 /************************Estilo para el contenedor de toda la subseccion profesores titulo y cards *********************/
 .contenedorProfesores {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin-top: 0px;
+    width: 95%;
 }
 
 /************************Estilo para el contenedor de toda la subseccion profesores cards *********************/
@@ -64,4 +66,40 @@
     height: 2px;
     background: #DADADA;
     margin-top: 160px;
+}
+
+@media (min-width: 1921px) {
+    .contenedorSubtituloCursos,
+    .contenedorSubtituloProfesores {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 1440px) {
+    .contenedorSubtituloCursos,
+    .contenedorSubtituloProfesores {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedorSubtituloCursos {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .contenedorSubtituloCursos {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    } 
+
+    .subtitulo {
+        font-size: 1.5rem;
+    }
 }

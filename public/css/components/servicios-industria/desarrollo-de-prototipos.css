@@ -1,7 +1,9 @@
 /* Estilo del contenedor de la sección */
 .desarrolloDePrototiposContainer {
-    width: 1728px;
-    height: 2355px;
+    width: 100%;
+
+    height: auto;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,6 +12,8 @@
 
 /* Estilo para el titulo de la sección */
 .desarrolloDePrototiposTitle {
+    width: 100%;
+    text-align: center;
     color: #000;
     font-family: Montserrat;
     font-size: 55px;
@@ -23,6 +27,7 @@
 
 /* Estilo para el subtitulo de la sección */
 .desarrolloDePrototiposSubtitle {
+    width: 100%;
     margin-top: 108px;
     margin-bottom: 60px;
     color: #000;
@@ -39,7 +44,7 @@
 .creacion-de-prototipo {
     margin-top: 58px;
     margin-bottom: 128px;
-    width: 1728px;
+    width: 100%;
     height: 631px;
     flex-shrink: 0;
     display: flex;
@@ -48,7 +53,7 @@
 
 /* Estilo del texto de la subsección */
 .creacion-de-prototipo-text {
-    width: 1195px;
+    width: 100%;
     margin-top: 159px;
     color: #FFF;
     text-align: center;
@@ -58,4 +63,6 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.32px;
+    padding-left: 50px;
+    padding-right: 50px;
 }

@@ -1,18 +1,33 @@
 /* Estilo de la Card de objetivos */
 .objetivosDeLaIncorporacionDeHciCard {
-    width: 1728px;
-    height: 418px;
+    width: 100%;/*1728*/
+    height: auto;
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
-}
+    overflow: hidden;
 
+}
+@media (max-width: 1400px) {
+    .objetivosDeLaIncorporacionDeHciCard {
+        width: 90%; /* Ajusta el ancho a un 85% para reducir el espacio a la derecha */        
+        margin-left: 5%; /* Añade un margen izquierdo para mantener el espacio */
+       
+    }
+}
+@media (min-width: 1400px) {
+    .objetivosDeLaIncorporacionDeHciCard {
+        width: 90%; /* Ajusta el ancho a un 85% para reducir el espacio a la derecha */        
+        margin-left: 5%; /* Añade un margen izquierdo para mantener el espacio */
+       
+    }
+}
 /* Estilo del titulo de la card */
 .objetivosDeLaIncorporacionDeHciCardTitle {
     margin-top: 40px;
-    margin-left: 113px;
+    margin-left: 10% ;
     width: 670px;
-    height: 134px;
+    height: auto;
     flex-shrink: 0;
     color: #FFF;
     font-family: Montserrat;
@@ -20,14 +35,18 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+  
 }
+
 
 /* Estilo del texto de la card */
 .objetivosDeLaIncorporacionDeHciCardText {
     margin-top: 80px;
-    margin-left: 330px;
-    width: 1079px;
-    height: 124px;
+    margin-left: auto;  /* Centra el contenedor automáticamente */
+    margin-right: auto;
+    padding-bottom: 20px;
+    width: 70%;
+    height: auto;
     flex-shrink: 0;
     color: #FFF;
     text-align: center;
@@ -38,3 +57,4 @@
     line-height: normal;
     letter-spacing: 0.32px;
 }
+

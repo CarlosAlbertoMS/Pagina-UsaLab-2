@@ -1,11 +1,12 @@
 /* Estilo del contenedor de la sección */
 .incorporacionDeHciEnPlanesDeEstudioContainer {
-    width: 1728px;
-    height: 982px;
+    width: 100%;
+    height:auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 
 /* Estilo del titulo de la sección */
 .incorporacionDeHciEnPlanesDeEstudioTitle {
@@ -18,4 +19,5 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 0.55px;
+    text-align: center;
 }
