@@ -379,7 +379,9 @@
     /* azul marino como el resto de la navbar */
     color: #FFFFFF;
 }
-
+.inicio-mobile {
+    display: none;
+}
 /*****************/
 /********MEDIA QUERYS*********/
 
@@ -506,7 +508,9 @@
     .investigaciones,
     .formacion,
     .eventos,
-    .idioma {
+    .idioma,
+    .inicio-mobile {
+        display: flex; 
         width: 100%;
         justify-content: center;
         text-align: center;
@@ -865,7 +869,6 @@
         color: #fff !important;
         margin-bottom: 10px;
     }
-
     .contenidousalabtxt {
         display: block !important;
         /* Fuerza visibilidad */

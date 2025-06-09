@@ -43,8 +43,11 @@
           <span class="hamburger-icon">&#9776;</span>
           <span class="menu-text">Menú</span>
         </div>
-        <div class="menu1">
-          <!-- Seccion acerca de -->
+       <div class="menu1">
+          <div class="inicio-mobile" onclick="window.location.href='{{ url('/') }}'">
+            <div class="navbartxt">Inicio</div>
+          </div>
+
           <div class="acercade">
             <div onclick="window.location.href='{{ url('/nosotros') }}'" class="navbartxt">Acerca de</div>
             <!-- Contenido acerca de -->
@@ -296,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* --- decide si la barra debe o no estar pegada --- */
-        function updateSticky(){
+    function updateSticky(){
         /* en escritorio – pegamos solo después de que la franja blanca salga */
         if (window.scrollY >= barTop){
             if (!bar.classList.contains('sticky')){
@@ -321,6 +324,19 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load',    () => {                  // cuando todo (imágenes, fuentes…) ha terminado de cargar
         recalcBarTop();
         updateSticky();
+    });
+
+    const menuContainer = document.querySelector('.menu1');
+    // Selecciona todos los elementos que tienen un evento onclick dentro del menú.
+    const menuLinks = menuContainer.querySelectorAll('[onclick]');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Si el menú está activo (abierto en móvil), le quita la clase para cerrarlo.
+            if (menuContainer.classList.contains('active')) {
+                menuContainer.classList.remove('active');
+            }
+        });
     });
 });
 </script>
