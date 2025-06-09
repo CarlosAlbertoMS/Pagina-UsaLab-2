@@ -1,8 +1,15 @@
+/* 🔹 Para evitar el desplazamiento lateral en todo el sitio */
+html,
+body {
+    overflow-x: hidden;
+}
+
+
 .container1 {
     box-sizing: border-box;
 }
 
-.contc{
+.contc {
     width: 100%;
     height: 100%;
     display: flex;
@@ -21,31 +28,42 @@
 .misionContent {
     width: 100%;
     text-align: justify;
-    font-family: 'Montserrat', sans-serif; /* Fuente Montserrat */
-    font-size: 32px;                        /* Tamaño de fuente */
-    
+    font-family: 'Montserrat', sans-serif;
+    /* Fuente Montserrat */
+    font-size: 32px;
+    /* Tamaño de fuente */
+
     /*min-height: 100vh;*/
     display: flex;
-    justify-content: center; /* Centra .misionvc horizontalmente */
-    align-items: center;    /* Centra .misionvc verticalmente */
-    flex-direction: column; /* Asegura que funciona si .misionvc necesita apilarse */
-    position: relative;     /* Necesario para .fondoazul position:absolute */
+    justify-content: center;
+    /* Centra .misionvc horizontalmente */
+    align-items: center;
+    /* Centra .misionvc verticalmente */
+    flex-direction: column;
+    /* Asegura que funciona si .misionvc necesita apilarse */
+    position: relative;
+    /* Necesario para .fondoazul position:absolute */
     padding: 40px 20px;
-    overflow: hidden; /* Puede ayudar a prevenir desbordamientos inesperados */
+    overflow: hidden;
+    /* Puede ayudar a prevenir desbordamientos inesperados */
 }
 
 
 /* Fondo azul REIMPLEMENTADO */
 .fondoazul {
     position: absolute;
-    background: hsl(242, 80%, 10%);  /* Tu color */
-    z-index: 0;           /* Detrás del contenido */
-    border-radius: 8px;   /* Opcional */
+    background: hsl(242, 80%, 10%);
+    /* Tu color */
+    z-index: 0;
+    /* Detrás del contenido */
+    border-radius: 8px;
+    /* Opcional */
     /* top, left, width, height: Serán añadidos por JavaScript */
     /* Puedes dejar unos valores iniciales para evitar un 'flash' */
     width: 90%;
 
-    display: block; /* Asegurar que sea visible por defecto */
+    display: block;
+    /* Asegurar que sea visible por defecto */
 }
 
 
@@ -60,20 +78,16 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    position: relative;  /* <-- AÑADIR ESTO */
+    position: relative;
+    /* <-- AÑADIR ESTO */
     z-index: 2;
     margin-left: 0;
     padding: 40px 0;
     background-color: transparent;
 }
+
 /*Imagen Mario*/
-.img13 {
-    max-width: 50%;
-    height: auto;
-    margin-top: 0;
-    flex-shrink: 1;
-    object-fit: cover;
-}
+
 
 /*Contenedor del texto*/
 .misionvision {
@@ -122,62 +136,17 @@
 
 
 /* Titulos y Texto (asegurar visibilidad si hay problemas) */
-.titlemision, .misionp, .linea1 {
+.titlemision,
+.misionp,
+.linea1 {
     position: relative;
-    z-index: 4; /* Por si acaso, encima de todo */
+    z-index: 4;
+    /* Por si acaso, encima de todo */
 }
 
 /* --- Media Queries --- */
 /* Hay que ajustar .fondoazul DENTRO de cada media query */
 
-@media (min-width: 768px) {
-    .misionvc {
-        flex-wrap: nowrap; /* Lado a lado */
-        gap: 96px;
-        /* width: 85%; /* Ejemplo */
-    }
-
-    .img13 {
-        max-width: 576px;
-        height: 720px;
-        flex-shrink: 0;
-    }
-    /* Ajustes de texto como antes... */
-
-    /* Ajustar .fondoazul para layout lado a lado */
-
-}
-
-/* Para pantallas medianas (tabletas en orientación vertical, desde 600px hasta 768px) */
-@media (min-width: 600px) and (max-width: 767px) {
-    .misionvc {
-        flex-direction: column;
-        gap: 48px;
-        align-items: center;
-    }
-
-    .img13 {
-        max-width: 480px;
-        height: 600px;
-        margin-top: -10px;
-    }
-
-    .titlemision {
-        font-size: 45px;
-    }
-
-    .misionp {
-        font-size: 28px;
-        line-height: 36px;
-    }
-
-    .linea1 {
-        width: 500px;
-        height: 2px;
-    }
-
-
-}
 
 
 /*Separadores de la pagina*/
@@ -241,19 +210,21 @@
 
 /*Contenido de las imagenes*/
 .instalacionesimg {
-    width: 1408px;
-    height: 624px;
-    display: flex;
-    gap: 32px;
+  width: 1408px;
+  height: 624px;
+  display: flex;
+  gap: 32px;
 }
 
-/*Imagenes de las instalaciones*/
+
 .imginst {
-    width: 448px;
-    height: 624px;
-    flex-shrink: 0;
-    border-radius: var(--Corner-Medium, 12px);
+  width: 448px;
+  height: 624px;
+  flex-shrink: 0;
+  border-radius: var(--Corner-Medium, 12px);
 }
+/*Imagenes de las instalaciones*/
+
 
 /*Seccion equipo a cargo*/
 .equipoCont {
@@ -319,42 +290,51 @@
     font-weight: 400;
     line-height: normal;
 }
+
 trayectoriaContent {
     width: 100%;
-    height: 1048px;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/*Contenido del carrusel Trayectoria*/
+/*Contenido del carrusel Trayectzoria*/
 .contenidotray {
     /* O considera usar max-width para responsividad */
     /* max-width: 1728px; */
-    width: 100%;  /* Asegura que ocupe el ancho disponible hasta el max-width */
+    width: 100%;
+    /* Asegura que ocupe el ancho disponible hasta el max-width */
 
-    height: 399px;
-    display: flex; /* Esto afecta a los hijos de .contenidotray */
+    height: 500px;
+    /* Altura fija o ajustable según el diseño */
+    display: flex;
+    /* Esto afecta a los hijos de .contenidotray */
 
     /* --- Cambios para centrar --- */
     /* Quitamos el margen izquierdo negativo */
     /* margin-left: -260px; */
-    margin-left: auto;  /* Añadimos margen automático a la izquierda */
-    margin-right: auto; /* Añadimos margen automático a la derecha */
+    margin-left: auto;
+    /* Añadimos margen automático a la izquierda */
+    margin-right: auto;
+    /* Añadimos margen automático a la derecha */
     /* --- Fin de Cambios --- */
 
-    margin-bottom: -40px; /* Mantenemos esto si es necesario para tu layout */
+    margin-bottom: -40px;
+    /* Mantenemos esto si es necesario para tu layout */
     flex-shrink: 0;
     background: rgba(192, 192, 192, 0.30);
 
     /* Estas propiedades centran el *contenido dentro* de .contenidotray */
-    justify-content: center; /* Centra los hijos horizontalmente (si hay espacio) */
-    align-items: center;     /* Centra los hijos verticalmente */
+    justify-content: center;
+    /* Centra los hijos horizontalmente (si hay espacio) */
+    align-items: center;
+    /* Centra los hijos verticalmente */
 }
 
 /*Texto del carrusel Trayectoria*/
 .contenidotraytxt {
-    width: 70%;
+    width: 65%;
     flex-shrink: 0;
     color: #FFFCFC;
     text-align: justify;
@@ -363,7 +343,7 @@ trayectoriaContent {
     font-style: normal;
     font-weight: 400;
     line-height: 40px;
-    letter-spacing: 0.32px;
+    letter-spacing: 0.5px;
 }
 
 /*Contenedor Colaboraciones*/
@@ -396,19 +376,20 @@ trayectoriaContent {
 
 /* Este contenedor probablemente envuelve todo, lo dejamos como está
    o ajustamos justify-content si los items *dentro* deben centrarse */
-   .clientesContainer {
+.clientesContainer {
     width: 100%;
     display: flex;
     /* Si .clientes-container es hijo directo y quieres centrarlo con flex: */
     /* justify-content: center; */
     /* Si no, déjalo como estaba o ajústalo según necesites para otros hijos: */
-     justify-content: flex-start;
-     gap: 80px;
+    justify-content: flex-start;
+    gap: 80px;
 }
 
 /* Este es el contenedor que probablemente quieres centrar */
 .clientes-container {
-    width: 85%; /* Ancho fijo */
+    width: 85%;
+    /* Ancho fijo */
     height: 912px;
     overflow: hidden;
     position: relative;
@@ -717,11 +698,7 @@ body {
 
 
 /* Media query para tamaños más pequeños */
-@media screen and (max-width: 1200px) {
-    .container1 {
-        width: 95%;
-    }
-}
+
 
 .hablanosContainer {
     width: 100%;
@@ -741,26 +718,11 @@ body {
     text-align: center;
 }
 
-/* 🔹 Media query para evitar desplazamiento lateral en pantallas pequeñas */
-@media screen and (max-width: 1200px) {
-    .container1 {
-        width: 90%;
-        /* Se ajusta mejor en pantallas pequeñas */
-    }
-
-    .hablanos {
-        max-width: 95%;
-    }
-}
-
-/* 🔹 Para evitar el desplazamiento lateral en todo el sitio */
-html,
-body {
-    overflow-x: hidden;
-}
 
 
-/*Texto hablanos*/
+
+
+
 .hablanos-text {
     max-width: 90%;
     width: 1185px;
@@ -797,3 +759,411 @@ body {
 
 
 
+/* 🔹 Media query para evitar desplazamiento lateral en pantallas pequeñas */
+
+
+
+@media screen and (min-width: 701px) {
+    .misionvc {
+        flex-wrap: nowrap;
+        /* Lado a lado */
+        gap: 96px;
+        /* width: 85%; /* Ejemplo */
+    }
+
+    .img13 {
+        max-width: 50%;
+        height: auto;
+        margin-top: 0;
+        flex-shrink: 1;
+        object-fit: cover;
+    }
+
+
+
+
+}
+
+
+.carousel-caption-mobile {
+    display: none;
+}
+
+/* Para pantallas medianas (tabletas en orientación vertical, desde 600px hasta 768px) */
+/* --- MEDIA QUERY PARA MOVILES PEQUEÑOS (TELÉFONOS) --- */
+@media screen and (max-width: 600px) {
+    /* =============================
+       Estilos Responsivos - Mobile
+       Archivo: public/css/nosotros.css
+    ============================== */
+
+    /* 🔹 Ocultar elementos específicos */
+    .titulousalab,
+    .titulousalabtxt,
+    .contenidousalab,
+    .contenidousalabtxt {
+        display: none !important;
+    }
+
+    /* 🔹 Carrusel */
+    .carousel-item {
+        position: relative;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 25vh;
+        object-fit: cover;
+    }
+
+    /* 🔹 Ajustes generales del body */
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        overflow-x: hidden;
+        text-align: center;
+        font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    }
+
+    /* 🔹 Contenedor fondo móvil */
+    .fondo-Mobile {
+        background: hsl(242, 80%, 10%);
+        padding: 20px;
+        border-radius: 8px;
+        color: white;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto -20px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .misionp {
+        color: #FAF2F2;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: justify;
+
+        /* 👇 Esto ayuda mucho */
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        word-break: break-word;
+    }
+
+    .imginst {
+        width: 448px;
+        height: 624px;
+        flex-shrink: 0;
+        border-radius: var(--Corner-Medium, 12px);
+    }
+
+    /* 🔹 Imágenes pequeñas y centradas */
+    .cuadrousalab,
+    .cuadroutm {
+        width: 25vw !important;
+        height: auto !important;
+        margin: 0 auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    /* 🔹 Contenedores generales */
+    .misionvision,
+    .instalacionesp,
+    .contenidotraytxt,
+    .colaboracionesp,
+    .testimoniop,
+    .testimoniocard,
+    .hablanos-text {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    /* 🔹 Títulos */
+    .titlemision,
+    .instalacionestitle,
+    .equipotitle,
+    .colaboracionestitle,
+    .testimoniostitle {
+        width: 90%;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    /* 🔹 Subtítulos y nombres */
+    .nome1,
+    .nome2,
+    .testimoniotitulo {
+        width: 90%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* 🔹 Imágenes generales */
+    .imginst {
+        width: 450px;
+        height: 450px;
+        flex-shrink: 0;
+        border-radius: var(--Corner-Medium, 12px);
+    }
+
+    .img13 {
+        width: 80%;
+        height: 80%;
+        margin-top: 0;
+        flex-shrink: 1;
+        object-fit: cover;
+    }
+
+    .separador7 {
+        height: 40px;
+
+    }
+
+
+    .testimoniosimg,
+    .imginst {
+        width: 60vw !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+    /* 🔹 Trayectoria */
+    .contenidotray {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    /* 🔹 Formulario “Háblanos” */
+    .hablanos {
+        max-width: 95%;
+        padding: 0 10px;
+    }
+
+    .hablanos-button {
+        width: 80%;
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .hablanos:hover .hablanos-button {
+        width: 90%;
+        height: 52px;
+        font-size: 16px;
+    }
+
+    /* 🔹 Secciones: Colaboraciones y logros */
+
+    .misionContent,
+    .trayectoriaContent {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        /* Evita problemas con flex en algunos navegadores */
+        margin-bottom: 30px;
+        /* Reducir espacio en móvil */
+        padding: 15px 10px;
+        /* Ajustar padding para móvil */
+    }
+
+
+
+    .instalacionesContent {
+        padding-bottom: 40px;
+        /* Espacio anti-solapamiento */
+    }
+
+    .equipoCont {
+        clear: both;
+        /* Fuerza nueva línea */
+        margin-top: 360px;
+        /* Compensa padding anterior si es necesario */
+    }
+
+    .colaboracionesContent {
+        clear: both;
+        /* Fuerza nueva línea */
+        /* Compensa padding anterior si es necesario */
+    }
+
+    .logrosContent {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+        position: relative;
+        clear: both;
+        margin-top: px;
+        margin-top: 830px;
+
+
+    }
+
+    /*Titulo logros*/
+    .logrostitle {
+        height: 64px;
+        flex-shrink: 0;
+        color: #000;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .logroscont {
+        width: 100%;
+        height: 75%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* 🔹 Cuadros individuales */
+    .cuadroverde,
+    .cuadroazul,
+    .cuadroceleste,
+    .cuadrogris,
+    .cuadroutm,
+    .cuadrousalab {
+        width: 30vw;
+        height: 30vw;
+        max-width: 120px;
+        max-height: 120px;
+        padding: 1px;
+        flex-shrink: 0;
+    }
+
+    .cuadroutm img,
+    .cuadrousalab img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .cuadroutm,
+    .cuadrousalab {
+        width: 100px;
+        height: 100px;
+        display: block;
+        object-fit: contain;
+    }
+
+    /* 🔹 Texto de cuadros */
+    .cuadrotitle,
+    .cuadrop {
+        font-size: 10px;
+        width: auto;
+    }
+
+    /* 🔹 Separadores y líneas */
+    .separador2,
+    .separador3,
+    .separador4,
+    .separador5,
+    .separador6 {
+        height: 20px;
+    }
+
+    .linea1 {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    /* 🔹 Estructuras en columnas */
+    .misionvc,
+
+    .instalacionesimg,
+    .clientesContainer,
+    .testimonioscont,
+    .eq {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* 🔹 Trayectoria - Carrusel */
+    .trayectoriaContent .carousel-caption {
+        position: static !important;
+        background-color: hsl(242, 80%, 10%);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 15px;
+        color: white;
+        text-align: center;
+    }
+
+    .trayectoriaContent .titulousalabtxt {
+        font-size: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .contenidotray {
+        background-color: hsl(242, 80%, 10%);
+    }
+
+    /* 🔹 Carrusel principal */
+    .carrusel-header {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        width: 90%;
+        color: white;
+        text-align: center;
+    }
+
+    .tituloc {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .contc {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 10px;
+    }
+
+    /* 🔹 Layouts tipo “flex-container” */
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .flex-container img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .flex-container .texto {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    /* 🔹 Orden opcional invertido */
+    .orden-invertido {
+        order: -1;
+    }
+}
