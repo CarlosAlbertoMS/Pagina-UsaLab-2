@@ -58,7 +58,6 @@
 
 .pruebaslaboratoriotitle {
     width: 312px;
-    height: 132px;
     flex-shrink: 0;
     color: #090000;
     text-align: justify;
@@ -264,4 +263,148 @@
     overflow: hidden;
     text-overflow: ellipsis;
     width: 430px;
+}
+
+
+/* ------- Media Query para móviles -------- */
+@media (max-width: 768px) {
+
+  .pruebausalab, 
+  .pruebaslaboratorio,
+  .usabilidad,
+  .heuristica {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .pruebausalabtxt, 
+  .pruebaslaboratoriotxt,
+  .usabilidadcont,
+  .heuristicacont,
+  .requisitoss {
+    width: 100%;
+    gap: 40px;
+    padding: 0 10px;
+  }
+
+  .pruebausalabtitle, 
+  .pruebaslaboratoriotitle, 
+  .usabilidadtitle, 
+  .heuristicatitle, 
+  .requisitosptitle, 
+  .requisitosstitle {
+    width: 100%;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .pruebausalabp,
+  .pruebaslaboratoriop,
+  .usabilidadp,
+  .heuristicap {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .pruebausalabimg,
+  .pruebas1,
+  .pruebas2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .contenedorTar {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .tarjeta {
+    width: 90%;
+    height: auto;
+  }
+
+  .tituloTarTexto {
+    font-size: 24px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (min-height: 512px) and (max-height: 1366px) {
+    .pruebausalabtitle {
+        height: 82px;
+        font-size: 43px;
+    }
+
+    .pruebausalabimg {
+        width: 50%;
+        height: 70%;
+    }
+
+    .pruebausalab {
+        gap: 10%;
+    }
+
+    .pruebausalabp {
+        width: 100%;
+        height: 307px;
+        font-size: 25px;
+    }
+
+    .pruebausalabtxt {
+        gap: 50px;
+    }
+
+    .contenedorTar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        max-width: 1378px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .tarjeta{
+        width: 360px;
+        height: 600px;
+    }
+
+    .pruebaslaboratorio{
+        justify-content: flex-start;
+
+    }
+
+    .pruebaslaboratoriop{
+        font-size: 25px;
+    }
+
+    .pruebaslaboratoriotitle{
+        font-size: 37px;
+    }
+
+    .usabilidad{
+        gap: 38px;
+        justify-content: flex-start;
+    }
+
+    .usabilidadp{
+        font-size: 25px;
+    }
+
+    .usabilidadtitle{
+        font-size: 35px;
+    }
+
+    .heuristicap{
+        width: 562px;
+        font-size: 25px;
+    }
+
+    .heuristicatitle{
+        font-size: 35px;
+    }
+
 }
