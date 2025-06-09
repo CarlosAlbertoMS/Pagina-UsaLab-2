@@ -122,14 +122,15 @@
 .usalab-mini {
   margin-left: -0.1rem;     
 }
-/* ---------- Sticky SOLO en desktop (>992 px) ---------- */
+.navbar-wrapper.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
 @media (min-width:992px){
-  .navbar-wrapper.sticky{
-      position:fixed;
-      top:0; left:0; width:100%;
-      z-index:1000;
-      box-shadow:0 2px 6px rgba(0,0,0,.15);
-  }
   .navbar-wrapper.sticky .logo-mini{
       display:inline-block;
   }
@@ -139,7 +140,7 @@
   filter: brightness(0) invert(1);
 }
 
-/* Espaciador (el JS le asigna la altura real) */
+
 #navSpacer{display:none;}
 @media (min-width:992px){#navSpacer{display:block;height:0}}
 /*******Barra de navegacion*********/
@@ -157,7 +158,6 @@
 }
 
 .inicio {
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,6 +179,20 @@
     font-weight: 500;
     line-height: 1.2;
     white-space: nowrap; /* Evita que 'Inicio' se parta */
+}
+.mobile-menu-toggle {
+    display: none;
+    background: #06052D;
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+}
+/* Estilo específico para el icono dentro del toggle: */
+.hamburger-icon {
+    font-size: 1.25rem;          /* un poco más grande que el texto, para que resalte */
+    line-height: 1;              /* evita saltos verticales */
 }
 
 .menu1 {
@@ -289,7 +303,7 @@
 .servicioacademiaCont {
     display: none;                 /* Ocultos por defecto */
     position: absolute;
-    top: 0;                        /* Alineados con LA opción padre */
+    top: 0;                       
     left: 100%;                    /* Se despliegan hacia la derecha */
     background: #A4C732;
     z-index: 999;
@@ -364,23 +378,67 @@
 
 /* media query para móviles (< 768px) */
 @media (max-width: 768px) {
-    
+    /* ***************** MOSTRAR EL BOTÓN MENÚ ***************** */
+    .carousel,   
+    .banner {               
+        margin-top: 50px;    
+    }
+    .mobile-menu-toggle {
+    display: flex;         
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #06052D;
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    }
+    .navbar1 {
+        position: relative; /* Para que .menu1 (abajo) se calcule respecto a este contenedor */
+    }
+
+    .inicio,
+    .logo-mini,
+    .logousalab,
+    .logoutm {
+        display: none;
+    }
     .navbar1 {
         flex-direction: column; 
         justify-content: center;
         align-items: center; 
-        padding: 0.5rem 0;
+
         flex-wrap: wrap;
     }
+    /* .menu1 (las opciones) deberá estar oculta hasta que se haga click en “Menú” */
+        
     .menu1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        width: 100%;
-        gap: 0;
+    display: none;            /* por defecto no se ve */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+    position: absolute;     
+    top: 100%;                /* justo debajo de .navbar1 */
+    left: 0;                  /* alinear a la izquierda de .navbar1 */
+    background: #06052D;
+    z-index: 1002;            /* más alto que el toggle y que cualquier dropdown */
+    }
+    .menu1.active {
+    display: flex;
+    position: absolute;   /* refuerza que sigue siendo absolute */
+    top: 100%;            /* debajo de .navbar1 */
+    left: 0;
+    width: 100%;
+    z-index: 1002;
+    }
+    .navbar-wrapper {
+    margin-bottom: 56px;
+    position: relative; /* El menú se posiciona respecto a este contenedor */
     }
     /* Ajusta cada item en modo columna */
-    .inicio,
     .acercade,
     .servicios,
     .investigaciones,
@@ -396,24 +454,15 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
         position: relative;
     }
-
-.inicio {
-        margin-right: 0 !important; 
-        margin-left: 0 !important;
-        border-top: none;
-}
-.navbartxt {
+    .navbartxt {
         text-align: center;
         white-space: normal; 
-}
-
-.acercadeCont,
-.serviciosCont,
-.investigacionesCont,
-.formacionCont,
-.eventosCont,
-.servicioindustriaCont,
-.servicioacademiaCont {
+    }
+      .acercadeCont,
+    .serviciosCont,
+    .investigacionesCont,
+    .formacionCont,
+    .eventosCont {
         position: static;
         display: none;
         width: 150%;
@@ -426,48 +475,60 @@
         align-items: center;
     }
 
-.adcontent,
-.srcontent,
-.incontent,
-.facontent,
-.evcontent {
+    /* Contenedores de dropdown de SEGUNDO NIVEL (sub-submenús) */
+    .servicioindustriaCont,
+    .servicioacademiaCont {
+        position: static;
+        display: none;
+        width: 100%; 
+        background: transparent; /* El fondo lo darán los items de abajo */
+        margin-top: 0;
+        padding: 0;
+        box-sizing: border-box;
+        flex-direction: column;
+        z-index: 999;
+        align-items: center;
+    }
+    .adcontent,
+    .srcontent,
+    .incontent,
+    .facontent,
+    .evcontent {
         width: 100%;
         text-align: center;
         padding: 0.75rem 1rem;
         border-bottom: 1px solid #04060b;
         background-color: rgba(6, 5, 45, 0.2);
-}
-
-.adcontent:last-child,
-.srcontent:last-child,
-.incontent:last-child,
-.facontent:last-child,
-.evcontent:last-child {
+    }
+    .adcontent:last-child,
+    .srcontent:last-child,
+    .incontent:last-child,
+    .facontent:last-child,
+    .evcontent:last-child {
         border-bottom: none;
-}
-
-    /* Sub-submenús en columna  */
-.srcontent:hover .servicioindustriaCont,
-.srcontent:hover .servicioacademiaCont {
+    }
+    /* Sub-submenús en columna */
+    .srcontent:hover .servicioindustriaCont,
+    .srcontent:hover .servicioacademiaCont {
         display: flex;
         flex-direction: column;
         align-items: center;
-}
-
-.sricontent,
-.sracontent {
-        width: 100%;
-        display: block;
-        text-align: center;
-        border-bottom: 1px solid #7991e7;
-        padding: 0.75rem 1rem;
-        box-sizing: border-box;
-        transition: background-color 0.3s ease;
-}
-.sricontent:last-child,
-.sracontent:last-child {
+    }
+    .sricontent,
+    .sracontent {
+    width: 100%;
+    display: flex; /* Usamos flexbox para centrar */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    border-bottom: 1px solid #7991e7;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    }
+    .sricontent:last-child,
+    .sracontent:last-child {
         border-bottom: none;
-        }
+    }
 }
 /***********************Carrusel*********************/
 
@@ -631,50 +692,67 @@
 }
 
 /* Pantallas Móviles ( ~768px) */
+
+
 @media (max-width: 767.98px) {
-    /* Posiciona el texto debajo o de forma diferente si usas .carousel-caption */
-    .carousel-caption { /* O .contenidousalab si es ese el contenedor */
-        display: block !important; /* Fuerza a que sea visible */
-        visibility: visible !important;
-        opacity: 1 !important;
-        height: auto !important; /* Asegura que tenga altura */
-        position: absolute !important; /* Sobreescribe 'absolute' si es necesario */
-        /* Mantén los demás estilos que ya tenías */
-        bottom: auto;
-        left: 0;
-        right: 0;
-        padding: 10px 10px; /* Aumenta padding por si acaso */
-        text-align: justify;
-        margin-top: 0;
-        border-radius: 0;
-        z-index: 10;
+  
+  .carousel-caption {
+    position: absolute !important;
+    top: auto !important;            /* Anula cualquier top heredado */
+    bottom: 0 !important;            /* Sitúa todo el caption en la parte inferior */
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;          
+    padding: 0 !important;          
+    margin: 0 auto !important;       /* Centrado seguro */
+    text-align: center;              /* Centrado horizontal de su contenido */
+    z-index: 10;                     /* Asegura que quede sobre la imagen del carousel */
+  }
+
+
+    .titulousalab {
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 !important;           
+    padding: 8px 1rem !important;     
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Estilos del texto del título en móvil: */
+  .titulousalabtxt {
+    font-size: 32px !important;      /* Ajusta a 32px (o el valor que consideres) */
+    line-height: 1.2 !important;
+    text-align: center !important;
+    color: #ffffff !important;       /* Asegura contraste sobre la imagen oscurecida */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+    .contenidousalab {
+    position: relative !important;
+    width: 100% !important;
+    margin: 0 !important;              
+    padding: 16px 1rem !important;      
+    box-sizing: border-box !important;
+    background: rgba(192, 192, 192, 0.30) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
     }
 
-    .titulousalabtxt {
-        display: block !important; /* Fuerza visibilidad */
-        visibility: visible !important;
-        opacity: 1 !important;
-        /* Mantén los demás estilos */
-        font-size: 36px;
-        line-height: 1.2;
-        text-shadow: none;
-        text-align: center;
-        color: #fff !important; 
-        margin-bottom: 10px;
-    }
+
     .contenidousalabtxt {
-        display: block !important; /* Fuerza visibilidad */
-        visibility: visible !important;
-        opacity: 1 !important;
-        height: auto !important; /* Asegura altura */
-        /* Mantén los demás estilos */
-        font-size: 16px;
-        line-height: 1.5;
-        text-align: left;
-        width: 100%;
-        margin: 0 0 10px 0;
-        color: #f0f0f0 !important; /* Fuerza color */
-        overflow: visible !important; /* Evita que se oculte por overflow */
+    font-size: 16px !important;      /* Ajusta según necesidades */
+    line-height: 1.4 !important;
+    text-align: center !important;   /* Centra cada línea */
+    color: #f0f0f0 !important;       /* Contraste suficiente sobre gris semitransparente */
+    margin: 0 !important;
+    padding: 0 !important;
     }
 }
 

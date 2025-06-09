@@ -28,8 +28,8 @@
       <!-- Barra de navegacion -->
       <div class="navbar-wrapper" id="navbarWrapper">   
         <div class="navbar1">
-        <img src="{{ asset('img/Logo-UTM-1.png') }}" class="logo-mini" alt="UTM mini">
-        <img src="{{ asset('img/logo Usalab 3-03 1.png') }}" class="logo-mini usalab-mini" alt="UsaLab mini">
+          <img src="{{ asset('img/Logo-UTM-1.png') }}" class="logo-mini" alt="UTM mini">
+          <img src="{{ asset('img/logo Usalab 3-03 1.png') }}" class="logo-mini usalab-mini" alt="UsaLab mini">
         <!-- Seccion Inicio -->
         <div class="inicio" onclick="window.location.href='{{ url('/') }}'">
               
@@ -38,6 +38,11 @@
               <span class="iniciotxt">Inicio</span>
           </div>
         <!-- Termina seccion Inicio -->
+        <div class="mobile-menu-toggle"
+          onclick="document.querySelector('.menu1').classList.toggle('active')">
+          <span class="hamburger-icon">&#9776;</span>
+          <span class="menu-text">Menú</span>
+        </div>
         <div class="menu1">
           <!-- Seccion acerca de -->
           <div class="acercade">
@@ -219,7 +224,7 @@
               <!-- Imagenes del carrusel -->
               @yield('img')
           </div>
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption">
               <!-- Titulo del carrusel -->
               <div class="titulousalab">
                   <p class="titulousalabtxt">@yield('tituloc')</p>
@@ -291,21 +296,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* --- decide si la barra debe o no estar pegada --- */
-    function updateSticky(){
-        /* en móviles/tablets nunca hay sticky */
-        if (window.innerWidth < desktop){
-            bar.classList.remove('sticky');
-            spacer.style.height = 0;
-            return;
-        }
-
-        /* en escritorio – pegamos sólo después de que la franja blanca salga */
+        function updateSticky(){
+        /* en escritorio – pegamos solo después de que la franja blanca salga */
         if (window.scrollY >= barTop){
             if (!bar.classList.contains('sticky')){
                 bar.classList.add('sticky');
                 spacer.style.height = bar.offsetHeight + 'px'; // compensación
             }
-        }else{
+        } else {
             bar.classList.remove('sticky');
             spacer.style.height = 0;
         }
