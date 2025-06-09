@@ -111,3 +111,100 @@
 #event3-card {
     background: url("../../../photos/feria1.png") lightgray -255.733px 0px / 197.619% 100% no-repeat;
 }
+
+/* Para pantallas pequeñas como teléfonos (≤ 480px) */
+@media (max-width: 480px) {
+  .fondo-azul {
+    height: 30VH;
+    margin-top: -200px;
+    padding: 40px 20px;
+  }
+
+  .ultimoseventostxt {
+    width: auto;
+    margin: 0 auto 24px;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .eventosContainer {
+    margin: 0 auto;
+    padding: 0 16px;
+    height: auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 16px;
+  }
+
+  .event-card {
+    width: 100%;
+    height: 400px;
+  }
+
+  .content-event-card {
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+
+  .title-event-card {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .text-event-card {
+    font-size: 16px;
+  }
+
+  #event1, #event2, #event3 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (min-height: 512px) and (max-height: 1366px){
+    .ultimoseventostxt {
+        margin-left: 30px;
+        font-size: 30px;
+    }
+
+    .eventosContainer {
+        margin-left: 200px;
+        gap: 12px;
+    }
+
+    .event-card{
+        width: 285px;
+        height: 380px;
+    }
+
+    #event1 {
+        margin-top: 255px;
+    }
+    
+    #event2 {
+        margin-top: 256px;
+    }
+    
+    #event3 {
+        margin-top: 302px;
+    }
+
+    .title-event-card{
+        font-size: 20px;
+    }
+
+    .content-event-card{
+        width: 245px;
+    }
+
+    .eventosContainer{
+        height: 388px;
+    }
+
+    .text-event-card{
+        font-size: 14px;
+    }
+
+
+
+}

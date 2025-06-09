@@ -46,3 +46,40 @@
     right: 6%; /* Ajusto con un porcentaje */
     transform: translate(0%, -50%);
 }
+@media (max-width: 768px) {
+
+  .requisitossCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+  }
+
+  .requisitossCard img {
+    position: absolute;
+    z-index: -1;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+  }
+
+  .requisitosstitulo,
+  .requisitossp {
+    position: static;
+    transform: none;
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  .requisitosstitulo {
+    font-size: 28px;
+  }
+
+  .requisitossp {
+    font-size: 18px;
+  }
+}

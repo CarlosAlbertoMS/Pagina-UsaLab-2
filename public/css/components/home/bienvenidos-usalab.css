@@ -1,137 +1,208 @@
 /****** Bienvenidos a UsaLab ******/
-/* Contenedor de la sección: "Bienvenidos a UsaLab" */
 .bienvenidos-a-usalab-container {
     margin-top: 86px;
-    height: auto; /* Ajusta la altura automáticamente */
     width: 100%;
 }
 
-/* Titulo "Bienvenidos a UsaLab" */
 .bienvenidos-a-usalab-title {
     color: #000;
     font-family: Montserrat;
     font-size: 55px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-/* Contenido de la sección "Bienvenidos a UsaLab" */
 .content-bienvenidos-a-usalab {
     width: 100%;
     height: 324px;
-    flex-shrink: 0;
     background: url("../../../photos/bienvenidos-a-usalab.png") lightgray 50% / cover no-repeat;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-/* Texto de la sección "Bienvenidos a UsaLab" */
 .bienvenidos-a-usalab-text {
-    margin-top: 53px;
-    width: 96%;
-    height: 215px;
-    flex-shrink: 0;
+    width: 90%;
+    max-width: 1200px;
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
     font-size: 32px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: 0.32px;
 }
 
-/** Nuestra Historia **/
-/* Contenedor de la sección: "Nuestra Historia"*/
+/****** Nuestra Historia ******/
 .nuestra-historia-container {
     margin-top: 45px;
-    height: 426px;
     width: 100%;
 }
 
-/* Titulo "Nuestra Historia" */
 .nuestra-historia-title {
     color: #000;
     font-family: Montserrat;
     font-size: 55px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-/* Contenido de la sección "Nuestra Historia" */
 .content-nuestra-historia {
     width: 100%;
     height: 324px;
-    flex-shrink: 0;
     background: url("../../../photos/nuestra-historia.png") lightgray 50% / cover no-repeat;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-/* Texto de la sección "Nuestra Historia" */
 .nuestra-historia-text {
-    margin-top: 39px;
-    width: 100%;
-    height: 215px;
-    flex-shrink: 0;
+    width: 90%;
+    max-width: 1200px;
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
     font-size: 32px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: 0.32px;
 }
+
 /****** Experiencias ******/
-/* Contenedor de la sección: "Experiencias" */
 .experiencias-container {
     margin-top: 45px;
-    height: 426px;
     width: 100%;
 }
 
-/* Título "Experiencias" */
 .experiencias-title {
     color: #000;
     font-family: Montserrat;
     font-size: 55px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
-/* Contenido de la sección "Experiencias" */
 .content-experiencias {
     width: 100%;
     height: 324px;
-    flex-shrink: 0;
     background: url("../../../photos/experiencias.jpg") center / cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Texto de la sección "Experiencias" */
 .experiencias-text {
-    margin-top: 39px;
-    width: 100%;
-    height: 215px;
-    flex-shrink: 0;
+    width: 90%;
+    max-width: 1200px;
     color: #FFF;
     text-align: center;
     font-family: Montserrat;
     font-size: 32px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     letter-spacing: 0.32px;
+}
+
+/*************** RESPONSIVE ***************/
+@media (max-width: 1024px) {
+    .bienvenidos-a-usalab-title,
+    .nuestra-historia-title,
+    .experiencias-title {
+        font-size: 42px;
+    }
+
+    .bienvenidos-a-usalab-text,
+    .nuestra-historia-text,
+    .experiencias-text {
+        font-size: 26px;
+    }
+
+    .content-bienvenidos-a-usalab,
+    .content-nuestra-historia,
+    .content-experiencias {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .bienvenidos-a-usalab-title,
+    .nuestra-historia-title,
+    .experiencias-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .bienvenidos-a-usalab-text,
+    .nuestra-historia-text,
+    .experiencias-text {
+        font-size: 20px;
+        padding: 0 16px;
+    }
+
+    .content-bienvenidos-a-usalab,
+    .content-nuestra-historia,
+    .content-experiencias {
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bienvenidos-a-usalab-title,
+    .nuestra-historia-title,
+    .experiencias-title {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .bienvenidos-a-usalab-text,
+    .nuestra-historia-text,
+    .experiencias-text {
+        font-size: 16px;
+        padding: 0 12px;
+    }
+
+    .content-bienvenidos-a-usalab,
+    .content-nuestra-historia,
+    .content-experiencias {
+        height: auto;
+        padding: 40px 0;
+        background-size: cover;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (min-height: 512px) and (max-height: 1366px){
+    .bienvenidos-a-usalab-title{
+        font-size: 40px;
+    }
+
+    .bienvenidos-a-usalab-text{
+        font-size: 22px;
+    }
+
+    .nuestra-historia-title{
+        font-size: 40px;
+    }
+
+    .nuestra-historia-text{
+        font-size: 22px;
+    }
+
+    .experiencias-title{
+        font-size: 40px;
+    }
+
+    .experiencias-text{
+        font-size: 22px;
+    }
+
+    .content-bienvenidos-a-usalab{
+        height: 250px;
+    }
+
+    .content-nuestra-historia{
+        height: 250px;
+    }
+
+    .content-experiencias{
+        height: 250px;
+    }
 }
