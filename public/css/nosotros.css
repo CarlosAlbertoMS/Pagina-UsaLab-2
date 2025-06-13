@@ -1186,6 +1186,19 @@ body {
         text-align: center;
     }
 
+
+    .trayectoriaTitltxt {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 20px;
+        letter-spacing: 0.8px;
+        margin-bottom: 6%;
+    }
+
     /* 🔹 Carrusel principal */
     .carrusel-header {
         position: absolute;
