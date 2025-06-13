@@ -306,12 +306,17 @@
   .heuristicap {
     width: 100%;
     font-size: 20px;
+    height: auto;
   }
 
-  .pruebausalabimg,
+  .pruebausalabimg
+   {
+    width: 90%;
+    height: auto;
+  }
   .pruebas1,
-  .pruebas2 {
-    width: 100%;
+  .pruebas2{
+     width: 100%;
     height: auto;
   }
 

@@ -810,7 +810,7 @@
 }
 
 /* Pantallas Móviles Pequeñas ( ~576px) */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .titulousalabtxt {
         font-size: 28px;
         /* Reducción 5 */
