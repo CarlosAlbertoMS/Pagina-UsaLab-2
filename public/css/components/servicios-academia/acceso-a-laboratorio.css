@@ -41,6 +41,29 @@
     letter-spacing: 0.55px;
 }
 
+
+
+.flechaIndicadoraDerecha {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(360%);
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  /*background-color: white; /* Igual que tu fondo o ligeramente opaco */
+  /*border-radius: 50%;*/
+ /* box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
+  pointer-events: none; /* No bloquea scroll */
+  animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+
 .pasosParaReservacionCardsContainer {
     display: flex;
     flex-wrap: nowrap; /* IMPORTANTE: para scroll horizontal */
@@ -48,8 +71,10 @@
     gap: 20px;
     width: 100%;
     box-sizing: border-box;
-   
+    position: relative;
     scroll-behavior: smooth;
+    margin-bottom: 128px;
+    
   
 }
 
@@ -140,4 +165,14 @@
         width: 90%;
     }
 
+}
+.solo-desktop {
+    display: inline;
+}
+
+/* Versión móvil: oculta esa parte */
+@media (max-width: 500px) {
+    .solo-desktop {
+        display: none;
+    }
 }

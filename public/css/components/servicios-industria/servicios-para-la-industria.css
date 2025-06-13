@@ -41,3 +41,10 @@
     text-align: justify;
     hyphens: auto;
 }
+@media(max-width:500px){
+   .serviciosParaLaIndustriaDescription{
+        
+        font-size:22px;
+       
+    }
+}
