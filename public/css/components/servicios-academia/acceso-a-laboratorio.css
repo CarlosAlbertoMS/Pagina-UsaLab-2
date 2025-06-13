@@ -6,7 +6,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
-    
+    padding-right: 5%;
+    padding-left: 5%;   
 }
 
 /* Estilos del titulo de la sección */
@@ -40,6 +41,29 @@
     letter-spacing: 0.55px;
 }
 
+
+
+.flechaIndicadoraDerecha {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(360%);
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  /*background-color: white; /* Igual que tu fondo o ligeramente opaco */
+  /*border-radius: 50%;*/
+ /* box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
+  pointer-events: none; /* No bloquea scroll */
+  animation: parpadeo 1s infinite;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+
 .pasosParaReservacionCardsContainer {
     display: flex;
     flex-wrap: nowrap; /* IMPORTANTE: para scroll horizontal */
@@ -47,8 +71,11 @@
     gap: 20px;
     width: 100%;
     box-sizing: border-box;
-    padding: 10px;
-    scroll-behavior: smooth; /* opcional pero se ve chido */
+    position: relative;
+    scroll-behavior: smooth;
+    margin-bottom: 128px;
+    
+  
 }
 
 
@@ -59,7 +86,7 @@
 
 /* Estilo de las cards de la subsección "Pasos para reservación" */
 .pasoParaReservacionCard {
-    flex: 0 0 calc(33.33% - 80px); 
+    flex: 0 0 calc(33.33% - 15px); 
     height: auto;
     flex-shrink: 0;
     border-radius: 16px;
@@ -67,18 +94,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    margin-left: 5%;
+   
+   
 }
-@media(max-width:1000px){
+
+@media(max-width:1200px){
     .pasoParaReservacionCard{
-        flex: 0 0 calc(50% - 60px)
+        flex: 0 0 calc(50% - 10px)
     }
 
 }
-@media(max-width:500px){
+@media(max-width:700px){
     .pasoParaReservacionCard{
-        flex: 0 0 calc(100% - 40px);
+        flex: 0 0 calc(100% - 10px);
+    }
+}
+@media(max-width:400px){
+    .pasoParaReservacionCard{
+        flex: 0 0 calc(100% );
     }
 }
 /* Estilo de número de paso */
@@ -132,4 +165,14 @@
         width: 90%;
     }
 
+}
+.solo-desktop {
+    display: inline;
+}
+
+/* Versión móvil: oculta esa parte */
+@media (max-width: 500px) {
+    .solo-desktop {
+        display: none;
+    }
 }

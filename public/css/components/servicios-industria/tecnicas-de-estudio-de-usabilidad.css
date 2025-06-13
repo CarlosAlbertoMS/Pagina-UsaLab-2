@@ -52,6 +52,14 @@
     hyphens: auto;
 }
 
+@media(max-width:500px){
+.tecnicasDeEstudioDeUsabilidadText{
+        
+        font-size:22px;
+       
+    }
+}
+
 /* Estilo del contenedor de las cards de la sección */
 .tecnicasDeEstudioDeUsabilidadCardsContainer {
     width: 100%;

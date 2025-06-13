@@ -259,3 +259,171 @@
     text-decoration-line: underline;
     text-decoration-skip-ink: none;
 }
+
+@media (max-width: 768px) {
+
+  .objetivoMaestria {
+    padding: 8% 5%;
+  }
+
+  .objetivoMaestriaTitulo {
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  .objetivoMaestriaCont {
+    font-size: 4.5vw;
+  }
+
+  .perfilIngresoMaestria {
+    flex-direction: column;
+    align-items: center;
+    padding: 8%;
+  }
+
+  .perfilIngresoMaestriaBox {
+    padding: 5% 0;
+  }
+
+  .perfilIngresoMaestriaTitulo {
+    font-size: 32px;
+  }
+
+  .perfilIngresoMaestriaCont {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .perfilIngresoMaestria img {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .tituloTarTextoMC {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+    .egreso {
+    height: 400px; /* o incluso 100vh si quieres que llene toda la pantalla */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .egreso-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Muy importante */
+    z-index: -1;
+  }
+
+  .tituloEgreso {
+    font-size: 24px;
+    text-align: center;
+    margin: 10% auto 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .textoEgreso {
+    font-size: 16px;
+    width: 90%;
+    margin: 5% auto;
+    text-align: justify;
+    position: relative;
+    z-index: 1;
+  }
+
+  .procesoAdministrativoTitulo {
+    font-size: 32px;
+  }
+
+  .procesoAdministrativoFechasTitulo {
+    font-size: 24px;
+  }
+
+  .procesoAdministrativoFechasTexto {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .procesoAdministrativoDocumentacionTitulo {
+    font-size: 32px;
+  }
+
+  .procesoAdministrativoDocumentacionTexto {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  .avisoMCTitulo,
+  .informesMCTitulo {
+    font-size: 24px;
+  }
+
+  .avisoMCTexto,
+  .informesMCTexto {
+    font-size: 16px;
+    width: 95%;
+  }
+
+  .avisoMCTexto a,
+  .informesMCTexto a {
+    word-break: break-word;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (min-height: 512px) and (max-height: 1366px){
+    .perfilIngresoMaestriaTitulo{
+        font-size: 35px;
+    }
+    
+    .perfilIngresoMaestriaCont{
+        font-size: 22px;
+    }
+
+    .egreso{
+        height: 440px;
+    }
+
+    .textoEgreso{
+        font-size: 22px;
+    }
+
+    .tituloEgreso{
+        font-size: 35px;
+    }
+
+    .procesoAdministrativoFechasTitulo{
+        font-size: 25px;
+    }
+    
+    .procesoAdministrativoDocumentacionTitulo{
+        font-size: 25px;
+    }
+
+    .procesoAdministrativoDocumentacionTexto{
+        font-size: 25px;
+    }
+
+    .avisoMCTexto{
+        font-size: 25px;
+    }
+
+    .procesoAdministrativoFechasTexto{
+        font-size: 25px;
+    }
+
+    .procesoAdministrativoTitulo{
+        font-size: 35px;
+    }
+
+    .informesMCTexto{
+        font-size: 25px;
+    }
+}
+@media (max-width: 767px) {
+  .solo-escritorio {
+    display: none;
+  }
+}

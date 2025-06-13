@@ -22,18 +22,32 @@
     <header>
       <!-- Header de la pagina(logos del UsaLab) -->
       <div class="header">
-        <img src="{{ asset('img/Logo UTM Color 1.png') }}" alt="logoutm" class="logoutm" srcset="">
-        <img src="{{ asset('img/logo Usalab 3-03 1.png') }}" alt="logousalab" class="logousalab" srcset="">
+        <img src="{{ asset('img/Logo UTM Color 1.png') }}"  class="logoutm"   alt="UTM">
+        <img src="{{ asset('img/logo Usalab 3-03 1.png') }}" class="logousalab" alt="UsaLab">
       </div>
       <!-- Barra de navegacion -->
-      <div class="navbar1">
+      <div class="navbar-wrapper" id="navbarWrapper">   
+        <div class="navbar1">
+          <img src="{{ asset('img/Logo-UTM-1.png') }}" class="logo-mini" alt="UTM mini">
+          <img src="{{ asset('img/logo Usalab 3-03 1.png') }}" class="logo-mini usalab-mini" alt="UsaLab mini">
         <!-- Seccion Inicio -->
-        <div onclick="window.location.href='{{ url('/') }}'" class="inicio">
-          <div class="iniciotxt">Inicio</div>
-        </div>
+        <div class="inicio" onclick="window.location.href='{{ url('/') }}'">
+              
+              <!-- logo mini -->
+              
+              <span class="iniciotxt">Inicio</span>
+          </div>
         <!-- Termina seccion Inicio -->
-        <div class="menu1">
-          <!-- Seccion acerca de -->
+        <div class="mobile-menu-toggle"
+          onclick="document.querySelector('.menu1').classList.toggle('active')">
+          <span class="hamburger-icon">&#9776;</span>
+          <span class="menu-text">Menú</span>
+        </div>
+       <div class="menu1">
+          <div class="inicio-mobile" onclick="window.location.href='{{ url('/') }}'">
+            <div class="navbartxt">Inicio</div>
+          </div>
+
           <div class="acercade">
             <div onclick="window.location.href='{{ url('/nosotros') }}'" class="navbartxt">Acerca de</div>
             <!-- Contenido acerca de -->
@@ -200,6 +214,8 @@
           </div>
         </div>
       </div>
+      </div>
+      <div id="navSpacer"></div>
       <!-- Termina barra de navegación -->
       <div class="separador"></div>
     </header>
@@ -211,7 +227,7 @@
               <!-- Imagenes del carrusel -->
               @yield('img')
           </div>
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption">
               <!-- Titulo del carrusel -->
               <div class="titulousalab">
                   <p class="titulousalabtxt">@yield('tituloc')</p>
@@ -231,7 +247,7 @@
         <div class="logosfooter">
           <img class="utmfooter" src="{{ asset('img/Logo-UTM-1.png') }}" />
           <img class="usalabfooter" src="{{ asset('img/logo Usalab 3-03 1.png') }}" />
-        </div>
+        </div>  
         <div class="sf1"></div>
         <div class="footertxt">+52 953 532 0399<br /><br />Av. Doctor Modesto Seara Vázquez #1, Acatlima, 69000 Heroica
           Cdad. de Huajuapan de León, Oax. México<br /><br /></div>
@@ -266,6 +282,64 @@
     </footer>
 
   </div>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const bar      = document.getElementById('navbarWrapper'); // franja azul
+    const spacer   = document.getElementById('navSpacer');     // espaciador invisible
+    const desktop  = 992;                                      // mismo break‑point que en el CSS
+    let   barTop   = 0;                                        // se calculará al vuelo
+
+    /* --- calcula la posición ORIGINAL de la barra en el flujo del documento --- */
+    function recalcBarTop(){
+        bar.classList.remove('sticky');        // la devolvemos a su sitio normal
+        spacer.style.height = 0;               // borramos la altura anterior
+        /* offsetTop relativo al documento (= posición vertical real) */
+        barTop = bar.getBoundingClientRect().top + window.scrollY;
+    }
+
+    /* --- decide si la barra debe o no estar pegada --- */
+    function updateSticky(){
+        /* en escritorio – pegamos solo después de que la franja blanca salga */
+        if (window.scrollY >= barTop){
+            if (!bar.classList.contains('sticky')){
+                bar.classList.add('sticky');
+                spacer.style.height = bar.offsetHeight + 'px'; // compensación
+            }
+        } else {
+            bar.classList.remove('sticky');
+            spacer.style.height = 0;
+        }
+    }
+
+    /* --- eventos --- */
+    recalcBarTop();                 // 1) justo al cargar el DOM
+    updateSticky();                 // 2) y comprobamos el estado inicial
+
+    window.addEventListener('scroll',  updateSticky);           // al hacer scroll
+    window.addEventListener('resize',  () => {                  // al redimensionar
+        recalcBarTop();
+        updateSticky();
+    });
+    window.addEventListener('load',    () => {                  // cuando todo (imágenes, fuentes…) ha terminado de cargar
+        recalcBarTop();
+        updateSticky();
+    });
+
+    const menuContainer = document.querySelector('.menu1');
+    // Selecciona todos los elementos que tienen un evento onclick dentro del menú.
+    const menuLinks = menuContainer.querySelectorAll('[onclick]');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Si el menú está activo (abierto en móvil), le quita la clase para cerrarlo.
+            if (menuContainer.classList.contains('active')) {
+                menuContainer.classList.remove('active');
+            }
+        });
+    });
+});
+</script>
 </body>
 
 </html>

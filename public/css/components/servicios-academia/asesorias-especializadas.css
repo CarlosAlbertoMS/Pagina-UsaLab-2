@@ -7,6 +7,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
+    padding-right: 4%;
+    padding-left: 2%; 
 }
 
 /* Estilo del titulo de la sección */
