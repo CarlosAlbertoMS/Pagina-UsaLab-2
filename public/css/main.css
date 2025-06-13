@@ -1055,11 +1055,16 @@ footer {
         align-items: flex-start;
         /* o center, como prefieras */
     }
+    footer{
+    row-gap: 0.75rem; 
+  }
 
+    .footerinformacion{
+    gap: 0.5rem;       
+     }
     .footerinformacion,
     .footermenu {
         flex: 1 1 auto;
-        /* Cada bloque ocupará 100% del ancho en móvil */
         margin-left: 0;
     }
 
@@ -1070,8 +1075,5 @@ footer {
     .utmfooter,
     .usalabfooter {
         width: 80px;
-        /* Ajusta a un tamaño menor para móviles */
     }
 }
-
-/***************************Investigaciones******************************************/
