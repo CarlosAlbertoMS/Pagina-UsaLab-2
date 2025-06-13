@@ -9,6 +9,7 @@
             <x-eventos.light-box_carousel 
                 customClassBiggerText="bigger-title"
                 customClassWidth="more-width"
+                customClassOffset="offset"
                 diapositiva="slide-1" 
                 lugar="First slide" 
                 statusCarouselItem="active" 
