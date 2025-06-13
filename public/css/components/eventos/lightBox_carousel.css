@@ -45,16 +45,6 @@
     display: none;
 }
 
-.carousel-caption {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
-
-.carousel-caption p {
-    margin: 0;
-}
-
 /* Animaciones para el texto adicional */
 .extra-text {
     width: 50%;
@@ -135,10 +125,6 @@
 }
 
 @media (max-width: 1024px) {
-    .carousel-item img {
-        min-height: 12rem;
-    }
-
     .slide-title.shrink {
         display: none;
     }
@@ -182,6 +168,10 @@
         width: 98%;
         right: 1%;
         font-size: 0.9rem;
+        height: auto;
+        /* margin-top: 1px !important; */
+        transform: translate(0%, -80%) !important;
+        border: solid cyan 2px;
     }
 
     .btn-mas-info {
