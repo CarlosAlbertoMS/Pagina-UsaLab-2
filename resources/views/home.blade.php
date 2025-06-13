@@ -35,7 +35,7 @@
 @endsection
 
 @section('tituloc')
-UsaLab<br /><br>Laboratorio de Usabilidad
+UsaLab<br />Laboratorio de Usabilidad
 @endsection
 
 @section('contc','Es un laboratorio de la Universidad Tecnológica de la Mixteca (UTM)
