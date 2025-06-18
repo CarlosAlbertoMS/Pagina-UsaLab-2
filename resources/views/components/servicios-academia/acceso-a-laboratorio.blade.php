@@ -4,7 +4,7 @@
     <div class="accesoALaboratorioTitle">Acceso a Laboratorio</div>
     <!-- Card de la sección -->
     <x-information-card image="{{ asset('img/acceso-a-laboratorio.png') }}">
-        En UsaLab, ponemos a disposición nuestro laboratorio de usabilidad para estudiantes, investigadores y profesionales que deseen llevar a cabo pruebas y evaluaciones en un entorno controlado. Para acceder a nuestras instalaciones y utilizar los recursos disponibles, es necesario realizar una solicitud previa. Nuestro laboratorio está equipado con tecnología avanzada para el análisis de la experiencia de usuario (UX), pruebas de usabilidad y estudios de interacción humano-computadora (HCI).
+        En UsaLab, ponemos a disposición nuestro laboratorio de usabilidad para estudiantes, investigadores y profesionales que deseen llevar a cabo pruebas y evaluaciones en un entorno controlado. <span class="solo-desktop"> Para acceder a nuestras instalaciones y utilizar los recursos disponibles, es necesario realizar una solicitud previa.</span> Nuestro laboratorio está equipado con tecnología avanzada para el análisis de la experiencia de usuario (UX), pruebas de usabilidad y estudios de interacción humano-computadora (HCI).
     </x-information-card>
 
     <!-- Subtitulo de la sección -->
@@ -60,5 +60,9 @@
             <!-- Texto de la card -->
             <div class="pasoParaReservacionCardText">Recibirá un correo de confirmación y aceptación para corroborar la fecha y la hora de acceso a laboratorio.</div>
         </div>
+             <!-- Flecha indicadora -->
+  <div class="flechaIndicadoraDerecha" id="flechaIndicadora">➔</div>
     </div>
+ 
 </div>
+

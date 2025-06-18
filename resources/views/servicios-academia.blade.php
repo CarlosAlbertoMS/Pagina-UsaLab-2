@@ -68,7 +68,7 @@
         <x-servicios-academia.acceso-a-laboratorio />
 
         <!-- Separador entre el contenido de la sección y el háblanos -->
-        <div class="separador-servicios-academia"></div>
+       <!--<div class="separador-servicios-academia"></div>-->
 
         <!-- Sección "Hablanos" -->
         <x-hablanos />

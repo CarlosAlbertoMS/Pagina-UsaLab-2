@@ -134,14 +134,15 @@
 .usalab-mini {
   margin-left: -0.1rem;     
 }
-/* ---------- Sticky SOLO en desktop (>992 px) ---------- */
+.navbar-wrapper.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
 @media (min-width:992px){
-  .navbar-wrapper.sticky{
-      position:fixed;
-      top:0; left:0; width:100%;
-      z-index:1000;
-      box-shadow:0 2px 6px rgba(0,0,0,.15);
-  }
   .navbar-wrapper.sticky .logo-mini{
       display:inline-block;
   }
@@ -151,7 +152,7 @@
   filter: brightness(0) invert(1);
 }
 
-/* Espaciador (el JS le asigna la altura real) */
+
 #navSpacer{display:none;}
 @media (min-width:992px){#navSpacer{display:block;height:0}}
 /*******Barra de navegacion*********/
@@ -193,6 +194,34 @@
     line-height: 1.2;
     white-space: nowrap;
     /* Evita que 'Inicio' se parta */
+}
+.mobile-menu-toggle {
+    display: none;
+    background: #06052D;
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+}
+/* Estilo específico para el icono dentro del toggle: */
+.hamburger-icon {
+    font-size: 1.25rem;          /* un poco más grande que el texto, para que resalte */
+    line-height: 1;              /* evita saltos verticales */
+}
+.mobile-menu-toggle {
+    display: none;
+    background: #06052D;
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+}
+/* Estilo específico para el icono dentro del toggle: */
+.hamburger-icon {
+    font-size: 1.25rem;          /* un poco más grande que el texto, para que resalte */
+    line-height: 1;              /* evita saltos verticales */
 }
 
 .menu1 {
@@ -315,10 +344,8 @@
     display: none;
     /* Ocultos por defecto */
     position: absolute;
-    top: 0;
-    /* Alineados con su opción padre */
-    left: 100%;
-    /* Se despliegan hacia la derecha */
+    top: 0;                       
+    left: 100%;                    /* Se despliegan hacia la derecha */
     background: #A4C732;
     z-index: 999;
     flex-direction: column;
@@ -352,7 +379,9 @@
     /* azul marino como el resto de la navbar */
     color: #FFFFFF;
 }
-
+.inicio-mobile {
+    display: none;
+}
 /*****************/
 /********MEDIA QUERYS*********/
 
@@ -412,34 +441,76 @@
 
 /* media query para móviles (< 768px) */
 @media (max-width: 768px) {
+    /* ***************** MOSTRAR EL BOTÓN MENÚ ***************** */
+    .carousel,   
+    .banner {               
+        margin-top: 50px;    
+    }
+    .mobile-menu-toggle {
+    display: flex;         
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #06052D;
+    color: #FFFFFF;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+    cursor: pointer;
+    }
+    .navbar1 {
+        position: relative; /* Para que .menu1 (abajo) se calcule respecto a este contenedor */
+    }
 
-    /* Navbar en columna y totalmente centrado */
+    .inicio,
+    .logo-mini,
+    .logousalab,
+    .logoutm {
+        display: none;
+    }
     .navbar1 {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        /*  <-- Para centrar horizontalmente */
-        padding: 0.5rem 0;
+        align-items: center; 
+
         flex-wrap: wrap;
     }
-
+    /* .menu1 (las opciones) deberá estar oculta hasta que se haga click en “Menú” */
+        
     .menu1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /*  <-- Para centrar a lo largo del eje horizontal */
-        width: 100%;
-        gap: 0;
+    display: none;            /* por defecto no se ve */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+    position: absolute;     
+    top: 100%;                /* justo debajo de .navbar1 */
+    left: 0;                  /* alinear a la izquierda de .navbar1 */
+    background: #06052D;
+    z-index: 1002;            /* más alto que el toggle y que cualquier dropdown */
+    }
+    .menu1.active {
+    display: flex;
+    position: absolute;   /* refuerza que sigue siendo absolute */
+    top: 100%;            /* debajo de .navbar1 */
+    left: 0;
+    width: 100%;
+    z-index: 1002;
+    }
+    .navbar-wrapper {
+    margin-bottom: 56px;
+    position: relative; /* El menú se posiciona respecto a este contenedor */
     }
 
     /* Ajusta cada item en modo columna */
-    .inicio,
     .acercade,
     .servicios,
     .investigaciones,
     .formacion,
     .eventos,
-    .idioma {
+    .idioma,
+    .inicio-mobile {
+        display: flex; 
         width: 100%;
         justify-content: center;
         text-align: center;
@@ -461,18 +532,13 @@
     /* Evita recortes si la palabra es larga */
     .navbartxt {
         text-align: center;
-        white-space: normal;
-        /* Permite que el texto se parta en varias líneas */
+        white-space: normal; 
     }
-
-    /* Ajusta dropdowns en columna y centrado */
-    .acercadeCont,
+      .acercadeCont,
     .serviciosCont,
     .investigacionesCont,
     .formacionCont,
-    .eventosCont,
-    .servicioindustriaCont,
-    .servicioacademiaCont {
+    .eventosCont {
         position: static;
         display: none;
         width: 150%;
@@ -487,6 +553,20 @@
         /* <-- Centra también el contenido interno */
     }
 
+    /* Contenedores de dropdown de SEGUNDO NIVEL (sub-submenús) */
+    .servicioindustriaCont,
+    .servicioacademiaCont {
+        position: static;
+        display: none;
+        width: 100%; 
+        background: transparent; /* El fondo lo darán los items de abajo */
+        margin-top: 0;
+        padding: 0;
+        box-sizing: border-box;
+        flex-direction: column;
+        z-index: 999;
+        align-items: center;
+    }
     .adcontent,
     .srcontent,
     .incontent,
@@ -514,18 +594,17 @@
         flex-direction: column;
         align-items: center;
     }
-
     .sricontent,
     .sracontent {
-        width: 100%;
-        display: block;
-        text-align: center;
-        border-bottom: 1px solid #7991e7;
-        padding: 0.75rem 1rem;
-        box-sizing: border-box;
-        transition: background-color 0.3s ease;
+    width: 100%;
+    display: flex; /* Usamos flexbox para centrar */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    border-bottom: 1px solid #7991e7;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
     }
-
     .sricontent:last-child,
     .sracontent:last-child {
         border-bottom: none;
@@ -752,6 +831,8 @@
 }
 
 /* Pantallas Móviles ( ~768px) */
+
+
 @media (max-width: 767.98px) {
 
     /* Posiciona el texto debajo o de forma diferente si usas .carousel-caption */
@@ -788,7 +869,6 @@
         color: #fff !important;
         margin-bottom: 10px;
     }
-
     .contenidousalabtxt {
         display: block !important;
         /* Fuerza visibilidad */

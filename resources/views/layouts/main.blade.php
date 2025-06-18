@@ -28,8 +28,8 @@
       <!-- Barra de navegacion -->
       <div class="navbar-wrapper" id="navbarWrapper">   
         <div class="navbar1">
-        <img src="{{ asset('img/Logo-UTM-1.png') }}" class="logo-mini" alt="UTM mini">
-        <img src="{{ asset('img/logo Usalab 3-03 1.png') }}" class="logo-mini usalab-mini" alt="UsaLab mini">
+          <img src="{{ asset('img/Logo-UTM-1.png') }}" class="logo-mini" alt="UTM mini">
+          <img src="{{ asset('img/logo Usalab 3-03 1.png') }}" class="logo-mini usalab-mini" alt="UsaLab mini">
         <!-- Seccion Inicio -->
         <div class="inicio" onclick="window.location.href='{{ url('/') }}'">
               
@@ -38,8 +38,16 @@
               <span class="iniciotxt">Inicio</span>
           </div>
         <!-- Termina seccion Inicio -->
-        <div class="menu1">
-          <!-- Seccion acerca de -->
+        <div class="mobile-menu-toggle"
+          onclick="document.querySelector('.menu1').classList.toggle('active')">
+          <span class="hamburger-icon">&#9776;</span>
+          <span class="menu-text">Menú</span>
+        </div>
+       <div class="menu1">
+          <div class="inicio-mobile" onclick="window.location.href='{{ url('/') }}'">
+            <div class="navbartxt">Inicio</div>
+          </div>
+
           <div class="acercade">
             <div onclick="window.location.href='{{ url('/nosotros') }}'" class="navbartxt">Acerca de</div>
             <!-- Contenido acerca de -->
@@ -219,7 +227,7 @@
               <!-- Imagenes del carrusel -->
               @yield('img')
           </div>
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption">
               <!-- Titulo del carrusel -->
               <div class="titulousalab">
                   <p class="titulousalabtxt">@yield('tituloc')</p>
@@ -292,20 +300,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* --- decide si la barra debe o no estar pegada --- */
     function updateSticky(){
-        /* en móviles/tablets nunca hay sticky */
-        if (window.innerWidth < desktop){
-            bar.classList.remove('sticky');
-            spacer.style.height = 0;
-            return;
-        }
-
-        /* en escritorio – pegamos sólo después de que la franja blanca salga */
+        /* en escritorio – pegamos solo después de que la franja blanca salga */
         if (window.scrollY >= barTop){
             if (!bar.classList.contains('sticky')){
                 bar.classList.add('sticky');
                 spacer.style.height = bar.offsetHeight + 'px'; // compensación
             }
-        }else{
+        } else {
             bar.classList.remove('sticky');
             spacer.style.height = 0;
         }
@@ -323,6 +324,19 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load',    () => {                  // cuando todo (imágenes, fuentes…) ha terminado de cargar
         recalcBarTop();
         updateSticky();
+    });
+
+    const menuContainer = document.querySelector('.menu1');
+    // Selecciona todos los elementos que tienen un evento onclick dentro del menú.
+    const menuLinks = menuContainer.querySelectorAll('[onclick]');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Si el menú está activo (abierto en móvil), le quita la clase para cerrarlo.
+            if (menuContainer.classList.contains('active')) {
+                menuContainer.classList.remove('active');
+            }
+        });
     });
 });
 </script>
