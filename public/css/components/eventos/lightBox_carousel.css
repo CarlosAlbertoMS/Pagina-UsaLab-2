@@ -16,7 +16,7 @@
     font-size: 2rem;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    line-height: 1.5;
 }
 
 /* --------- Animaciones del carousel --------- */
@@ -24,6 +24,10 @@
 .slide-image.dimmed {
     filter: brightness(0.5);
     transition: filter 0.5s ease;
+}
+
+.slide-image.offset {
+    transform: translateY(24px);
 }
 
 /* Animaciones para el título */
@@ -39,16 +43,6 @@
 
 .slide-title.shrink br.responsive {
     display: none;
-}
-
-.carousel-caption {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-}
-
-.carousel-caption p {
-    margin: 0;
 }
 
 /* Animaciones para el texto adicional */
@@ -67,7 +61,6 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
 }
 
 /* Texto adicional cuando se muestra */
@@ -132,10 +125,6 @@
 }
 
 @media (max-width: 1024px) {
-    .carousel-item img {
-        min-height: 12rem;
-    }
-
     .slide-title.shrink {
         display: none;
     }
@@ -179,6 +168,10 @@
         width: 98%;
         right: 1%;
         font-size: 0.9rem;
+        height: auto;
+        /* margin-top: 1px !important; */
+        transform: translate(0%, -80%) !important;
+        border: solid cyan 2px;
     }
 
     .btn-mas-info {
