@@ -210,19 +210,20 @@ body {
 
 /*Contenido de las imagenes*/
 .instalacionesimg {
-  width: 1408px;
-  height: 624px;
-  display: flex;
-  gap: 32px;
+    width: 1408px;
+    height: 624px;
+    display: flex;
+    gap: 32px;
 }
 
 
 .imginst {
-  width: 448px;
-  height: 624px;
-  flex-shrink: 0;
-  border-radius: var(--Corner-Medium, 12px);
+    width: 448px;
+    height: 624px;
+    flex-shrink: 0;
+    border-radius: var(--Corner-Medium, 12px);
 }
+
 /*Imagenes de las instalaciones*/
 
 
@@ -297,6 +298,19 @@ trayectoriaContent {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.trayectoriaTitltxt {
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    margin-bottom: 6%;
 }
 
 /*Contenido del carrusel Trayectzoria*/
@@ -798,8 +812,7 @@ body {
     ============================== */
 
     /* 🔹 Ocultar elementos específicos */
-    .titulousalab,
-    .titulousalabtxt,
+
     .contenidousalab,
     .contenidousalabtxt {
         display: none !important;
@@ -876,7 +889,6 @@ body {
     /* 🔹 Contenedores generales */
     .misionvision,
     .instalacionesp,
-    .contenidotraytxt,
     .colaboracionesp,
     .testimoniop,
     .testimoniocard,
@@ -887,6 +899,7 @@ body {
         line-height: 22px;
         text-align: center;
     }
+
 
     /* 🔹 Títulos */
     .titlemision,
@@ -941,7 +954,7 @@ body {
 
     /* 🔹 Trayectoria */
     .contenidotray {
-        width: 90%;
+        width: 100%;
         height: auto;
         margin: 0 auto;
         flex-direction: column;
@@ -972,6 +985,7 @@ body {
         display: flex;
         flex-direction: column;
         min-height: 0;
+
         /* Evita problemas con flex en algunos navegadores */
         margin-bottom: 30px;
         /* Reducir espacio en móvil */
@@ -1100,24 +1114,89 @@ body {
     }
 
     /* 🔹 Trayectoria - Carrusel */
-    .trayectoriaContent .carousel-caption {
-        position: static !important;
-        background-color: hsl(242, 80%, 10%);
-        padding: 15px;
-        border-radius: 8px;
-        margin-top: 15px;
-        color: white;
+
+
+    .titulousalabtxt {
+        /* o prueba con 5px si aún lo quieres separado */
+
+        margin-bottom: 50px;
         text-align: center;
     }
 
-    .trayectoriaContent .titulousalabtxt {
-        font-size: 10px;
-        margin-bottom: 10px;
-        text-align: center;
+
+    .trayectoriaContent .carousel-caption {
+        position: relative !important;
+        background-color: hsl(242, 80%, 10%);
+        padding: 25px;
+        border-radius: 8px;
+        color: white;
+        font-size: 14px;
+
+        /* Centrado horizontal */
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 100px;
+
+        /* Igual ancho que contenidotray */
+        width: 100%;
+        max-width: 800px;
+        /* valor opcional que puedes ajustar */
+        box-sizing: border-box;
+
+        text-align: justify;
     }
 
     .contenidotray {
         background-color: hsl(242, 80%, 10%);
+        text-align: justify;
+        padding: 25px;
+
+        /* Igual que carousel-caption */
+        border-radius: 8px;
+
+        width: 100%;
+        max-width: 600px;
+        /* Igual que carousel-caption */
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+
+
+
+    .contenidotraytxt {
+        width: 100%;
+        margin: 20px auto 0 auto;
+        /* Empuja hacia abajo sin afectar el padding interno */
+        font-size: 14px;
+        line-height: 24px;
+        text-align: justify;
+        padding: 10px;
+    }
+
+    .trayectoriaTitle {
+        position: absolute;
+        /* ajusta según lo que necesites */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        color: white;
+        font-size: 24px;
+        background: transparent;
+        text-align: center;
+    }
+
+
+    .trayectoriaTitltxt {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 20px;
+        letter-spacing: 0.8px;
+        margin-bottom: 6%;
     }
 
     /* 🔹 Carrusel principal */
